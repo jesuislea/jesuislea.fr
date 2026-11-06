@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<title>Contentieux : faire respecter le droit · Je suis Léa</title>
+<meta name="description" content="Accès aux documents, impayés, droit de l'Union européenne, Nations unies : les voies juridiques que #JeSuisLéa mène de front contre la précarité dans l'ESR.">
+<style>
+  :root{
+    --nuit:#222a4d;--surface:#2e3868;--surface-2:#191f3d;
+    --clair:#e9ebf7;--doux:#a2a9cf;--rose:#ec4899;--aqua:#4fd6c1;
+    --trait:rgba(255,255,255,.12);
+    --sans:"Helvetica Neue",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    --degrade:linear-gradient(95deg,var(--rose),var(--aqua));
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--nuit);color:var(--clair);font-family:Georgia,"Iowan Old Style",serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--aqua)}
+  .wrap{max-width:760px;margin:0 auto;padding:0 1.25rem}
+  .bandeau{background:var(--surface-2);color:var(--doux);font-family:var(--sans);font-size:.72rem;letter-spacing:.06em;padding:.55rem 1.25rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;border-bottom:1px solid var(--trait)}
+  .bandeau a{color:var(--doux);text-decoration:none}
+  .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--doux);border-bottom:1px solid var(--trait);padding-bottom:.7rem;margin-bottom:2rem;display:flex;justify-content:space-between;gap:1rem}
+  header{padding:3.5rem 0 2rem}
+  h1{font-family:var(--sans);font-size:clamp(2.2rem,7vw,3.8rem);line-height:1.02;font-weight:700;letter-spacing:-.02em;margin-bottom:1.3rem}
+  h1 em{font-style:normal;color:var(--rose)}
+  .chapo{font-size:1.12rem;color:var(--doux);max-width:60ch}
+.chapo.alerte{margin-top:1rem;padding:.8rem 1rem;border-left:4px solid #e84393;background:rgba(232,67,147,.10);font-size:1rem;color:inherit}
+
+  /* gros chiffres */
+  .chiffres{background:var(--surface-2);padding:2.6rem 0;margin-top:2rem}
+  .chiffres .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+  .chiffre .n{font-family:var(--sans);font-weight:700;font-size:clamp(2.6rem,9vw,4.6rem);line-height:1;letter-spacing:-.02em}
+  .chiffre .l{font-family:var(--sans);font-size:.85rem;color:var(--doux);margin-top:.45rem;max-width:20ch}
+  .n.rose{color:var(--rose)} .n.aqua{color:var(--aqua)} .n.blanc{color:var(--clair)}
+
+  /* graphique en cases */
+  section{padding:3rem 0 .5rem}
+  h2{font-family:var(--sans);font-size:1.7rem;font-weight:700;letter-spacing:-.01em;margin-bottom:.5rem}
+  .sous{font-family:var(--sans);font-size:.92rem;color:var(--doux);margin-bottom:1.6rem;max-width:60ch}
+  .cases{display:grid;grid-template-columns:repeat(11,1fr);gap:6px;max-width:520px}
+  .case{aspect-ratio:1;border-radius:4px;position:relative}
+  .case.fond{background:var(--aqua)}
+  .case.renvoi{background:repeating-linear-gradient(45deg,var(--aqua) 0 3px,transparent 3px 7px);border:1.5px solid var(--aqua)}
+  .case.silence{background:transparent;border:1.5px solid var(--rose)}
+  .legende{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;font-family:var(--sans);font-size:.85rem;color:var(--doux);margin-top:1.1rem}
+  .legende span{display:inline-flex;align-items:center;gap:.45rem}
+  .legende i{display:inline-block;width:14px;height:14px;border-radius:3px}
+
+  /* barre commission */
+  .barre-box{background:var(--surface);border:1px solid var(--trait);border-left:3px solid var(--rose);border-radius:5px;padding:1.4rem 1.5rem;margin-top:1rem}
+  .barre-box .q{font-family:var(--sans);font-weight:600;font-size:1.05rem;margin-bottom:1rem}
+  .ligne{display:grid;grid-template-columns:9.5rem 1fr 2rem;align-items:center;gap:.8rem;font-family:var(--sans);font-size:.86rem;color:var(--doux);margin-bottom:.55rem}
+  .piste{height:12px;background:var(--surface-2);border-radius:6px;overflow:hidden}
+  .piste b{display:block;height:100%;border-radius:6px}
+  .ligne .v{color:var(--clair);font-weight:700;text-align:right}
+  .barre-box .note{font-family:var(--sans);font-size:.8rem;color:var(--doux);margin-top:.8rem}
+
+  /* fiches */
+  .fiches{display:grid;gap:.9rem}
+  .fiche{background:var(--surface);border:1px solid var(--trait);border-radius:5px;padding:1.1rem 1.25rem}
+  .fiche .nom{font-family:var(--sans);font-weight:700;font-size:1.05rem;display:flex;justify-content:space-between;gap:.8rem;flex-wrap:wrap;align-items:baseline}
+  .tag{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.15rem .55rem;border-radius:20px;white-space:nowrap}
+  .tag.vert{background:rgba(79,214,193,.16);color:var(--aqua)}
+  .tag.jaune{background:rgba(255,214,102,.14);color:#ffd666}
+  .tag.gris{background:rgba(255,255,255,.08);color:var(--doux)}
+  .fiche p{color:var(--doux);font-size:.98rem;margin-top:.4rem}
+  .fiche q{color:var(--clair)}
+
+
+  /* tableau des réponses */
+  .tab{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:.9rem}
+  .tab th{text-align:left;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--doux);font-weight:600;padding:.6rem .7rem;border-bottom:1px solid var(--trait)}
+  .tab td{padding:.85rem .7rem;border-bottom:1px solid var(--trait);vertical-align:top;color:var(--doux);line-height:1.45}
+  .tab td.nom{color:var(--clair);font-weight:700;white-space:nowrap}
+  .tab tr:hover td{background:rgba(255,255,255,.03)}
+  .p{font-weight:700;white-space:nowrap}
+  .p.oui{color:#4ade80} .p.ouv{color:#ffd666} .p.non{color:#c9a7ff} .p.rien{color:rgba(162,169,207,.55)} .p.esq{color:#f0a37a}
+  .tab q{color:var(--clair)}
+  .cle{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-family:var(--sans);font-size:.8rem;color:var(--doux);margin-top:.9rem}
+  @media (max-width:640px){
+    .tab thead{display:none}
+    .tab,.tab tbody,.tab tr,.tab td{display:block;width:100%}
+    .tab tr{background:var(--surface);border:1px solid var(--trait);border-radius:5px;margin-bottom:.8rem;padding:.4rem 0}
+    .tab td{border:none;padding:.3rem 1rem}
+    .tab td.nom{font-size:1.02rem;padding-top:.6rem}
+    .tab td[data-l]::before{content:attr(data-l)" : ";color:var(--doux);font-weight:400}
+  }
+  .silences{display:flex;flex-wrap:wrap;gap:.5rem}
+  .silences span{font-family:var(--sans);font-size:.85rem;border:1px solid rgba(236,72,153,.45);color:var(--clair);padding:.3rem .7rem;border-radius:20px}
+
+  .retenir{border-left:3px solid var(--aqua);padding-left:1.2rem;font-size:1.12rem;max-width:62ch;margin-top:.5rem}
+  .retenir strong{color:var(--rose)}
+  .cta{background:var(--surface-2);margin-top:3rem;padding:2.6rem 0 3rem}
+  .cta h2{margin-bottom:.8rem}
+  .cta p{color:var(--doux);max-width:60ch;margin-bottom:1.4rem}
+  .btn{display:inline-block;background:var(--degrade);color:var(--nuit);font-family:var(--sans);font-size:.92rem;font-weight:700;text-decoration:none;padding:.9rem 1.6rem;border-radius:6px}
+  .questions{list-style:none;counter-reset:q;max-width:64ch}
+  .questions li{counter-increment:q;position:relative;padding-left:2rem;margin-bottom:.8rem;color:var(--doux)}
+  .questions li::before{content:counter(q);position:absolute;left:0;color:var(--aqua);font-family:var(--sans);font-weight:700}
+  footer{font-family:var(--sans);font-size:.8rem;color:var(--doux);padding:2rem 0 3rem;border-top:1px solid var(--trait)}
+
+  @media (max-width:560px){
+    .chiffres .wrap{grid-template-columns:1fr;gap:1.4rem}
+    .cases{grid-template-columns:repeat(11,1fr);gap:4px}
+    .ligne{grid-template-columns:7rem 1fr 1.6rem}
+  }
+
+  .note-lien{font-family:var(--sans);font-size:.82rem;color:var(--doux);margin:.9rem 0 0;line-height:1.6}
+  .apercu{background:var(--surface);border:1px solid var(--trait);border-radius:6px;padding:1.2rem 1.3rem 1rem;margin-bottom:1.4rem}
+  .ap-titre{font-family:var(--sans);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--aqua);font-weight:700;margin-bottom:.9rem}
+  .ap-ligne{display:grid;grid-template-columns:minmax(0,13rem) 1fr 4rem;gap:.8rem;align-items:center;margin-bottom:.75rem;font-family:var(--sans)}
+  .ap-nom{color:var(--clair);font-weight:600;font-size:.92rem;line-height:1.2}.ap-nom small{display:block;color:var(--doux);font-weight:400;font-size:.74rem;margin-top:.15rem}
+  .ap-piste{height:.7rem;background:rgba(255,255,255,.07);border-radius:4px;overflow:hidden}.ap-piste b{display:block;height:100%;background:var(--rose);border-radius:4px}
+  .ap-ligne.ref .ap-piste b{background:var(--doux)}.ap-ligne.ref .ap-nom{color:var(--doux)}
+  .ap-v{font-family:var(--sans);font-weight:700;color:var(--clair);text-align:right;font-size:1rem}
+  .ap-note{font-family:var(--sans);font-size:.76rem;color:var(--doux);margin:.4rem 0 0;line-height:1.5}
+  @media (max-width:600px){.ap-ligne{grid-template-columns:1fr 3.6rem}.ap-piste{grid-column:1/-1;order:3}}
+  .compteurs{display:flex;flex-wrap:wrap;gap:.8rem;margin:0 0 1.1rem}.compteurs>div{flex:1 1 9rem;background:var(--surface);border:1px solid var(--trait);border-radius:6px;padding:.8rem 1rem;font-family:var(--sans);font-size:.85rem;color:var(--doux)}
+  .cn{display:block;font-size:2rem;font-weight:700;line-height:1.1;margin-bottom:.15rem}.cn.ok{color:var(--aqua)}.cn.ar{color:#ffd666}.cn.att{color:var(--clair)}
+  .attente{margin-top:1rem;font-family:var(--sans)}.attente summary{cursor:pointer;color:var(--aqua);font-weight:600;font-size:.9rem}
+  .liste-att{color:var(--doux);font-size:.85rem;line-height:1.8;margin-top:.7rem}
+</style><style>
+  .statut{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.15rem .55rem;border-radius:20px;white-space:nowrap}
+  .s-ok{background:rgba(79,214,193,.16);color:var(--aqua)}
+  .s-ar{background:rgba(255,214,102,.14);color:#ffd666}
+  .s-att{background:rgba(255,255,255,.08);color:var(--doux)}
+  .grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:.55rem;font-family:var(--sans);font-size:.88rem}
+  .etab{background:var(--surface);border:1px solid var(--trait);border-radius:5px;padding:.6rem .8rem;display:flex;flex-direction:column;gap:.35rem}
+  .etab b{color:var(--clair);font-weight:600}
+  .barre3{display:flex;height:34px;border-radius:6px;overflow:hidden;font-family:var(--sans);font-size:.8rem;font-weight:700;margin:.6rem 0 .4rem}
+  .barre3 div{display:flex;align-items:center;justify-content:center;color:var(--nuit);white-space:nowrap;overflow:hidden}
+  .sommaire{padding:2rem 0 .5rem}
+  .sommaire .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
+  .sommaire a{display:flex;flex-direction:column;gap:.35rem;background:var(--surface);border:1px solid var(--trait);border-radius:8px;padding:1rem 1.1rem;text-decoration:none;color:var(--clair);font-family:var(--sans);transition:border-color .15s,transform .15s}
+  .sommaire a:hover{border-color:var(--aqua);transform:translateY(-2px)}
+  .sommaire .num{font-size:1.6rem;font-weight:800;color:var(--rose);line-height:1}
+  .sommaire b{font-size:1rem;line-height:1.3}
+  .sommaire a span:last-child{font-size:.82rem;color:var(--doux);line-height:1.4}
+  .partie{font-family:var(--sans);font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--aqua);margin-bottom:.4rem}
+  .h3{font-family:var(--sans);font-size:1.15rem;margin:1.8rem 0 .7rem}
+  section[id]{scroll-margin-top:1rem;border-top:1px solid var(--trait);margin-top:2rem}
+  @media (max-width:640px){.sommaire .wrap{grid-template-columns:1fr}}
+  .fiche p.src{font-family:var(--sans);font-size:.78rem;color:var(--doux);margin-top:.6rem}
+  @media (max-width:560px){.barre3{font-size:.7rem}.barre3 .hc{font-size:0}}
+</style>
+<style>
+  .front{background:var(--surface);border:1px solid var(--trait);border-left:3px solid var(--aqua);border-radius:6px;padding:1.3rem 1.4rem;margin-bottom:1rem}
+  .front.rose{border-left-color:var(--rose)}
+  .front-tete{display:flex;justify-content:space-between;align-items:baseline;gap:.8rem;flex-wrap:wrap;margin-bottom:.5rem}
+  .front h3{font-family:var(--sans);font-size:1.15rem;line-height:1.3}
+  .front h3 small{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--aqua);font-weight:800;margin-bottom:.25rem}
+  .front.rose h3 small{color:var(--rose)}
+  .front p{color:var(--doux);margin-top:.5rem}
+  .front p strong{color:var(--clair)}
+  .front .src{font-family:var(--sans);font-size:.78rem;margin-top:.8rem}
+  .avert{font-family:var(--sans);font-size:.8rem;color:var(--doux);margin-top:1.5rem;max-width:64ch}
+</style>
+</head>
+<body>
+
+<div class="bandeau"><a href="index.html">← Je suis Léa</a><span>Contentieux · mis à jour le 2 novembre 2026</span></div>
+
+<header>
+  <div class="wrap">
+    <div class="label"><span>Contentieux</span><span>Faire respecter le droit</span></div>
+    <h1>Le droit est de notre côté.<br><em>Nous allons le faire valoir.</em></h1>
+    <p class="chapo">Parmi nous, il y a des juristes : docteur·es et enseignant·es en droit public, privé, européen et international, qui connaissent ces règles de l'intérieur. Plutôt que de tout miser sur une seule action, nous avançons sur plusieurs fronts à la fois, en France, devant l'Union européenne et aux Nations unies.</p>
+  </div>
+</header>
+
+<div class="chiffres">
+  <div class="wrap">
+    <div class="chiffre"><div class="n rose">57</div><div class="l">demandes d'accès aux documents envoyées aux universités</div></div>
+    <div class="chiffre"><div class="n aqua">5</div><div class="l">fronts juridiques et institutionnels menés en parallèle, dont une saisine de l'ONU</div></div>
+    <div class="chiffre"><div class="n blanc">2022</div><div class="l">depuis le 1er septembre, la loi impose de payer les vacataires chaque mois</div></div>
+  </div>
+</div>
+
+<section id="fronts">
+  <div class="wrap">
+    <div class="partie">Nos actions</div>
+    <h2>Cinq fronts, une même exigence</h2>
+    <p class="sous">Les règles existent souvent déjà. Ce qui manque, c'est leur respect. Voici où nous en sommes.</p>
+
+    <div class="front">
+      <div class="front-tete"><h3><small>1 · En France</small>Obtenir les chiffres que les universités ne publient pas</h3><span class="statut s-ar">En cours</span></div>
+      <p>Du 25 au 30 octobre 2026, nous avons demandé à 57 établissements le nombre de vacataires, leurs heures, leurs délais de paiement et ce qu'ils dépensent en primes et en cabinets de conseil. Le droit d'accès aux documents administratifs est garanti par la loi : <strong>en cas de refus ou de silence, nous saisirons la Commission d'accès aux documents administratifs (CADA), puis, si nécessaire, le tribunal administratif.</strong></p>
+      <p class="src"><a href="transparence.html#demandes">Suivre les réponses, établissement par établissement →</a></p>
+    </div>
+
+    <div class="front rose">
+      <div class="front-tete"><h3><small>2 · En France</small>Faire payer ce qui est dû</h3><span class="statut s-ar">Appel à situations</span></div>
+      <p>Depuis le 1<sup>er</sup> septembre 2022, le code de l'éducation impose de payer les vacataires chaque mois. Le Conseil d'État a annulé en 2024 une note ministérielle qui en restreignait la portée. Pourtant, des vacations restent payées six mois, un an plus tard. <strong>Nous recensons les situations d'impayés et de retards pour préparer, avec celles et ceux qui le souhaitent, des réclamations et des recours, y compris pour les intérêts de retard.</strong></p>
+      <p class="src">Article L. 952-1 du code de l'éducation · <a href="https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2024-02-06/473328">Conseil d'État, 6 février 2024, n° 473328</a></p>
+    </div>
+
+    <div class="front">
+      <div class="front-tete"><h3><small>3 · Union européenne</small>Saisir la Commission européenne</h3><span class="statut s-ar">Envoi en fin de semaine</span></div>
+      <p>Le droit de l'Union interdit l'abus de contrats précaires successifs et les discriminations envers les travailleurs à temps partiel ou à durée déterminée. La Cour de justice a jugé que des contrats temporaires d'enseignant·es à l'université ne peuvent pas servir à couvrir des besoins permanents. Le 13 mai 2026, saisie par la Commission européenne, elle a condamné l'Italie pour le recours abusif aux contrats à durée déterminée de son personnel administratif et technique des écoles. <strong>Notre plainte contre la France, pour l'ensemble des précaires de l'ESR, part en fin de semaine. Nous la publierons ici dès son envoi.</strong></p>
+      <p class="src">Directives 1999/70/CE et 97/81/CE · CJUE, 13 mars 2014, <em>Márquez Samohano</em>, C-190/13 · <a href="https://curia.europa.eu/site/upload/docs/application/pdf/2026-05/cp260071en.pdf">CJUE, 13 mai 2026, <em>Commission c. Italie</em>, C-155/25</a></p>
+    </div>
+
+    <div class="front">
+      <div class="front-tete"><h3><small>4 · Nations unies</small>Alerter la Rapporteuse spéciale sur le droit à l'éducation</h3><span class="statut s-ok">Envoyée le 2 novembre 2026</span></div>
+      <p>La France s'est engagée, par le Pacte international relatif aux droits économiques, sociaux et culturels, à garantir des conditions de travail justes et à améliorer continuellement les conditions matérielles du personnel enseignant. <strong>Le 2 novembre 2026, nous avons saisi la Rapporteuse spéciale des Nations unies sur le droit à l'éducation, Farida Shaheed</strong>, en nous appuyant sur les témoignages du mur. Nous lui demandons notamment de recommander au Gouvernement français de payer les vacataires chaque mois et de transformer en emplois stables les fonctions qui répondent à des besoins permanents.</p>
+      <p class="src">Pacte international relatif aux droits économiques, sociaux et culturels, articles 7, 10 et 13 · <a href="JeSuisLea_lettre_ONU_rapporteuse_speciale.pdf">Lire notre lettre (PDF, 2 pages) →</a></p>
+    </div>
+
+    <div class="front rose">
+      <div class="front-tete"><h3><small>5 · Parlement</small>Une commission d'enquête et des amendements</h3><span class="statut s-ar">En cours</span></div>
+      <p>Le contentieux ne suffit pas : il faut aussi changer les règles. Nous demandons une commission d'enquête parlementaire sur la précarité dans l'enseignement supérieur et la recherche, et nous avons proposé des amendements au projet de loi de finances 2027.</p>
+      <p class="src"><a href="barometre.html">Voir qui s'engage, et qui se tait →</a></p>
+    </div>
+
+    <p class="avert">Les informations de cette page présentent nos démarches ; elles ne constituent pas une consultation juridique. Les témoignages ne sont jamais transmis à une autorité sans l'accord de leur auteur·e.</p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Vous êtes payé·e en retard, ou pas du tout ?</h2>
+    <p>Racontez-nous votre situation, en toute confidentialité : établissement, nombre d'heures, date des cours, date du paiement. Chaque cas documenté renforce l'action collective.</p>
+    <a class="btn" href="mailto:contact@jesuislea.fr?subject=Retard%20de%20paiement">Écrire au collectif</a>
+  </div>
+</section>
+
+<footer><div class="wrap">#JeSuisLéa · <a href="index.html">jesuislea.fr</a> · contact@jesuislea.fr</div></footer>
+</body>
+</html>

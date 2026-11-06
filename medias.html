@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<title>On parle de Léa · Je suis Léa</title>
+<meta name="description" content="Tribunes, enquêtes, interviews : #JeSuisLéa dans les médias, en France et à l'étranger.">
+<style>
+  :root{
+    --nuit:#222a4d;--surface:#2e3868;--surface-2:#191f3d;
+    --clair:#e9ebf7;--doux:#a2a9cf;--rose:#ec4899;--aqua:#4fd6c1;
+    --trait:rgba(255,255,255,.12);
+    --sans:"Helvetica Neue",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    --degrade:linear-gradient(95deg,var(--rose),var(--aqua));
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--nuit);color:var(--clair);font-family:Georgia,"Iowan Old Style",serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--aqua)}
+  .wrap{max-width:760px;margin:0 auto;padding:0 1.25rem}
+  .bandeau{background:var(--surface-2);color:var(--doux);font-family:var(--sans);font-size:.72rem;letter-spacing:.06em;padding:.55rem 1.25rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;border-bottom:1px solid var(--trait)}
+  .bandeau a{color:var(--doux);text-decoration:none}
+  .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--doux);border-bottom:1px solid var(--trait);padding-bottom:.7rem;margin-bottom:2rem;display:flex;justify-content:space-between;gap:1rem}
+  header{padding:3.5rem 0 2rem}
+  h1{font-family:var(--sans);font-size:clamp(2.2rem,7vw,3.8rem);line-height:1.02;font-weight:700;letter-spacing:-.02em;margin-bottom:1.3rem}
+  h1 em{font-style:normal;color:var(--rose)}
+  .chapo{font-size:1.12rem;color:var(--doux);max-width:60ch}
+.chapo.alerte{margin-top:1rem;padding:.8rem 1rem;border-left:4px solid #e84393;background:rgba(232,67,147,.10);font-size:1rem;color:inherit}
+
+  /* gros chiffres */
+  .chiffres{background:var(--surface-2);padding:2.6rem 0;margin-top:2rem}
+  .chiffres .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+  .chiffre .n{font-family:var(--sans);font-weight:700;font-size:clamp(2.6rem,9vw,4.6rem);line-height:1;letter-spacing:-.02em}
+  .chiffre .l{font-family:var(--sans);font-size:.85rem;color:var(--doux);margin-top:.45rem;max-width:20ch}
+  .n.rose{color:var(--rose)} .n.aqua{color:var(--aqua)} .n.blanc{color:var(--clair)}
+
+  /* graphique en cases */
+  section{padding:3rem 0 .5rem}
+  h2{font-family:var(--sans);font-size:1.7rem;font-weight:700;letter-spacing:-.01em;margin-bottom:.5rem}
+  .sous{font-family:var(--sans);font-size:.92rem;color:var(--doux);margin-bottom:1.6rem;max-width:60ch}
+  .cases{display:grid;grid-template-columns:repeat(11,1fr);gap:6px;max-width:520px}
+  .case{aspect-ratio:1;border-radius:4px;position:relative}
+  .case.fond{background:var(--aqua)}
+  .case.renvoi{background:repeating-linear-gradient(45deg,var(--aqua) 0 3px,transparent 3px 7px);border:1.5px solid var(--aqua)}
+  .case.silence{background:transparent;border:1.5px solid var(--rose)}
+  .legende{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;font-family:var(--sans);font-size:.85rem;color:var(--doux);margin-top:1.1rem}
+  .legende span{display:inline-flex;align-items:center;gap:.45rem}
+  .legende i{display:inline-block;width:14px;height:14px;border-radius:3px}
+
+  /* barre commission */
+  .barre-box{background:var(--surface);border:1px solid var(--trait);border-left:3px solid var(--rose);border-radius:5px;padding:1.4rem 1.5rem;margin-top:1rem}
+  .barre-box .q{font-family:var(--sans);font-weight:600;font-size:1.05rem;margin-bottom:1rem}
+  .ligne{display:grid;grid-template-columns:9.5rem 1fr 2rem;align-items:center;gap:.8rem;font-family:var(--sans);font-size:.86rem;color:var(--doux);margin-bottom:.55rem}
+  .piste{height:12px;background:var(--surface-2);border-radius:6px;overflow:hidden}
+  .piste b{display:block;height:100%;border-radius:6px}
+  .ligne .v{color:var(--clair);font-weight:700;text-align:right}
+  .barre-box .note{font-family:var(--sans);font-size:.8rem;color:var(--doux);margin-top:.8rem}
+
+  /* fiches */
+  .fiches{display:grid;gap:.9rem}
+  .fiche{background:var(--surface);border:1px solid var(--trait);border-radius:5px;padding:1.1rem 1.25rem}
+  .fiche .nom{font-family:var(--sans);font-weight:700;font-size:1.05rem;display:flex;justify-content:space-between;gap:.8rem;flex-wrap:wrap;align-items:baseline}
+  .tag{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.15rem .55rem;border-radius:20px;white-space:nowrap}
+  .tag.vert{background:rgba(79,214,193,.16);color:var(--aqua)}
+  .tag.jaune{background:rgba(255,214,102,.14);color:#ffd666}
+  .tag.gris{background:rgba(255,255,255,.08);color:var(--doux)}
+  .fiche p{color:var(--doux);font-size:.98rem;margin-top:.4rem}
+  .fiche q{color:var(--clair)}
+
+
+  /* tableau des réponses */
+  .tab{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:.9rem}
+  .tab th{text-align:left;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--doux);font-weight:600;padding:.6rem .7rem;border-bottom:1px solid var(--trait)}
+  .tab td{padding:.85rem .7rem;border-bottom:1px solid var(--trait);vertical-align:top;color:var(--doux);line-height:1.45}
+  .tab td.nom{color:var(--clair);font-weight:700;white-space:nowrap}
+  .tab tr:hover td{background:rgba(255,255,255,.03)}
+  .p{font-weight:700;white-space:nowrap}
+  .p.oui{color:#4ade80} .p.ouv{color:#ffd666} .p.non{color:#c9a7ff} .p.rien{color:rgba(162,169,207,.55)} .p.esq{color:#f0a37a}
+  .tab q{color:var(--clair)}
+  .cle{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-family:var(--sans);font-size:.8rem;color:var(--doux);margin-top:.9rem}
+  @media (max-width:640px){
+    .tab thead{display:none}
+    .tab,.tab tbody,.tab tr,.tab td{display:block;width:100%}
+    .tab tr{background:var(--surface);border:1px solid var(--trait);border-radius:5px;margin-bottom:.8rem;padding:.4rem 0}
+    .tab td{border:none;padding:.3rem 1rem}
+    .tab td.nom{font-size:1.02rem;padding-top:.6rem}
+    .tab td[data-l]::before{content:attr(data-l)" : ";color:var(--doux);font-weight:400}
+  }
+  .silences{display:flex;flex-wrap:wrap;gap:.5rem}
+  .silences span{font-family:var(--sans);font-size:.85rem;border:1px solid rgba(236,72,153,.45);color:var(--clair);padding:.3rem .7rem;border-radius:20px}
+
+  .retenir{border-left:3px solid var(--aqua);padding-left:1.2rem;font-size:1.12rem;max-width:62ch;margin-top:.5rem}
+  .retenir strong{color:var(--rose)}
+  .cta{background:var(--surface-2);margin-top:3rem;padding:2.6rem 0 3rem}
+  .cta h2{margin-bottom:.8rem}
+  .cta p{color:var(--doux);max-width:60ch;margin-bottom:1.4rem}
+  .btn{display:inline-block;background:var(--degrade);color:var(--nuit);font-family:var(--sans);font-size:.92rem;font-weight:700;text-decoration:none;padding:.9rem 1.6rem;border-radius:6px}
+  .questions{list-style:none;counter-reset:q;max-width:64ch}
+  .questions li{counter-increment:q;position:relative;padding-left:2rem;margin-bottom:.8rem;color:var(--doux)}
+  .questions li::before{content:counter(q);position:absolute;left:0;color:var(--aqua);font-family:var(--sans);font-weight:700}
+  footer{font-family:var(--sans);font-size:.8rem;color:var(--doux);padding:2rem 0 3rem;border-top:1px solid var(--trait)}
+
+  @media (max-width:560px){
+    .chiffres .wrap{grid-template-columns:1fr;gap:1.4rem}
+    .cases{grid-template-columns:repeat(11,1fr);gap:4px}
+    .ligne{grid-template-columns:7rem 1fr 1.6rem}
+  }
+</style><style>
+  .presse{display:grid;gap:1rem}
+  .article{display:grid;grid-template-columns:7.5rem 1fr;gap:1.2rem;background:var(--surface);border:1px solid var(--trait);border-radius:6px;padding:1.2rem 1.3rem;text-decoration:none;color:inherit;transition:border-color .15s,transform .15s}
+  .article:hover{border-color:var(--aqua);transform:translateY(-2px)}
+  .article .media{font-family:var(--sans);font-weight:800;font-size:1.05rem;color:var(--clair);line-height:1.2}
+  .article .date{font-family:var(--sans);font-size:.78rem;color:var(--doux);margin-top:.35rem}
+  .article .titre{font-size:1.12rem;color:var(--clair);line-height:1.35}
+  .article .resume{font-size:.95rem;color:var(--doux);margin-top:.45rem}
+  .article .lire{font-family:var(--sans);font-size:.8rem;font-weight:700;color:var(--aqua);margin-top:.6rem;display:inline-block}
+  .genre{font-family:var(--sans);font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.12rem .5rem;border-radius:20px;background:rgba(236,72,153,.16);color:var(--rose);display:inline-block;margin-bottom:.45rem}
+  .genre.g-rep{background:rgba(236,72,153,.16);color:var(--rose)}
+  .genre.g-enq{background:rgba(79,214,193,.16);color:var(--aqua)}
+  .genre.g-tri{background:rgba(255,214,102,.15);color:#ffd666}
+  .genre.g-tem{background:rgba(201,167,255,.16);color:#c9a7ff}
+  .genre.g-int{background:rgba(255,255,255,.12);color:#e9ebf7}
+  .genre.g-blog{background:rgba(240,163,122,.16);color:#f0a37a}
+  .genre.de,.genre.uk{background:rgba(127,178,255,.16);color:#7fb2ff}
+  .bientot{display:flex;flex-wrap:wrap;gap:.5rem}
+  .bientot span{font-family:var(--sans);font-size:.88rem;border:1px dashed rgba(79,214,193,.6);color:var(--clair);padding:.35rem .8rem;border-radius:20px}
+  @media (max-width:560px){.article{grid-template-columns:1fr;gap:.5rem}}
+</style>
+</head>
+<body>
+
+<div class="bandeau"><a href="index.html">← Je suis Léa</a><span>On parle de Léa · mis à jour le 6 novembre 2026</span></div>
+
+<header>
+  <div class="wrap">
+    <div class="label"><span>Revue de presse</span><span>France · Allemagne · Royaume-Uni</span></div>
+    <h1>Les Léa sortent de l'ombre.<br><em>Et les médias en parlent.</em></h1>
+    <p class="chapo">Tribunes, enquêtes, interviews : chaque article fait exister celles et ceux que les statistiques oublient. Voici ce qui a été publié sur #JeSuisLéa et sur la précarité dans l'enseignement supérieur et la recherche.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Déjà parus</h2>
+    <p class="sous">Du plus récent au plus ancien. La tribune continue de recueillir des soutiens : <a href="signataires.html">voir les signataires</a>.</p>
+    <div class="presse">
+
+      <a class="article" href="https://www.timeshighereducation.com/news/je-suis-lea-french-scholars-living-poverty-demand-change" target="_blank" rel="noopener">
+        <div><div class="media">Times Higher Education (Royaume-Uni)</div><div class="date">6 novembre 2026</div></div>
+        <div><span class="genre g-enq">Article</span><div class="titre">« Je suis Léa » : French scholars living in poverty demand change</div><p class="resume">Le magazine de référence de l'enseignement supérieur international consacre un article à #JeSuisLéa et donne la parole à notre cofondatrice : « I'm not asking for the moon, I'm asking for some very basic conditions. »</p><span class="lire">Lire l'article (en anglais) →</span></div>
+      </a>
+
+      <a class="article" href="https://www.france.tv/france-3/bourgogne-franche-comte/ici-19-20-bourgogne/9015112-emission-du-lundi-2-novembre-2026.html" target="_blank" rel="noopener">
+        <div><div class="media">France 3 Bourgogne</div><div class="date">2 novembre 2026</div></div>
+        <div><span class="genre g-rep">Reportage télévisé</span><div class="titre">Journal télévisé du 19/20</div><p class="resume">Le 19/20 de France 3 Bourgogne consacre un reportage à une vacataire de Dijon et donne la parole à notre cofondatrice.</p><span class="lire">Voir le replay (jusqu’au 2 décembre) →</span></div>
+      </a>
+
+      <a class="article" href="https://www.radiofrance.fr/franceinfo/podcasts/la-question-des-informes/la-question-des-informes-du-lundi-02-novembre-2026-5320890" target="_blank" rel="noopener">
+        <div><div class="media">France Info</div><div class="date">2 novembre 2026</div></div>
+        <div><span class="genre g-int">Radio</span><div class="titre">La question des informés</div><p class="resume">Invitée de France Info, notre cofondatrice défend le lien entre la mobilisation lycéenne et la précarité à l'université : « pour chaque besoin permanent, un poste permanent ». Ce n'est pas la crise, c'est un choix politique, contraire au droit européen et international.</p><span class="lire">Écouter l'émission →</span></div>
+      </a>
+
+      <a class="article" href="https://france3-regions.franceinfo.fr/normandie/seine-maritime/rouen/temoignages-je-suis-passe-de-jeune-femme-avec-un-avenir-brillant-a-galerienne-les-jeunes-chercheurs-decourages-par-la-precarite-3441279.html" target="_blank" rel="noopener">
+        <div><div class="media">France 3 Normandie</div><div class="date">2 novembre 2026</div></div>
+        <div><span class="genre g-tem">Témoignages</span><div class="titre">« Je suis passée de jeune femme avec un avenir brillant à galérienne » : les jeunes chercheurs découragés par la précarité</div><p class="resume">Medhi Weber donne la parole à une Léa rouennaise, sociologue qui quitte la recherche après dix ans de vacations, à un vacataire de Rouen et à nos cofondatrices.</p><span class="lire">Lire le reportage →</span></div>
+      </a>
+
+      <a class="article" href="https://france3-regions.franceinfo.fr/bretagne/on-est-payes-au-tarif-d-un-menu-enfant-des-annees-90-je-suis-lea-un-collectif-pour-denoncer-la-precarite-dans-l-enseignement-superieur-3441798.html" target="_blank" rel="noopener">
+        <div><div class="media">France 3 Bretagne</div><div class="date">30 octobre 2026</div></div>
+        <div><span class="genre g-rep">Reportage</span><div class="titre">« On est payés au tarif d'un menu enfant des années 90 » : #Je suis Léa, un collectif pour dénoncer la précarité dans l'enseignement supérieur</div><p class="resume">Séverine Breton donne la parole à une Léa bretonne, docteure bientôt au RSA après des années de CDD et de vacations, et à notre cofondatrice.</p><span class="lire">Lire le reportage →</span></div>
+      </a>
+
+      <a class="article" href="https://france3-regions.franceinfo.fr/occitanie/haute-garonne/toulouse/temoignages-je-vis-sous-le-seuil-de-pauvrete-parfois-a-bac-8-les-vacataires-de-l-enseignement-superieur-se-mobilisent-pour-peser-sur-le-debat-politique-3440931.html" target="_blank" rel="noopener">
+        <div><div class="media">France 3 Occitanie</div><div class="date">30 octobre 2026</div></div>
+        <div><span class="genre g-rep">Reportage</span><div class="titre">« Je vis sous le seuil de pauvreté » : parfois à Bac+8, les vacataires de l'enseignement supérieur se mobilisent pour peser sur le débat politique</div><p class="resume">Claire Sardain donne la parole à des précaires toulousain·es et à notre cofondatrice, avant le vote du budget et la mobilisation du 5 novembre.</p><span class="lire">Lire le reportage →</span></div>
+      </a>
+
+      <a class="article" href="https://www.jmwiarda.de/blog/2026/10/29/nach-hanna-kommt-lea" target="_blank" rel="noopener">
+        <div><div class="media">Jan-Martin Wiarda</div><div class="date">29 octobre 2026</div></div>
+        <div><span class="genre de">Interview · Allemagne</span><div class="titre">« Nach Hanna kommt Léa » (Après Hanna, voici Léa)</div><p class="resume">Le journaliste de référence sur les politiques universitaires en Allemagne interroge notre cofondatrice sur #JeSuisLéa, héritier français de #IchBinHanna, les vacations et la pauvreté malgré le doctorat. En allemand.</p><span class="lire">Lire l'interview →</span></div>
+      </a>
+
+      <a class="article" href="https://www.ouest-france.fr/bretagne/rennes-35000/vacataire-a-rennes-2-lea-temoigne-de-la-precarite-de-lenseignement-universitaire-f4511e58-ce36-11f1-bb5f-3dc5c0feacca" target="_blank" rel="noopener">
+        <div><div class="media">Ouest-France</div><div class="date">24 octobre 2026</div></div>
+        <div><span class="genre g-tem">Témoignage</span><div class="titre">Vacataire à Rennes 2, Léa témoigne de la précarité de l'enseignement universitaire</div><p class="resume">Une vacataire de Rennes 2 raconte la précarité de l'enseignement universitaire, en écho à la campagne #JeSuisLéa.</p><span class="lire">Lire l'article →</span></div>
+      </a>
+
+      <a class="article" href="https://www.liberation.fr/idees-et-debats/tribunes/la-precarite-du-lycee-a-luniversite-que-fait-le-parlement-20261022_MGIHIN4YERDFFDZ2USSWCHBDSI/" target="_blank" rel="noopener">
+        <div><div class="media">Libération</div><div class="date">22 octobre 2026</div></div>
+        <div><span class="genre g-tri">Tribune</span><div class="titre">« La précarité du lycée à l'université : que fait le Parlement ? »</div><p class="resume">Notre tribune, signée par 338 universitaires, relie les difficultés des lycéen·nes et des étudiant·es aux conditions de travail des précaires de l'ESR.</p><span class="lire">Lire la tribune →</span></div>
+      </a>
+
+      <a class="article" href="https://basta.media/on-est-les-parias-de-l-enseignement-superieur-ultra-precaires-les-vacataires-universite-ne-lachent-pas-mobilisations" target="_blank" rel="noopener">
+        <div><div class="media">Basta!</div><div class="date">19 octobre 2026</div></div>
+        <div><span class="genre g-enq">Enquête</span><div class="titre">« On est les parias de l'enseignement supérieur » : ultra-précaires, les vacataires des universités ne lâchent pas</div><p class="resume">Rachel Knaebel enquête sur les vacataires, mal payé·es et souvent avec des mois de retard, et cite le collectif Je suis Léa, créé ce mois-ci.</p><span class="lire">Lire l'enquête →</span></div>
+      </a>
+
+      <a class="article" href="https://blogs.mediapart.fr/pascal-maillard/blog/131026/je-suis-lea" target="_blank" rel="noopener">
+        <div><div class="media">Club de Mediapart</div><div class="date">13 octobre 2026</div></div>
+        <div><span class="genre g-blog">Billet de blog</span><div class="titre">« Je suis Léa »</div><p class="resume">Pascal Maillard salue « bien plus qu'un collectif de précaires » : « un mouvement qui est en train de naître », porté par un mur de témoignages « souvent bouleversants ».</p><span class="lire">Lire le billet →</span></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>En préparation</h2>
+    <p class="sous">Des journalistes préparent des sujets avec des Léa qui ont accepté de témoigner.</p>
+    <div class="bientot"><span>Campus Média</span><span>Deutschlandfunk (Allemagne)</span></div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Vous êtes journaliste ?</h2>
+    <p>Nous pouvons vous mettre en relation avec des précaires de l'ESR partout en France, à visage découvert ou anonymement, et vous transmettre nos chiffres et leurs sources.</p>
+    <a class="btn" href="mailto:contact@jesuislea.fr?subject=Demande%20presse">Nous écrire</a>
+  </div>
+</section>
+
+<footer><div class="wrap">#JeSuisLéa · <a href="index.html">jesuislea.fr</a> · contact@jesuislea.fr</div></footer>
+</body>
+</html>

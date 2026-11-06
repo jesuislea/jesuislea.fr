@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<title>Baromètre des député·es · Je suis Léa</title>
+<meta name="description" content="Budget de l'enseignement supérieur : ce que nous ont répondu les député·es, et celles et ceux qui se taisent.">
+<style>
+  :root{
+    --nuit:#222a4d;--surface:#2e3868;--surface-2:#191f3d;
+    --clair:#e9ebf7;--doux:#a2a9cf;--rose:#ec4899;--aqua:#4fd6c1;
+    --trait:rgba(255,255,255,.12);
+    --sans:"Helvetica Neue",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    --degrade:linear-gradient(95deg,var(--rose),var(--aqua));
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--nuit);color:var(--clair);font-family:Georgia,"Iowan Old Style",serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--aqua)}
+  .wrap{max-width:760px;margin:0 auto;padding:0 1.25rem}
+  .bandeau{background:var(--surface-2);color:var(--doux);font-family:var(--sans);font-size:.72rem;letter-spacing:.06em;padding:.55rem 1.25rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;border-bottom:1px solid var(--trait)}
+  .bandeau a{color:var(--doux);text-decoration:none}
+  .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--doux);border-bottom:1px solid var(--trait);padding-bottom:.7rem;margin-bottom:2rem;display:flex;justify-content:space-between;gap:1rem}
+  header{padding:3.5rem 0 2rem}
+  h1{font-family:var(--sans);font-size:clamp(2.2rem,7vw,3.8rem);line-height:1.02;font-weight:700;letter-spacing:-.02em;margin-bottom:1.3rem}
+  h1 em{font-style:normal;color:var(--rose)}
+  .chapo{font-size:1.12rem;color:var(--doux);max-width:60ch}
+.chapo.alerte{margin-top:1rem;padding:.8rem 1rem;border-left:4px solid #e84393;background:rgba(232,67,147,.10);font-size:1rem;color:inherit}
+
+  /* gros chiffres */
+  .chiffres{background:var(--surface-2);padding:2.6rem 0;margin-top:2rem}
+  .chiffres .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+  .chiffre .n{font-family:var(--sans);font-weight:700;font-size:clamp(2.6rem,9vw,4.6rem);line-height:1;letter-spacing:-.02em}
+  .chiffre .l{font-family:var(--sans);font-size:.85rem;color:var(--doux);margin-top:.45rem;max-width:20ch}
+  .n.rose{color:var(--rose)} .n.aqua{color:var(--aqua)} .n.blanc{color:var(--clair)}
+
+  /* graphique en cases */
+  section{padding:3rem 0 .5rem}
+  h2{font-family:var(--sans);font-size:1.7rem;font-weight:700;letter-spacing:-.01em;margin-bottom:.5rem}
+  .sous{font-family:var(--sans);font-size:.92rem;color:var(--doux);margin-bottom:1.6rem;max-width:60ch}
+  .cases{display:grid;grid-template-columns:repeat(11,1fr);gap:6px;max-width:520px}
+  .case{aspect-ratio:1;border-radius:4px;position:relative}
+  .case.fond{background:var(--aqua)}
+  .case.renvoi{background:repeating-linear-gradient(45deg,var(--aqua) 0 3px,transparent 3px 7px);border:1.5px solid var(--aqua)}
+  .case.silence{background:transparent;border:1.5px solid var(--rose)}
+  .legende{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;font-family:var(--sans);font-size:.85rem;color:var(--doux);margin-top:1.1rem}
+  .legende span{display:inline-flex;align-items:center;gap:.45rem}
+  .legende i{display:inline-block;width:14px;height:14px;border-radius:3px}
+
+  /* barre commission */
+  .barre-box{background:var(--surface);border:1px solid var(--trait);border-left:3px solid var(--rose);border-radius:5px;padding:1.4rem 1.5rem;margin-top:1rem}
+  .barre-box .q{font-family:var(--sans);font-weight:600;font-size:1.05rem;margin-bottom:1rem}
+  .ligne{display:grid;grid-template-columns:9.5rem 1fr 2rem;align-items:center;gap:.8rem;font-family:var(--sans);font-size:.86rem;color:var(--doux);margin-bottom:.55rem}
+  .piste{height:12px;background:var(--surface-2);border-radius:6px;overflow:hidden}
+  .piste b{display:block;height:100%;border-radius:6px}
+  .ligne .v{color:var(--clair);font-weight:700;text-align:right}
+  .barre-box .note{font-family:var(--sans);font-size:.8rem;color:var(--doux);margin-top:.8rem}
+
+  /* fiches */
+  .fiches{display:grid;gap:.9rem}
+  .fiche{background:var(--surface);border:1px solid var(--trait);border-radius:5px;padding:1.1rem 1.25rem}
+  .fiche .nom{font-family:var(--sans);font-weight:700;font-size:1.05rem;display:flex;justify-content:space-between;gap:.8rem;flex-wrap:wrap;align-items:baseline}
+  .tag{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.15rem .55rem;border-radius:20px;white-space:nowrap}
+  .tag.vert{background:rgba(79,214,193,.16);color:var(--aqua)}
+  .tag.jaune{background:rgba(255,214,102,.14);color:#ffd666}
+  .tag.gris{background:rgba(255,255,255,.08);color:var(--doux)}
+  .fiche p{color:var(--doux);font-size:.98rem;margin-top:.4rem}
+  .fiche q{color:var(--clair)}
+
+
+  /* tableau des réponses */
+  .tab{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:.9rem}
+  .tab th{text-align:left;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--doux);font-weight:600;padding:.6rem .7rem;border-bottom:1px solid var(--trait)}
+  .tab td{padding:.85rem .7rem;border-bottom:1px solid var(--trait);vertical-align:top;color:var(--doux);line-height:1.45}
+  .tab td.nom{color:var(--clair);font-weight:700;white-space:nowrap}
+  .tab tr:hover td{background:rgba(255,255,255,.03)}
+  .p{font-weight:700;white-space:nowrap}
+  .p.oui{color:#4ade80} .p.ouv{color:#ffd666} .p.non{color:#c9a7ff} .p.rien{color:rgba(162,169,207,.55)} .p.esq{color:#f0a37a}
+  .tab q{color:var(--clair)}
+  .cle{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-family:var(--sans);font-size:.8rem;color:var(--doux);margin-top:.9rem}
+  @media (max-width:640px){
+    .tab thead{display:none}
+    .tab,.tab tbody,.tab tr,.tab td{display:block;width:100%}
+    .tab tr{background:var(--surface);border:1px solid var(--trait);border-radius:5px;margin-bottom:.8rem;padding:.4rem 0}
+    .tab td{border:none;padding:.3rem 1rem}
+    .tab td.nom{font-size:1.02rem;padding-top:.6rem}
+    .tab td[data-l]::before{content:attr(data-l)" : ";color:var(--doux);font-weight:400}
+  }
+  .silences{display:flex;flex-wrap:wrap;gap:.5rem}
+  .silences span{font-family:var(--sans);font-size:.85rem;border:1px solid rgba(236,72,153,.45);color:var(--clair);padding:.3rem .7rem;border-radius:20px}
+
+  .retenir{border-left:3px solid var(--aqua);padding-left:1.2rem;font-size:1.12rem;max-width:62ch;margin-top:.5rem}
+  .retenir strong{color:var(--rose)}
+  .cta{background:var(--surface-2);margin-top:3rem;padding:2.6rem 0 3rem}
+  .cta h2{margin-bottom:.8rem}
+  .cta p{color:var(--doux);max-width:60ch;margin-bottom:1.4rem}
+  .btn{display:inline-block;background:var(--degrade);color:var(--nuit);font-family:var(--sans);font-size:.92rem;font-weight:700;text-decoration:none;padding:.9rem 1.6rem;border-radius:6px}
+  .questions{list-style:none;counter-reset:q;max-width:64ch}
+  .questions li{counter-increment:q;position:relative;padding-left:2rem;margin-bottom:.8rem;color:var(--doux)}
+  .questions li::before{content:counter(q);position:absolute;left:0;color:var(--aqua);font-family:var(--sans);font-weight:700}
+  footer{font-family:var(--sans);font-size:.8rem;color:var(--doux);padding:2rem 0 3rem;border-top:1px solid var(--trait)}
+
+  @media (max-width:560px){
+    .chiffres .wrap{grid-template-columns:1fr;gap:1.4rem}
+    .cases{grid-template-columns:repeat(11,1fr);gap:4px}
+    .ligne{grid-template-columns:7rem 1fr 1.6rem}
+  }
+</style>
+</head>
+<body>
+
+<div class="bandeau"><a href="index.html">← Je suis Léa</a><span>Baromètre · mis à jour le 4 novembre 2026</span></div>
+
+<header>
+  <div class="wrap">
+    <div class="label"><span>Budget de l'ESR</span><span>Vote décisif le 3 novembre</span></div>
+    <h1>58 député·es interpellé·es.<br><em>3 seulement s'engagent pour une commission d'enquête.</em></h1>
+    <p class="chapo">Avant le vote du budget de l'enseignement supérieur et de la recherche, nous avons posé trois questions simples aux député·es de la commission des affaires culturelles et de l'éducation, aux rapporteur·es et à des élu·es de circonscriptions universitaires. Voici ce qu'ils et elles nous ont répondu.</p>
+    <p class="chapo"><a href="JeSuisLea_Barometre_deputes_oct2026.pdf" download style="display:inline-block;background:#ec4899;color:#fff;font-family:var(--sans);font-weight:600;text-decoration:none;padding:.6rem 1.1rem;border-radius:999px">Télécharger le baromètre en PDF (5 pages)</a></p>
+    <p class="chapo alerte"><b>Attention au calendrier.</b> Le mardi 3 novembre, l'Assemblée vote sur la partie « recettes » du budget. Si elle la rejette, le budget part au Sénat dans la version du gouvernement : les crédits de l'enseignement supérieur ne seront pas débattus en séance, et les avancées obtenues en commission pour les vacataires et les ATER disparaîtront. Si elle l'adopte, ces crédits seront examinés dans les jours suivants. Dans les deux cas, c'est maintenant que les député·es doivent dire ce qu'ils et elles défendront. Les sénateur·ices prendront ensuite le relais.</p>
+  </div>
+</header>
+
+<div class="chiffres">
+  <div class="wrap">
+    <div class="chiffre"><div class="n blanc">58</div><div class="l">député·es interpellé·es, par nous ou par des citoyen·nes</div></div>
+    <div class="chiffre"><div class="n aqua">24</div><div class="l">ont répondu</div></div>
+    <div class="chiffre"><div class="n rose">3</div><div class="l">engagements clairs seulement pour une commission d'enquête</div></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Qui a répondu ?</h2>
+    <p class="sous">Une case par député·e interpellé·e, par nous ou par des citoyen·nes.</p>
+    <div class="cases" aria-label="23 réponses sur le fond, 1 réponse sans prise de position, 34 sans réponse">
+      <div class="case fond"></div><div class="case fond"></div><div class="case fond"></div><div class="case fond"></div><div class="case fond"></div><div class="case fond"></div><div class="case fond"></div><div class="case fond"></div><div class="case fond"></div><div class="case fond"></div><div class="case fond"></div><div class="case fond"></div><div class="case fond"></div><div class="case fond"></div><div class="case fond"></div><div class="case fond"></div><div class="case fond"></div><div class="case fond"></div><div class="case fond"></div><div class="case fond"></div><div class="case fond"></div><div class="case fond"></div><div class="case fond"></div>
+      <div class="case renvoi"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div><div class="case silence"></div>
+    </div>
+    <div class="legende">
+      <span><i style="background:var(--aqua)"></i>Réponse sur le fond (23)</span>
+      <span><i style="background:repeating-linear-gradient(45deg,var(--aqua) 0 3px,transparent 3px 7px);border:1.5px solid var(--aqua)"></i>Réponse sans prise de position (1)</span>
+      <span><i style="border:1.5px solid var(--rose)"></i>Pas de réponse (34)</span>
+    </div>
+
+    <div class="barre-box">
+      <div class="q">Une commission d'enquête sur la précarité dans l'ESR ?</div>
+      <div class="ligne"><span>S'engage pour</span><div class="piste"><b style="width:5.2%;background:#4ade80"></b></div><span class="v">3</span></div>
+      <div class="ligne"><span>Ouvert·e, sans engagement</span><div class="piste"><b style="width:10.3%;background:#ffd666"></b></div><span class="v">6</span></div>
+      <div class="ligne"><span>Autre voie proposée</span><div class="piste"><b style="width:5.2%;background:var(--doux)"></b></div><span class="v">3</span></div>
+      <div class="ligne"><span>Élude la question</span><div class="piste"><b style="width:17.2%;background:#f0a37a"></b></div><span class="v">10</span></div>
+      <div class="ligne"><span>Pas encore de réponse</span><div class="piste"><b style="width:62.1%;background:var(--rose)"></b></div><span class="v">36</span></div>
+      <p class="note">Sur 58 député·es : les 44 que nous avons sollicité·es et les 14 qui ont répondu à des citoyen·nes. « Ouvert·e » : Violette Spillebout, Fanny Dombre-Coste, Estelle Mercier, Ayda Hadizadeh, Philippe Naillet, Rodrigo Arenas. « S'engage pour » : Marie-Charlotte Garin, Julie Ozenne, Tristan Lahais. « Autre voie » : Éric Bothorel (partir du rapport du Sénat), Delphine Lingemann (mission d'information), Catherine Hervieu (renvoi au Sénat ; son groupe a déjà utilisé son droit de tirage). « Élude la question » : Mathilde Hignet, Sylvain Carrière, Aurélien Saintoul, Marie Mesmeur, Sabrina Sebaihi, Stéphane Peu, Claudia Rouaux, Xavier Breton, Pierrick Courbon, Jean-Luc Bourgeaux. « Pas encore de réponse » : les 34 député·es silencieux·ses, Fatiha Keloua Hachi et Mickaël Bouloux.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Ce qu'ils et elles nous ont répondu</h2>
+    <p class="sous">Réponses reçues directement par #JeSuisLéa, résumées fidèlement. Trois députées se sont prononcées sur l'heure de vacation à 80 € brut : toutes pour.</p>
+    <table class="tab"><thead><tr><th>Député·e</th><th>Vacations</th><th>Commission d'enquête</th><th>En bref</th></tr></thead><tbody><tr><td class="nom">Marie-Charlotte Garin</td><td data-l="Vacations"><span class="p oui">✓ Pour</span></td><td data-l="Commission d'enquête"><span class="p oui">✓ Pour</span></td><td>Votera l'AC102 et les amendements dans le même sens. Soutient l'heure à 80 € brut pour toutes les heures travaillées, payée chaque mois et à temps. Soutient une commission d'enquête, mais le droit de tirage relève d'une décision de groupe et le calendrier est serré. « Ce n'est pas une rémunération, c'est une exploitation organisée par l'État lui-même. »</td></tr><tr><td class="nom">Éric Bothorel</td><td data-l="Vacations"><span class="p ouv">~ Ouvert·e</span></td><td data-l="Commission d'enquête"><span class="p non">↷ Autre voie</span></td><td>Juge la situation des ATER et des contractuel·les « scandaleuse ». Interroge le montant de 80 €. Préfère partir du rapport de la commission d'enquête du Sénat plutôt que d'en ouvrir une à l'Assemblée. Critique notre démarche de publication.</td></tr><tr><td class="nom">Fatiha Keloua Hachi</td><td data-l="Vacations"><span class="p oui">✓ Pour</span></td><td data-l="Commission d'enquête"><span class="p rien">— Pas encore de réponse</span></td><td>Questions écrites, amendements AC18, AC19, AC53 ; cosigne l'AC28 sur les ATER (adopté en commission) et l'AC27 sur le Smic horaire des vacataires (retiré en commission). Relancée sur la commission d'enquête le 23 octobre, sans réponse à ce jour.</td></tr><tr><td class="nom">Julie Ozenne</td><td data-l="Vacations"><span class="p oui">✓ Pour</span></td><td data-l="Commission d'enquête"><span class="p oui">✓ Pour</span></td><td>Cosignataire de l'AC102, elle le votera en séance. Soutient l'heure à 80 € brut « afin de lutter au mieux contre l'insécurité professionnelle et matérielle de celles et ceux qui font vivre l'université ». Son groupe n'a plus de droit de tirage, mais elle confirme son « soutien à toute démarche de création de commission d'enquête ».</td></tr><tr><td class="nom">Ayda Hadizadeh</td><td data-l="Vacations"><span class="p oui">✓ Pour</span></td><td data-l="Commission d'enquête"><span class="p ouv">~ Ouvert·e</span></td><td>« Entièrement favorable » aux mesures pour les vacataires et les ATER et à l'heure à 80 € brut pour toutes les heures travaillées. Sur la commission d'enquête, doit « se renseigner » sur ce qui reste possible d'ici la fin de la mandature. Propose une rencontre.</td></tr><tr><td class="nom">Rodrigo Arenas</td><td data-l="Vacations"><span class="p oui">✓ Pour</span></td><td data-l="Commission d'enquête"><span class="p ouv">~ Ouvert·e</span></td><td>Son équipe précise le 3 novembre qu'il est « pleinement en accord » avec nos demandes et les soutiendra en commission et dans l'hémicycle. Ne suit pas lui-même l'enseignement supérieur ; propose de relayer auprès des élu·es en charge.</td></tr><tr><td class="nom">Violette Spillebout</td><td data-l="Vacations"><span class="p esq">≈ Élude la question</span></td><td data-l="Commission d'enquête"><span class="p ouv">~ Ouvert·e</span></td><td>Se dit <q>attentive</q>. Après relance (réponse de sa collaboratrice, 27 octobre) : son groupe ne dispose pas de droit de tirage, mais elle regardera <q>avec attention</q> une initiative portée par un autre groupe ou sous une autre forme. Souhaite recevoir nos témoignages des Hauts-de-France pour, le cas échéant, <q>interpeller le ministre</q>, et propose une rencontre à Lille.</td></tr><tr><td class="nom">Mickaël Bouloux</td><td data-l="Vacations"><span class="p ouv">~ Ouvert·e</span></td><td data-l="Commission d'enquête"><span class="p rien">— Pas encore de réponse</span></td><td>Juge la précarité <q>préoccupante</q> et <q>socialement injuste</q> ; avait cosigné un amendement au budget 2025 pour mieux rémunérer les précaires (non adopté). Se dit non compétent sur les crédits des universités et a transmis notre note à Fatiha Keloua Hachi. Relancé le 23 octobre sur la commission d'enquête, sans réponse à ce jour.</td></tr><tr><td class="nom">Delphine Lingemann</td><td data-l="Vacations"><span class="p esq">≈ Élude la question</span></td><td data-l="Commission d'enquête"><span class="p non">↷ Autre voie</span></td><td>AC102 <q>pas encore examiné</q>. Préfère une mission d'information.</td></tr></tbody></table><div class="cle"><span><b class="p oui">✓ Pour</b> engagement clair</span><span><b class="p ouv">~ Ouvert·e</b> intérêt, sans engagement</span><span><b class="p non">↷ Autre voie</b> propose autre chose</span><span><b class="p esq">≈ Élude la question</b> a répondu sans se prononcer sur ce point</span><span><b class="p rien">— Pas encore de réponse</b> question posée, sans réponse à ce jour</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Réponses reçues par des citoyen·nes</h2>
+    <p class="sous">Merci à celles et ceux qui ont écrit à leur député·e avec notre modèle et nous ont transmis la réponse.</p>
+    <table class="tab"><thead><tr><th>Député·e</th><th>Vacations</th><th>Commission d'enquête</th><th>En bref</th></tr></thead><tbody><tr><td class="nom">Tristan Lahais</td><td data-l="Vacations"><span class="p oui">✓ Pour</span></td><td data-l="Commission d'enquête"><span class="p oui">✓ Pour</span></td><td>Réponse à une chercheuse précaire, 29 octobre : votera en séance l'amendement II-AC102, qu'il a cosigné, et les amendements qui revalorisent les vacations et améliorent la situation des ATER. Soutient l'heure de vacation à 80 € brut pour toutes les heures réellement travaillées (préparation, corrections, surveillances), payée chaque mois et à temps. Soutient la création d'une commission d'enquête sur la précarité dans l'ESR, mais le droit de tirage relève d'une décision de groupe et le calendrier offre <q>très peu d'opportunités</q>. <q>Les vacataires permettent aujourd'hui au service public de l'ESR de ne pas s'écrouler, mais au prix de leur exploitation.</q></td></tr><tr><td class="nom">Fanny Dombre-Coste</td><td data-l="Vacations"><span class="p oui">✓ Pour</span></td><td data-l="Commission d'enquête"><span class="p ouv">~ Ouvert·e</span></td><td>Favorable à la revalorisation, et <q>soutient les différentes mesures en faveur des vacataires et des ATER</q>. Après relance (réponse de son collaborateur, 27 octobre) : partage l'initiative d'une commission d'enquête, mais son groupe ne dispose plus de droit de tirage d'ici la présidentielle ; veillera à ce que le sujet soit repris lorsqu'il le pourra.</td></tr><tr><td class="nom">Catherine Hervieu</td><td data-l="Vacations"><span class="p oui">✓ Pour</span></td><td data-l="Commission d'enquête"><span class="p non">↷ Autre voie</span></td><td>Cosigne l'AC102. Sur la commission d'enquête, renvoie d'abord au Sénat ; puis précise que son groupe a déjà utilisé cette session son droit à obtenir une commission d'enquête, et ne pourra plus en demander avant la prochaine session, après la présidentielle.</td></tr><tr><td class="nom">Sabrina Sebaihi</td><td data-l="Vacations"><span class="p esq">≈ Élude la question</span></td><td data-l="Commission d'enquête"><span class="p esq">≈ Élude la question</span></td><td>Assure de sa <q>vigilance</q>, sans engagement précis.</td></tr><tr><td class="nom">Estelle Mercier</td><td data-l="Vacations"><span class="p oui">✓ Pour</span></td><td data-l="Commission d'enquête"><span class="p ouv">~ Ouvert·e</span></td><td>Favorable à une revalorisation et à la prise en compte de toutes les heures travaillées. Besoins permanents : emplois stables. La précarité <q>mérite un examen parlementaire approfondi</q> ; sera <q>attentive aux initiatives</q>.</td></tr><tr><td class="nom">Sylvain Carrière</td><td data-l="Vacations"><span class="p ouv">~ Ouvert·e</span></td><td data-l="Commission d'enquête"><span class="p esq">≈ Élude la question</span></td><td>Réponse de groupe : hausse des moyens des universités, plan de recrutement de titulaires ; reconnaît la précarisation des jeunes chercheur·es. Rien sur l'AC102 ni sur la commission d'enquête.</td></tr><tr><td class="nom">Mathilde Hignet</td><td data-l="Vacations"><span class="p oui">✓ Pour</span></td><td data-l="Commission d'enquête"><span class="p esq">≈ Élude la question</span></td><td>Après relance (réponse de son attaché parlementaire) : « soutiendra évidemment toutes les mesures qui vont dans le sens d'une amélioration de la rémunération », si l'examen a lieu ; juge probable le rejet de la partie recettes. Sur la commission d'enquête, ne s'avance pas : son groupe ne peut en créer qu'une par an de sa propre initiative.</td></tr><tr><td class="nom">Aurélien Saintoul</td><td data-l="Vacations"><span class="p ouv">~ Ouvert·e</span></td><td data-l="Commission d'enquête"><span class="p esq">≈ Élude la question</span></td><td>Réponse de groupe sur le financement des universités ; doute que le budget soit voté sans recours au 49.3. Rien sur la commission d'enquête.</td></tr><tr><td class="nom">Stéphane Peu</td><td data-l="Vacations"><span class="p esq">≈ Élude la question</span></td><td data-l="Commission d'enquête"><span class="p esq">≈ Élude la question</span></td><td>Assure de son <q>soutien pour défendre le budget de l'enseignement supérieur</q>, sans autre précision.</td></tr><tr><td class="nom">Marie Mesmeur</td><td data-l="Vacations"><span class="p ouv">~ Ouvert·e</span></td><td data-l="Commission d'enquête"><span class="p esq">≈ Élude la question</span></td><td>Réponse de groupe à des électeur·rices de sa circonscription : hausse des moyens des universités, plan de recrutement de 30 000 personnels statutaires sur cinq ans ; reconnaît la précarisation des jeunes chercheur·es. Rien sur l'AC102 ni sur la commission d'enquête. Relancée avec des questions précises, sans réponse à ce jour.</td></tr><tr><td class="nom">Pierrick Courbon</td><td data-l="Vacations"><span class="p oui">✓ Pour</span></td><td data-l="Commission d'enquête"><span class="p esq">≈ Élude la question</span></td><td>Réponse à une doctorante vacataire de Saint-Étienne : partage <q>pleinement</q> ses constats. Indique avoir fait adopter en commission un amendement pour que les ATER soient payé·es au moins autant que les doctorant·es contractuel·les, et avoir déposé un amendement garantissant aux vacataires au moins le Smic horaire, <q>en tenant compte de l'ensemble du temps de travail effectivement accompli</q>. Ces amendements seront redéposés en séance, dont l'examen est <q>très incertain</q>. Rien sur la commission d'enquête.</td></tr><tr><td class="nom">Philippe Naillet</td><td data-l="Vacations"><span class="p oui">✓ Pour</span></td><td data-l="Commission d'enquête"><span class="p ouv">~ Ouvert, mais « pas possible »</span></td><td>Réponse à une chercheuse de La Réunion : votera en séance l'amendement II-AC102 et les mesures adoptées en commission pour les vacataires et les ATER ; juge le taux actuel <q>indigne des missions confiées aux enseignants</q> et l'objectif de 80 € brut <q>juste</q>. Sur la commission d'enquête, <q>sans remettre en cause son intérêt</q>, il indique qu'elle n'est pas possible : selon lui, les groupes ont renoncé à leur droit de tirage cette session pour préserver les « niches parlementaires ».</td></tr><tr><td class="nom">Xavier Breton</td><td data-l="Vacations"><span class="p esq">≈ Élude la question</span></td><td data-l="Commission d'enquête"><span class="p esq">≈ Élude la question</span></td><td>Réponse de son attaché parlementaire à des enseignant·es de Lyon 3 : le député sera d'une <q>pleine vigilance</q> lors de l'examen du budget en séance. Rien sur les vacataires ni sur la commission d'enquête.</td></tr><tr><td class="nom">Claudia Rouaux</td><td data-l="Vacations"><span class="p esq">≈ Élude la question</span></td><td data-l="Commission d'enquête"><span class="p esq">≈ Élude la question</span></td><td>Réponse à des électeur·rices de sa circonscription : critique le crédit d'impôt recherche, dont le bilan lui paraît <q>largement contestable</q> et qui génère <q>d'importants effets d'aubaine</q>, ainsi que le financement public du privé ; soutient les amendements de son groupe pour recentrer le CIR sur les TPE et PME. Rien sur les vacataires ni sur la commission d'enquête.</td></tr><tr><td class="nom">Jean-Luc Bourgeaux</td><td data-l="Vacations"><span class="p esq">≈ Élude la question</span></td><td data-l="Commission d'enquête"><span class="p esq">≈ Élude la question</span></td><td>Réponse à une enseignante-chercheuse de sa circonscription, 29 octobre : assure de <q>toute ma vigilance</q> lors des discussions du budget et juge l'investissement dans la formation et la recherche <q>indispensable</q>. Rien sur les vacataires ni sur la commission d'enquête.</td></tr></tbody></table>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Pas de réponse à ce jour</h2>
+    <p class="sous">Certain·es ont déposé ou cosigné des amendements en faveur des précaires. Nous saluons ce travail, mais nous attendons aussi leur réponse sur la commission d'enquête.</p>
+    <p class="sous">Nous savons que la période budgétaire est chargée pour les parlementaires, et que le délai de réponse a pu paraître court. Mais ces précarités, et ces ultra-précarités, ne datent pas de cet automne : elles existent depuis des années, et elles sont tolérées depuis tout aussi longtemps. Chaque député·e peut encore nous répondre : nous mettrons ce baromètre à jour.</p>
+    <div class="silences">
+      <span>Alexandra Martin</span><span>Alexandre Portier</span><span>Alexis Corbière</span><span>Anna Pic</span><span>Anne Genetet</span><span>Béatrice Piron</span><span>Bertrand Sorre</span><span>Catherine Ibled</span><span>Céline Calvez</span><span>Charles Sitzenstuhl</span><span>Dominique Paillat</span><span>Erwan Balanant</span><span>Frantz Gumbs</span><span>Frédérique Meunier</span><span>Géraldine Bannier</span><span>Graziella Melchior</span><span>Hendrik Davi</span><span>Jean-Yves Bonnefoy</span><span>Jean Bodart</span><span>Jérémie Patrier-Leitus</span><span>Joël Bruneau</span><span>Julie Delpech</span><span>Laurent Croizier</span><span>Lionel Duparay</span><span>Nicole Sanquer</span><span>Paul Vannier</span><span>Philippe Fait</span><span>Pierre Henriet</span><span>Prisca Thevenot</span><span>Sandrine Lalanne</span><span>Sophie Taillé-Polian</span><span>Soumya Bourouaha</span><span>Véronique Ludmann</span><span>Virginie Duby-Muller</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Les trois questions posées</h2>
+    <ol class="questions">
+      <li>Voterez-vous les mesures adoptées en commission en faveur des vacataires et des ATER, notamment l'amendement II-AC102 adopté en commission, qui vise à doubler à terme le taux horaire des vacations, ainsi que ceux qui seront déposés en séance dans le même sens ?</li>
+      <li>Soutenez-vous une heure de vacation à 80 € brut, payée pour toutes les heures réellement travaillées ?</li>
+      <li>Soutenez-vous la création d'une commission d'enquête sur la précarité dans l'enseignement supérieur et la recherche ?</li>
+    </ol>
+    <p class="retenir">Plusieurs député·es soutiennent une revalorisation des vacations. Mais à ce jour, <strong>trois député·es seulement se sont engagé·es clairement pour une commission d'enquête</strong>. Ses pouvoirs d'investigation permettraient enfin d'obtenir des chiffres fiables, établissement par établissement.</p>
+<p class="retenir">Plusieurs groupes nous indiquent avoir déjà utilisé, cette session, leur droit de créer une commission d'enquête de leur propre initiative. Restent deux voies : une proposition de résolution votée par l'Assemblée, que nous demandons aux député·es de tous les groupes de cosigner, et une commission d'enquête au Sénat, qui examinera le budget à son tour.</p>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>Votre député·e n'apparaît pas ici ?</h2>
+    <p>Écrivez-lui avec notre modèle de mail, puis transmettez-nous sa réponse. Nous mettrons ce baromètre à jour.</p>
+    <a class="btn" href="mailto:contact@jesuislea.fr?subject=R%C3%A9ponse%20de%20mon%20d%C3%A9put%C3%A9%C2%B7e">Transmettre une réponse</a>
+  </div>
+</div>
+
+<footer><div class="wrap">#JeSuisLéa · <a href="index.html">jesuislea.fr</a> · contact@jesuislea.fr</div></footer>
+
+</body>
+</html>

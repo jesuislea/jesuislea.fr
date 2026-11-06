@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<title>Transparence : les universités et leurs vacataires · Je suis Léa</title>
+<meta name="description" content="Combien de cours reposent sur les vacataires ? Nos demandes d'accès aux documents auprès de 57 établissements, et ce que disent les chiffres.">
+<style>
+  :root{
+    --nuit:#222a4d;--surface:#2e3868;--surface-2:#191f3d;
+    --clair:#e9ebf7;--doux:#a2a9cf;--rose:#ec4899;--aqua:#4fd6c1;
+    --trait:rgba(255,255,255,.12);
+    --sans:"Helvetica Neue",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    --degrade:linear-gradient(95deg,var(--rose),var(--aqua));
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--nuit);color:var(--clair);font-family:Georgia,"Iowan Old Style",serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--aqua)}
+  .wrap{max-width:760px;margin:0 auto;padding:0 1.25rem}
+  .bandeau{background:var(--surface-2);color:var(--doux);font-family:var(--sans);font-size:.72rem;letter-spacing:.06em;padding:.55rem 1.25rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;border-bottom:1px solid var(--trait)}
+  .bandeau a{color:var(--doux);text-decoration:none}
+  .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--doux);border-bottom:1px solid var(--trait);padding-bottom:.7rem;margin-bottom:2rem;display:flex;justify-content:space-between;gap:1rem}
+  header{padding:3.5rem 0 2rem}
+  h1{font-family:var(--sans);font-size:clamp(2.2rem,7vw,3.8rem);line-height:1.02;font-weight:700;letter-spacing:-.02em;margin-bottom:1.3rem}
+  h1 em{font-style:normal;color:var(--rose)}
+  .chapo{font-size:1.12rem;color:var(--doux);max-width:60ch}
+.chapo.alerte{margin-top:1rem;padding:.8rem 1rem;border-left:4px solid #e84393;background:rgba(232,67,147,.10);font-size:1rem;color:inherit}
+
+  /* gros chiffres */
+  .chiffres{background:var(--surface-2);padding:2.6rem 0;margin-top:2rem}
+  .chiffres .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+  .chiffre .n{font-family:var(--sans);font-weight:700;font-size:clamp(2.6rem,9vw,4.6rem);line-height:1;letter-spacing:-.02em}
+  .chiffre .l{font-family:var(--sans);font-size:.85rem;color:var(--doux);margin-top:.45rem;max-width:20ch}
+  .n.rose{color:var(--rose)} .n.aqua{color:var(--aqua)} .n.blanc{color:var(--clair)}
+
+  /* graphique en cases */
+  section{padding:3rem 0 .5rem}
+  h2{font-family:var(--sans);font-size:1.7rem;font-weight:700;letter-spacing:-.01em;margin-bottom:.5rem}
+  .sous{font-family:var(--sans);font-size:.92rem;color:var(--doux);margin-bottom:1.6rem;max-width:60ch}
+  .cases{display:grid;grid-template-columns:repeat(11,1fr);gap:6px;max-width:520px}
+  .case{aspect-ratio:1;border-radius:4px;position:relative}
+  .case.fond{background:var(--aqua)}
+  .case.renvoi{background:repeating-linear-gradient(45deg,var(--aqua) 0 3px,transparent 3px 7px);border:1.5px solid var(--aqua)}
+  .case.silence{background:transparent;border:1.5px solid var(--rose)}
+  .legende{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;font-family:var(--sans);font-size:.85rem;color:var(--doux);margin-top:1.1rem}
+  .legende span{display:inline-flex;align-items:center;gap:.45rem}
+  .legende i{display:inline-block;width:14px;height:14px;border-radius:3px}
+
+  /* barre commission */
+  .barre-box{background:var(--surface);border:1px solid var(--trait);border-left:3px solid var(--rose);border-radius:5px;padding:1.4rem 1.5rem;margin-top:1rem}
+  .barre-box .q{font-family:var(--sans);font-weight:600;font-size:1.05rem;margin-bottom:1rem}
+  .ligne{display:grid;grid-template-columns:9.5rem 1fr 2rem;align-items:center;gap:.8rem;font-family:var(--sans);font-size:.86rem;color:var(--doux);margin-bottom:.55rem}
+  .piste{height:12px;background:var(--surface-2);border-radius:6px;overflow:hidden}
+  .piste b{display:block;height:100%;border-radius:6px}
+  .ligne .v{color:var(--clair);font-weight:700;text-align:right}
+  .barre-box .note{font-family:var(--sans);font-size:.8rem;color:var(--doux);margin-top:.8rem}
+
+  /* fiches */
+  .fiches{display:grid;gap:.9rem}
+  .fiche{background:var(--surface);border:1px solid var(--trait);border-radius:5px;padding:1.1rem 1.25rem}
+  .fiche .nom{font-family:var(--sans);font-weight:700;font-size:1.05rem;display:flex;justify-content:space-between;gap:.8rem;flex-wrap:wrap;align-items:baseline}
+  .tag{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.15rem .55rem;border-radius:20px;white-space:nowrap}
+  .tag.vert{background:rgba(79,214,193,.16);color:var(--aqua)}
+  .tag.jaune{background:rgba(255,214,102,.14);color:#ffd666}
+  .tag.gris{background:rgba(255,255,255,.08);color:var(--doux)}
+  .fiche p{color:var(--doux);font-size:.98rem;margin-top:.4rem}
+  .fiche q{color:var(--clair)}
+
+
+  /* tableau des réponses */
+  .tab{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:.9rem}
+  .tab th{text-align:left;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--doux);font-weight:600;padding:.6rem .7rem;border-bottom:1px solid var(--trait)}
+  .tab td{padding:.85rem .7rem;border-bottom:1px solid var(--trait);vertical-align:top;color:var(--doux);line-height:1.45}
+  .tab td.nom{color:var(--clair);font-weight:700;white-space:nowrap}
+  .tab tr:hover td{background:rgba(255,255,255,.03)}
+  .p{font-weight:700;white-space:nowrap}
+  .p.oui{color:#4ade80} .p.ouv{color:#ffd666} .p.non{color:#c9a7ff} .p.rien{color:rgba(162,169,207,.55)} .p.esq{color:#f0a37a}
+  .tab q{color:var(--clair)}
+  .cle{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-family:var(--sans);font-size:.8rem;color:var(--doux);margin-top:.9rem}
+  @media (max-width:640px){
+    .tab thead{display:none}
+    .tab,.tab tbody,.tab tr,.tab td{display:block;width:100%}
+    .tab tr{background:var(--surface);border:1px solid var(--trait);border-radius:5px;margin-bottom:.8rem;padding:.4rem 0}
+    .tab td{border:none;padding:.3rem 1rem}
+    .tab td.nom{font-size:1.02rem;padding-top:.6rem}
+    .tab td[data-l]::before{content:attr(data-l)" : ";color:var(--doux);font-weight:400}
+  }
+  .silences{display:flex;flex-wrap:wrap;gap:.5rem}
+  .silences span{font-family:var(--sans);font-size:.85rem;border:1px solid rgba(236,72,153,.45);color:var(--clair);padding:.3rem .7rem;border-radius:20px}
+
+  .retenir{border-left:3px solid var(--aqua);padding-left:1.2rem;font-size:1.12rem;max-width:62ch;margin-top:.5rem}
+  .retenir strong{color:var(--rose)}
+  .cta{background:var(--surface-2);margin-top:3rem;padding:2.6rem 0 3rem}
+  .cta h2{margin-bottom:.8rem}
+  .cta p{color:var(--doux);max-width:60ch;margin-bottom:1.4rem}
+  .btn{display:inline-block;background:var(--degrade);color:var(--nuit);font-family:var(--sans);font-size:.92rem;font-weight:700;text-decoration:none;padding:.9rem 1.6rem;border-radius:6px}
+  .questions{list-style:none;counter-reset:q;max-width:64ch}
+  .questions li{counter-increment:q;position:relative;padding-left:2rem;margin-bottom:.8rem;color:var(--doux)}
+  .questions li::before{content:counter(q);position:absolute;left:0;color:var(--aqua);font-family:var(--sans);font-weight:700}
+  footer{font-family:var(--sans);font-size:.8rem;color:var(--doux);padding:2rem 0 3rem;border-top:1px solid var(--trait)}
+
+  @media (max-width:560px){
+    .chiffres .wrap{grid-template-columns:1fr;gap:1.4rem}
+    .cases{grid-template-columns:repeat(11,1fr);gap:4px}
+    .ligne{grid-template-columns:7rem 1fr 1.6rem}
+  }
+
+  .note-lien{font-family:var(--sans);font-size:.82rem;color:var(--doux);margin:.9rem 0 0;line-height:1.6}
+  .apercu{background:var(--surface);border:1px solid var(--trait);border-radius:6px;padding:1.2rem 1.3rem 1rem;margin-bottom:1.4rem}
+  .ap-titre{font-family:var(--sans);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--aqua);font-weight:700;margin-bottom:.9rem}
+  .ap-ligne{display:grid;grid-template-columns:minmax(0,13rem) 1fr 4rem;gap:.8rem;align-items:center;margin-bottom:.75rem;font-family:var(--sans)}
+  .ap-nom{color:var(--clair);font-weight:600;font-size:.92rem;line-height:1.2}.ap-nom small{display:block;color:var(--doux);font-weight:400;font-size:.74rem;margin-top:.15rem}
+  .ap-piste{height:.7rem;background:rgba(255,255,255,.07);border-radius:4px;overflow:hidden}.ap-piste b{display:block;height:100%;background:var(--rose);border-radius:4px}
+  .ap-ligne.ref .ap-piste b{background:var(--doux)}.ap-ligne.ref .ap-nom{color:var(--doux)}
+  .ap-v{font-family:var(--sans);font-weight:700;color:var(--clair);text-align:right;font-size:1rem}
+  .ap-note{font-family:var(--sans);font-size:.76rem;color:var(--doux);margin:.4rem 0 0;line-height:1.5}
+  @media (max-width:600px){.ap-ligne{grid-template-columns:1fr 3.6rem}.ap-piste{grid-column:1/-1;order:3}}
+  .compteurs{display:flex;flex-wrap:wrap;gap:.8rem;margin:0 0 1.1rem}.compteurs>div{flex:1 1 9rem;background:var(--surface);border:1px solid var(--trait);border-radius:6px;padding:.8rem 1rem;font-family:var(--sans);font-size:.85rem;color:var(--doux)}
+  .cn{display:block;font-size:2rem;font-weight:700;line-height:1.1;margin-bottom:.15rem}.cn.ok{color:var(--aqua)}.cn.ar{color:#ffd666}.cn.att{color:var(--clair)}
+  .attente{margin-top:1rem;font-family:var(--sans)}.attente summary{cursor:pointer;color:var(--aqua);font-weight:600;font-size:.9rem}
+  .liste-att{color:var(--doux);font-size:.85rem;line-height:1.8;margin-top:.7rem}
+</style><style>
+  .statut{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.15rem .55rem;border-radius:20px;white-space:nowrap}
+  .s-ok{background:rgba(79,214,193,.16);color:var(--aqua)}
+  .s-ar{background:rgba(255,214,102,.14);color:#ffd666}
+  .s-att{background:rgba(255,255,255,.08);color:var(--doux)}
+  .grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:.55rem;font-family:var(--sans);font-size:.88rem}
+  .etab{background:var(--surface);border:1px solid var(--trait);border-radius:5px;padding:.6rem .8rem;display:flex;flex-direction:column;gap:.35rem}
+  .etab b{color:var(--clair);font-weight:600}
+  .barre3{display:flex;height:34px;border-radius:6px;overflow:hidden;font-family:var(--sans);font-size:.8rem;font-weight:700;margin:.6rem 0 .4rem}
+  .barre3 div{display:flex;align-items:center;justify-content:center;color:var(--nuit);white-space:nowrap;overflow:hidden}
+  .sommaire{padding:2rem 0 .5rem}
+  .sommaire .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
+  .sommaire a{display:flex;flex-direction:column;gap:.35rem;background:var(--surface);border:1px solid var(--trait);border-radius:8px;padding:1rem 1.1rem;text-decoration:none;color:var(--clair);font-family:var(--sans);transition:border-color .15s,transform .15s}
+  .sommaire a:hover{border-color:var(--aqua);transform:translateY(-2px)}
+  .sommaire .num{font-size:1.6rem;font-weight:800;color:var(--rose);line-height:1}
+  .sommaire b{font-size:1rem;line-height:1.3}
+  .sommaire a span:last-child{font-size:.82rem;color:var(--doux);line-height:1.4}
+  .partie{font-family:var(--sans);font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--aqua);margin-bottom:.4rem}
+  .h3{font-family:var(--sans);font-size:1.15rem;margin:1.8rem 0 .7rem}
+  section[id]{scroll-margin-top:1rem;border-top:1px solid var(--trait);margin-top:2rem}
+  @media (max-width:640px){.sommaire .wrap{grid-template-columns:1fr}}
+  .fiche p.src{font-family:var(--sans);font-size:.78rem;color:var(--doux);margin-top:.6rem}
+  @media (max-width:560px){.barre3{font-size:.7rem}.barre3 .hc{font-size:0}}
+</style>
+</head>
+<body>
+
+<div class="bandeau"><a href="index.html">← Je suis Léa</a><span>Transparence · mis à jour le 2 novembre 2026</span></div>
+
+<header>
+  <div class="wrap">
+    <div class="label"><span>Transparence</span><span>Données publiques et demandes d'accès aux documents</span></div>
+    <h1>Ce que les chiffres des universités<br><em>disent des vacataires.</em></h1>
+    <p class="chapo">Selon l'Inspection générale, les vacataires assurent environ 20 % des heures d'enseignement, mais leur nombre reste « difficilement mesurable faute d'un suivi homogène » (<a href="https://www.education.gouv.fr/igesr/les-charges-d-enseignement-vacataires-dans-les-etablissements-du-superieur-465621">rapport de juin 2025</a>). Nous avons donc cherché les chiffres nous-mêmes, dans les documents publiés par les universités et dans ceux que nous leur demandons. Cette page en rend compte en trois parties.</p>
+  </div>
+</header>
+
+<nav class="sommaire"><div class="wrap">
+  <a href="#partie1"><span class="num">1</span><b>Combien de cours reposent sur les vacataires ?</b><span>Jusqu'à une heure de cours sur trois dans certains établissements.</span></a>
+  <a href="#partie2"><span class="num">2</span><b>Ce que les universités savent payer</b><span>Primes de fonction et contrats de conseil : l'argent existe.</span></a>
+  <a href="#demandes"><span class="num">3</span><b>Où en sont nos demandes ?</b><span>57 établissements sollicités, réponses attendues fin novembre.</span></a>
+</div></nav>
+
+<div class="chiffres">
+  <div class="wrap">
+    <div class="chiffre"><div class="n rose">1/3</div><div class="l">des heures de cours assurées par des vacataires à Sciences Po Bordeaux</div></div>
+    <div class="chiffre"><div class="n aqua">6 sur 10</div><div class="l">personnes qui enseignent à l'université de Bordeaux sont vacataires</div></div>
+    <div class="chiffre"><div class="n blanc">57</div><div class="l">établissements sollicités du 25 au 30 octobre 2026</div></div>
+  </div>
+</div>
+
+<section id="partie1">
+  <div class="wrap">
+    <div class="partie">Partie 1</div>
+    <h2>Combien de cours reposent sur les vacataires ?</h2>
+    <p class="sous">Les données reçues, telles que les établissements les publient dans leurs propres rapports.</p>
+    <div class="fiches">
+      <div class="apercu">
+        <div class="ap-titre">En un coup d'œil</div>
+        <div class="ap-ligne"><div class="ap-nom">Le Havre Normandie<small>des intervenant·es en heures complémentaires (2025)</small></div><div class="ap-piste"><b style="width:71%"></b></div><div class="ap-v">71 %</div></div>
+        <div class="ap-ligne"><div class="ap-nom">Université de Bordeaux<small>des personnes qui enseignent</small></div><div class="ap-piste"><b style="width:59%"></b></div><div class="ap-v">≈ 59 %</div></div>
+        <div class="ap-ligne"><div class="ap-nom">Sciences Po Bordeaux<small>des heures de cours (2024)</small></div><div class="ap-piste"><b style="width:33%"></b></div><div class="ap-v">33 %</div></div>
+        <div class="ap-ligne"><div class="ap-nom">Rennes 2<small>des heures de cours (2024-2025)</small></div><div class="ap-piste"><b style="width:22%"></b></div><div class="ap-v">22 %</div></div>
+        <p class="ap-note">Part des vacataires. Les établissements ne mesurent pas tous la même chose (heures, personnes) : les chiffres ne sont pas strictement comparables, mais ils vont tous dans le même sens. Détails et sources ci-dessous.</p>
+      </div>
+      <div class="fiche">
+        <div class="nom">Sciences Po Bordeaux <span class="tag vert">Données reçues le 29 octobre</span></div>
+        <p>En 2024, les vacataires ont assuré <strong style="color:var(--clair)">9 312 heures</strong> d'enseignement sur environ 28 550 : <strong style="color:var(--rose)">près d'une heure sur trois</strong>. Le service statutaire des enseignant·es permanent·es n'en couvre qu'un peu plus de la moitié. La part des vacations est stable depuis 2023 (32,4 %), tandis que les heures complémentaires des permanent·es augmentent fortement : +73 % en 2023, +14 % en 2024, selon le rapport.</p>
+        <div class="barre3">
+          <div style="width:54.3%;background:var(--aqua)">Permanent·es 54 %</div>
+          <div class="hc" style="width:13.1%;background:#ffd666">HC 13 %</div>
+          <div style="width:32.6%;background:var(--rose);color:#fff">Vacataires 33 %</div>
+        </div>
+        <p class="src">Source : rapport social unique 2024 de Sciences Po Bordeaux, p. 11 (heures équivalent TD), transmis le 29 octobre 2026 en réponse à notre demande. Total et pourcentages calculés par nous. Les 9 312 heures incluent 1 172 heures assurées par des personnels de l'université de Bordeaux.</p>
+      </div>
+      <div class="fiche">
+        <div class="nom">Université de Bordeaux <span class="tag jaune">Données partielles</span></div>
+        <p>L'université présente <strong style="color:var(--clair)">4 853 vacataires d'enseignement</strong> comme des « collaborateurs ponctuels », pour un potentiel de 116 276 heures. Elle compte 3 387 personnels d'enseignement et de recherche, titulaires et contractuel·les. Autrement dit, <strong style="color:var(--rose)">environ six personnes sur dix qui enseignent à l'université de Bordeaux sont vacataires</strong>. L'université examine notre demande de données plus détaillées.</p>
+        <p class="src">Source : rapport social unique 2025 de l'université de Bordeaux, annexe « Chiffres clés », transmis par l'université le 27 octobre 2026 en réponse à notre demande. La proportion est calculée par nous sur les effectifs, pas sur les heures : beaucoup de vacataires n'assurent que quelques heures.</p>
+      </div>
+      <div class="fiche">
+        <div class="nom">Université Le Havre Normandie <span class="tag jaune">Données partielles · 2 novembre</span></div>
+        <p>En 2025, <strong style="color:var(--clair)">1 100 personnes</strong> ont assuré des heures ou cours complémentaires à l'université. Parmi elles, <strong style="color:var(--rose)">71 % étaient des vacataires</strong>, soit environ 780 personnes, une proportion « constante » selon l'université. L'université doit encore nous transmettre ses données détaillées sur les vacataires.</p>
+        <p>À titre de comparaison, son compte financier 2023 recense <strong style="color:var(--clair)">318 emplois d'enseignant·es titulaires</strong> et <strong style="color:var(--clair)">123 en CDD</strong> (en équivalents temps plein travaillé). Fin 2023, l'université disposait d'un fonds de roulement de 20,1 millions d'euros et d'une trésorerie de 23 millions d'euros.</p>
+        <p class="src">Source : <a href="https://www.univ-lehavre.fr/wp-content/uploads/2026/06/RSU-2025-V_finale.pdf">rapport social unique 2025 de l'université Le Havre Normandie</a>, p. 45, indiqué par l'université le 2 novembre 2026 en réponse à notre demande. Le nombre d'environ 780 vacataires est calculé par nous. Compte financier 2023 (tableau des emplois et tableau de financement), approuvé par le conseil d'administration le 14 mars 2024 et transmis par l'université. Les emplois sont comptés en équivalents temps plein, les vacataires en personnes : les deux chiffres ne sont pas directement comparables.</p>
+      </div>
+      <div class="fiche">
+        <div class="nom">Université Rennes 2 <span class="tag gris">Chiffres de l'université, via la presse et un syndicat</span></div>
+        <p>En 2024-2025, <strong style="color:var(--clair)">1 987 enseignant·es vacataires</strong> ont assuré <strong style="color:var(--clair)">55 000 heures de cours sur 250 000</strong>, soit environ 22 %. Sur 911 enseignant·es-chercheur·es, 577 sont titulaires. Notre propre demande à l'université est en cours.</p>
+        <p class="src">Sources : chiffres transmis par l'université Rennes 2 à une journaliste, relayés par Sud Éducation Rennes 2 dans un message aux personnels du 4 novembre 2026 ; <a href="https://www.ouest-france.fr/bretagne/rennes-35000/vacataire-a-rennes-2-lea-temoigne-de-la-precarite-de-lenseignement-universitaire-f4511e58-ce36-11f1-bb5f-3dc5c0feacca">Ouest-France, 24 octobre 2026</a>. Pourcentage calculé par nous.</p>
+      </div>
+    </div>
+    <h3 class="h3">Ce que cela veut dire</h3>
+    <ul class="questions">
+      <li><strong style="color:var(--clair)">La moyenne nationale masque des écarts énormes.</strong> Selon l'<a href="https://www.education.gouv.fr/igesr/les-charges-d-enseignement-vacataires-dans-les-etablissements-du-superieur-465621">Inspection générale</a>, les vacataires assurent environ 20 % de la charge d'enseignement. À Sciences Po Bordeaux, c'est près d'un tiers des heures, et à l'université de Bordeaux, les vacataires sont plus nombreux que les personnels d'enseignement et de recherche.</li>
+      <li><strong style="color:var(--clair)">Les vacations ne sont pas un appoint.</strong> Quand un tiers des heures en dépend, année après année, elles couvrent des besoins permanents. À besoin permanent, emploi permanent.</li>
+      <li><strong style="color:var(--clair)">Les titulaires aussi sont sous pression.</strong> À Sciences Po Bordeaux, la forte hausse des heures complémentaires suggère que les équipes permanentes compensent elles aussi le manque de postes.</li>
+      <li><strong style="color:var(--clair)">Ces chiffres ont leurs limites.</strong> Une partie des vacataires exerce une autre activité principale, ce qui est fréquent dans les instituts d'études politiques. Les rapports mesurent la dépendance aux vacations, pas directement la précarité. C'est pourquoi nous demandons aussi le statut des vacataires et les délais de paiement.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="partie2">
+  <div class="wrap">
+    <div class="partie">Partie 2</div>
+    <h2>Ce que les universités savent payer</h2>
+<p class="sous">Nous ne contestons ni les primes des collègues titulaires, qui rémunèrent de vraies responsabilités, ni le recours ponctuel à des prestataires. Mais ces chiffres publics montrent que l'argent existe quand l'université le décide, alors que les vacataires restent payé·es 43,50 € brut l'heure de TD, un taux censé couvrir aussi la préparation et les corrections, et que leurs surveillances d'examen sont souvent non rémunérées.</p>
+    <div class="fiches" style="margin:1.4rem 0 .4rem">
+      <div class="fiche">
+        <div class="nom">Université Paris-Panthéon-Assas <span class="tag gris">Délibération du conseil d'administration</span></div>
+        <p>Le conseil d'administration du 1<sup>er</sup> juillet 2026 fixe les primes de fonction des enseignant·es-chercheur·ses titulaires. Un vice-président statutaire touche <strong style="color:var(--clair)">10 500 € par an</strong>, soit environ six mois de salaire net d'un·e ATER. Un président de département, jusqu'à 8 750 €. Une responsabilité de master, 3 500 €.</p>
+        <p>Surtout, la délibération convertit chaque prime en heures de cours : 3 500 € valent 35 heures de cours magistral. <strong style="color:var(--rose)">Une heure de responsabilité y vaut donc 100 €. Une heure de TD assurée par un·e vacataire est payée 43,50 € brut, et une heure de cours magistral, qui compte pour 1,5 heure de TD, environ 65 €.</strong></p>
+        <p>Ces primes rémunèrent des responsabilités réelles, et nous ne les contestons pas. Mais elles montrent ce que l'université sait payer, et ce qu'elle refuse aux vacataires.</p>
+        <p class="src">Source : <a href="https://www.assas-universite.fr/sites/default/files/document/texte-officiel/deliberations-du-ca-plenier-du-1er-juillet-2026.pdf">délibérations du conseil d'administration de l'université Paris-Panthéon-Assas du 1<sup>er</sup> juillet 2026</a>, publiées sur le site de l'université (référentiel d'équivalences horaires et composante fonctionnelle C2 du RIPEC, à compter du 1<sup>er</sup> septembre 2026). Salaire ATER : environ 2 200 € brut par mois à temps plein (<a href="https://organisation.univ-pau.fr/fr/recrutement/recrutement-des-personnels-enseignants-chercheurs-postdoc/recrutement-ater.html">2 195 € selon l'université de Pau</a>).</p>
+      </div>
+    </div>
+    <h3 style="font-family:var(--sans);font-size:1.15rem;margin:1.6rem 0 .6rem">Les primes de fonction des titulaires</h3>
+    <p class="sous">Montants annuels fixés par les conseils d'administration, relevés dans les délibérations publiées par chaque établissement (lien dans la dernière colonne). Certains sont des plafonds, plusieurs grilles datent de 2022 ou 2023 et ont pu être revalorisées depuis.</p>
+    <table class="tab"><thead><tr><th>Établissement</th><th>Vice-président·e</th><th>Direction de composante</th><th>Délibération (source)</th></tr></thead><tbody>
+      <tr><td class="nom">Strasbourg</td><td data-l="Vice-président·e">11 597 €</td><td data-l="Direction">6 704 €</td><td data-l="Délibération"><a href="https://www.unistra.fr/fileadmin/upload/unistra/universite/fonctionnement/actes_reglementaires/deliberations_du_CA/seance_du_07-06-22/Point_4.04_DRH_-_LDG_Indemnitaires.pdf">juin 2022</a></td></tr>
+      <tr><td class="nom">Paris-Panthéon-Assas</td><td data-l="Vice-président·e">10 500 €</td><td data-l="Direction">7 000 à 8 750 €</td><td data-l="Délibération"><a href="https://www.assas-universite.fr/sites/default/files/document/texte-officiel/deliberations-du-ca-plenier-du-1er-juillet-2026.pdf">juillet 2026</a></td></tr>
+      <tr><td class="nom">Savoie Mont Blanc</td><td data-l="Vice-président·e">10 350 €</td><td data-l="Direction">9 603 €</td><td data-l="Délibération"><a href="https://www.univ-smb.fr/wp-content/uploads/2023/09/deliberation-ca-2023.02.21_4.2.-pers_revision_lignes_directrices_ripec.pdf">février 2023</a></td></tr>
+      <tr><td class="nom">Poitiers</td><td data-l="Vice-président·e">9 950 €</td><td data-l="Direction">8 300 €</td><td data-l="Délibération"><a href="https://www.univ-poitiers.fr/wp-content/uploads/sites/10/2024/10/Deliberation-n°CA-20-09-2024-10-RIPEC-C2.pdf">septembre 2024</a></td></tr>
+      <tr><td class="nom">Le Havre Normandie</td><td data-l="Vice-président·e">9 747 €</td><td data-l="Direction">9 747 €</td><td data-l="Délibération"><a href="https://www.univ-lehavre.fr/fr/download/deliberation-3011-2026-grh-ldg-et-reh-2026/">2026</a></td></tr>
+      <tr><td class="nom">Paris-Est Créteil</td><td data-l="Vice-président·e">9 603 €</td><td data-l="Direction">9 603 €</td><td data-l="Délibération"><a href="https://www.u-pec.fr/medias/fichier/del-ca-approuvant-les-lignes-directrices-de-gestion-relatives-au-regime-indemnitaire-des-enseignants-chercheurs_1742980912267-pdf">mars 2025</a></td></tr>
+      <tr><td class="nom">Orléans</td><td data-l="Vice-président·e">8 000 €</td><td data-l="Direction">9 300 €</td><td data-l="Délibération"><a href="https://www.univ-orleans.fr/upload/public/2024-07/2024-54_D%C3%A9lib%C3%A9ration%20PV%20CA_20240621_Primes%20fonctionnelles%202024-2025.pdf">juin 2024</a></td></tr>
+      <tr><td class="nom">Artois</td><td data-l="Vice-président·e">9 000 €</td><td data-l="Direction">6 000 €</td><td data-l="Délibération"><a href="https://www.univ-artois.fr/sites/default/files/2026-07/2026-065%20-%20LDG%20-%20RIPEC.pdf">juillet 2026</a></td></tr>
+      <tr><td class="nom">Lyon 2</td><td data-l="Vice-président·e">8 800 €</td><td data-l="Direction">4 400 €</td><td data-l="Délibération"><a href="https://www.univ-lyon2.fr/medias/fichier/ldg-regime-indemnitaire-des-ec_1696535079496-pdf">septembre 2023</a></td></tr>
+      <tr><td class="nom">Toulouse Capitole</td><td data-l="Vice-président·e">3 000 €</td><td data-l="Direction">3 000 €</td><td data-l="Délibération"><a href="https://www.ut-capitole.fr/medias/fichier/09-deliberation-relative-aux-lignes-directrices-ripec-c2_1676993307926-pdf">2022-2023 (projet)</a></td></tr>
+    </tbody></table>
+    <p class="retenir" style="margin-top:1.2rem">Une prime de vice-président·e de 10 000 € correspond à environ <strong>230 heures de TD payées à un·e vacataire</strong>. L'université de Bordeaux prévoit à elle seule une enveloppe de <strong>1,6 million d'euros</strong> pour ces primes de fonction en 2026-2027 (<a href="https://nuxeo.u-bordeaux.fr/nuxeo/nxfile/default/3c42a97e-bd1a-4830-b6e7-e28a13566c2b/file:content/2026-49%20D%C3%A9lib%C3%A9ration%20relative%20%C3%A0%20l'enveloppe%20pr%C3%A9visionnelle%202026%2027%20pour%20le%20RIPEC.pdf">délibération n° 2026-49</a>).</p>
+    <p class="note-lien">À noter : la valeur d'une heure de responsabilité varie beaucoup. Selon les délibérations, elle est d'environ 41 à 43 € de l'heure à <a href="https://www.pantheonsorbonne.fr/sites/default/files/inline-files/1_CA_2022-03-24-1_RIPEC.pdf">Paris 1</a>, à <a href="https://univ-cotedazur.fr/medias/fichier/2026-015-referentiel-ripec-2_1771598749357-pdf">Côte d'Azur</a> ou à <a href="https://www.sciencespo-aix.fr/wp-content/uploads/2025/07/2025070506-CAIEP-DeliberationPRP.pdf">Sciences Po Aix</a>, de 100 € à Assas et de 150 € à <a href="https://www.univ-orleans.fr/upload/public/2024-07/2024-54_D%C3%A9lib%C3%A9ration%20PV%20CA_20240621_Primes%20fonctionnelles%202024-2025.pdf">Orléans</a>. L'argument n'est donc pas que les titulaires seraient trop payé·es, mais que ces mêmes universités ne rémunèrent pas à leur juste valeur les heures réellement travaillées par les vacataires.</p>
+
+    <h3 style="font-family:var(--sans);font-size:1.15rem;margin:2rem 0 .6rem">Les contrats de conseil</h3>
+    <p class="sous">Marchés publics déclarés par les universités dans la base nationale de la commande publique (<a href="https://www.data.gouv.fr/fr/datasets/donnees-essentielles-de-la-commande-publique-consolidees-format-tabulaire/">data.gouv.fr</a>). Ce sont des montants maximaux de contrats, pas des sommes forcément dépensées, et seuls les marchés déclarés y figurent.</p>
+    <table class="tab"><thead><tr><th>Université</th><th>Montant maximal</th><th>Objet</th><th>Date</th></tr></thead><tbody>
+      <tr><td class="nom">Reims Champagne-Ardenne</td><td data-l="Montant">8 millions €</td><td data-l="Objet">Ingénierie informatique, conseil et assistance à maîtrise d'ouvrage, sur 4 ans</td><td data-l="Date">2024</td></tr>
+      <tr><td class="nom">CY Cergy Paris</td><td data-l="Montant">1,4 million €</td><td data-l="Objet">Conseil et accompagnement, accord-cadre partagé entre trois cabinets, sur 4 ans</td><td data-l="Date">2023</td></tr>
+      <tr><td class="nom">Aix-Marseille</td><td data-l="Montant">600 000 €</td><td data-l="Objet">Dispositif d'accompagnement (conseil en ressources humaines)</td><td data-l="Date">2022</td></tr>
+      <tr><td class="nom">Paris 1 Panthéon-Sorbonne</td><td data-l="Montant">560 000 €</td><td data-l="Objet">Accompagnement de la stratégie de l'université (marché attribué par erreur à Assas dans la base nationale)</td><td data-l="Date">2022</td></tr>
+      <tr><td class="nom">PSL</td><td data-l="Montant">420 000 €</td><td data-l="Objet">Accompagnement par une agence de communication, sur 12 mois</td><td data-l="Date">2026</td></tr>
+      <tr><td class="nom">Lorraine</td><td data-l="Montant">235 237 €</td><td data-l="Objet">Accompagnement de l'université dans une réflexion, par PwC Advisory, sur 8 mois</td><td data-l="Date">2021</td></tr>
+    </tbody></table>
+    <p class="src" style="font-family:var(--sans);font-size:.78rem;color:var(--doux);margin-top:.8rem">Sources : délibérations des conseils d'administration publiées par chaque établissement ; <a href="https://www.data.gouv.fr/fr/datasets/donnees-essentielles-de-la-commande-publique-consolidees-format-tabulaire/">données essentielles de la commande publique</a> (data.gouv.fr), consultées le 30 octobre 2026. Nos demandes d'accès aux documents portent aussi sur les montants réellement payés.</p>
+  </div>
+
+  </div>
+</section>
+
+<section id="demandes">
+  <div class="wrap">
+    <div class="partie">Partie 3</div>
+    <h2>Où en sont nos demandes ?</h2>
+    <p class="sous">Les établissements ont un mois pour répondre. Sans réponse, le silence vaut refus et nous pourrons saisir la Commission d'accès aux documents administratifs (CADA). Échéances : du 25 au 28 novembre 2026 pour les 42 premières demandes, le 30 novembre pour les 15 suivantes.</p>
+        <div class="compteurs"><div><span class="cn ok">3</span>ont transmis des données</div><div><span class="cn ar">7</span>instruisent notre demande</div><div><span class="cn att">47</span>n'ont pas encore répondu</div></div>
+    <div class="grille"><div class="etab"><b>Sciences Po Bordeaux</b><span><span class="statut s-ok">Données reçues</span></span></div><div class="etab"><b>Université de Bordeaux</b><span><span class="statut s-ok">Données reçues</span></span></div><div class="etab"><b>Université Le Havre Normandie</b><span><span class="statut s-ok">Données partielles reçues</span></span></div><div class="etab"><b>Université Marie et Louis Pasteur</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>Université Polytechnique Hauts-de-France</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>Université Côte d’Azur</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>Université Paris Dauphine-PSL</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>Université Bordeaux Montaigne</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>Université de Rouen Normandie</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>Université de Tours</b><span><span class="statut s-ar">En cours d'instruction</span></span></div></div>
+    <details class="attente"><summary>Voir les 47 établissements qui n'ont pas encore répondu</summary><p class="liste-att">Aix-Marseille Université · Université d’Angers · Université des Antilles · Avignon Université · Université Bourgogne Europe · Université de Bretagne Occidentale · Université de Caen Normandie · Université Claude Bernard Lyon 1 · Université Clermont Auvergne · CY Cergy Paris Université · Université Grenoble Alpes · Université Gustave Eiffel · Université de Haute-Alsace · Université Jean Monnet Saint-Étienne · Université Jean Moulin Lyon 3 · Université de Lille · Université de Limoges · Université de Lorraine · Université Lumière Lyon 2 · Le Mans Université · Université de Montpellier · Nantes Université · Université d’Orléans · Université Paris 1 Panthéon-Sorbonne · Université Paris 8 · Université Paris Cité · Université Paris-Est Créteil · Université Paris-Panthéon-Assas · Université Paris-Saclay · Université de Pau et des Pays de l’Adour · Université Paul-Valéry Montpellier 3 · Université de Perpignan Via Domitia · Université de Picardie Jules Verne · Université de Poitiers · Université de Reims Champagne-Ardenne · Université de Rennes · Université Rennes 2 · Université de La Réunion · Université Savoie Mont Blanc · Sorbonne Nouvelle · Université Sorbonne Paris Nord · Sorbonne Université · Université de Strasbourg · Université Toulouse Capitole · Université Toulouse III Paul Sabatier · Université Toulouse Jean Jaurès · Université de Versailles Saint-Quentin-en-Yvelines</p></details
+</div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Vous travaillez dans un de ces établissements ?</h2>
+    <p>Demandez en conseil d'administration que le rapport social publie le nombre de vacataires, leurs heures et les délais de paiement, et que l'université rende public ce qu'elle dépense chaque année en cabinets de conseil et en prestataires externes. Et dites-nous comment cela se passe chez vous.</p>
+    <a class="btn" href="index.html#temoignages">Témoigner</a>
+  </div>
+</section>
+
+<footer><div class="wrap">#JeSuisLéa · <a href="index.html">jesuislea.fr</a> · contact@jesuislea.fr</div></footer>
+</body>
+</html>
