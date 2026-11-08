@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<title>Le Label Précarité Garantie · Je suis Léa</title>
+<meta name="description" content="Ils affichent le label européen « HR Excellence in Research ». Nous leur décernons le nôtre : le Label Précarité Garantie.">
+<style>
+  :root{
+    --nuit:#222a4d;--surface:#2e3868;--surface-2:#191f3d;
+    --clair:#e9ebf7;--doux:#a2a9cf;--rose:#ec4899;--aqua:#4fd6c1;--or:#f2c94c;
+    --trait:rgba(255,255,255,.12);
+    --sans:"Helvetica Neue",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--nuit);color:var(--clair);font-family:Georgia,"Iowan Old Style",serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--aqua)}
+  .wrap{max-width:760px;margin:0 auto;padding:0 1.25rem}
+  .bandeau{background:var(--surface-2);color:var(--doux);font-family:var(--sans);font-size:.72rem;letter-spacing:.06em;padding:.55rem 1.25rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;border-bottom:1px solid var(--trait)}
+  .bandeau a{color:var(--doux);text-decoration:none}
+  .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--doux);border-bottom:1px solid var(--trait);padding-bottom:.7rem;margin-bottom:2rem;display:flex;justify-content:space-between;gap:1rem}
+  header{padding:3.5rem 0 2rem}
+  .hero{display:grid;grid-template-columns:1fr 230px;gap:2rem;align-items:center}
+  h1{font-family:var(--sans);font-size:clamp(2.2rem,7vw,3.6rem);line-height:1.02;font-weight:700;letter-spacing:-.02em;margin-bottom:1.3rem}
+  h1 em{font-style:normal;color:var(--rose)}
+  .chapo{font-size:1.12rem;color:var(--doux);max-width:60ch}
+  .tampon{width:100%;max-width:230px;transform:rotate(-9deg);filter:drop-shadow(0 6px 18px rgba(0,0,0,.35))}
+  section{padding:3rem 0 .5rem}
+  h2{font-family:var(--sans);font-size:1.7rem;font-weight:700;letter-spacing:-.01em;margin-bottom:.5rem}
+  .sous{font-family:var(--sans);font-size:.92rem;color:var(--doux);margin-bottom:1.6rem;max-width:60ch}
+  p{margin-bottom:1rem;max-width:64ch}
+  .retenir{border-left:3px solid var(--aqua);padding-left:1.2rem;font-size:1.12rem;max-width:62ch;margin-top:.5rem}
+  .retenir strong{color:var(--rose)}
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin:1.4rem 0}
+  .duo .c{background:var(--surface);border:1px solid var(--trait);border-radius:6px;padding:1.2rem 1.3rem;font-family:var(--sans)}
+  .duo .nom{font-weight:700;font-size:1rem;margin-bottom:.6rem}
+  .duo .l1{font-size:.85rem;color:var(--doux)}
+  .duo .l1 b{color:var(--aqua)}
+  .duo .l2{font-size:.85rem;color:var(--doux);margin-top:.35rem}
+  .duo .l2 b{color:var(--rose);font-size:1.4rem}
+  .mentions{display:grid;gap:.9rem}
+  .mention{background:var(--surface);border:1px solid var(--trait);border-left:4px solid var(--rose);border-radius:6px;padding:1.2rem 1.4rem}
+  .mention h3{font-family:var(--sans);font-size:1.12rem;margin-bottom:.3rem}
+  .mention h3 span{color:var(--or)}
+  .mention p{color:var(--doux);font-size:.98rem;margin:0}
+  .mention .crit{font-family:var(--sans);font-size:.8rem;color:var(--aqua);margin-top:.5rem;letter-spacing:.02em}
+  .questions{list-style:none;counter-reset:q;max-width:64ch}
+  .questions li{counter-increment:q;position:relative;padding-left:2rem;margin-bottom:.8rem;color:var(--doux)}
+  .questions li::before{content:counter(q);position:absolute;left:0;color:var(--aqua);font-family:var(--sans);font-weight:700}
+  .questions strong{color:var(--clair)}
+  .cal{display:grid;grid-template-columns:8.5rem 1fr;gap:.5rem 1.2rem;font-family:var(--sans);font-size:.95rem;max-width:60ch}
+  .cal b{color:var(--aqua)}
+  .cal span{color:var(--doux)}
+  .src{font-family:var(--sans);font-size:.78rem;color:var(--doux);margin-top:1rem}
+  .appel{background:var(--surface);border:1px solid var(--trait);border-top:4px solid var(--aqua);border-radius:6px;padding:1.6rem 1.5rem}
+  .appel ul{margin:.4rem 0 1.2rem 1.2rem;color:var(--doux)}
+  .appel li{margin-bottom:.35rem}
+  .bouton{display:inline-block;font-family:var(--sans);font-weight:700;background:var(--rose);color:#fff;text-decoration:none;padding:.8rem 1.4rem;border-radius:999px;margin:.4rem 0 1rem}
+  .petit{font-family:var(--sans);font-size:.8rem;color:var(--doux);margin:0}
+  footer{font-family:var(--sans);font-size:.8rem;color:var(--doux);padding:2rem 0 3rem;border-top:1px solid var(--trait);margin-top:3rem}
+  @media (max-width:640px){
+    .hero{grid-template-columns:1fr}
+    .tampon{max-width:170px;margin:0 auto;display:block}
+    .duo{grid-template-columns:1fr}
+    .cal{grid-template-columns:1fr;gap:.1rem}
+    .cal span{margin-bottom:.6rem}
+  }
+</style>
+</head>
+<body>
+<div class="bandeau"><a href="index.html">← Je suis Léa</a><span>Label Précarité Garantie · édition 2026</span></div>
+
+<header><div class="wrap">
+  <div class="label"><span>Label Précarité Garantie</span><span>Édition 2026</span></div>
+  <div class="hero">
+    <div>
+      <h1>Ils ont le label <em>« Excellence RH »</em>.<br>Nous leur décernons le nôtre.</h1>
+      <p class="chapo">La Commission européenne distingue les établissements qui s'engagent à offrir aux chercheur·es un emploi stable et un salaire équitable. Beaucoup de ces mêmes établissements font tenir leurs cours par des vacataires payé·es sous le SMIC. Pour saluer cet écart, #JeSuisLéa crée le <strong style="color:var(--clair)">Label Précarité Garantie</strong>.</p>
+      <a class="bouton" href="#nominer" style="margin-top:1.2rem">Nominer un établissement</a>
+    </div>
+    <svg class="tampon" viewBox="0 0 240 240" role="img" aria-label="Tampon : Précarité garantie, #JeSuisLéa 2026">
+      <defs><path id="haut" d="M 36 120 A 84 84 0 0 1 204 120"/><path id="bas" d="M 30 120 A 90 90 0 0 0 210 120"/></defs>
+      <circle cx="120" cy="120" r="114" fill="none" stroke="#ec4899" stroke-width="6"/>
+      <circle cx="120" cy="120" r="102" fill="none" stroke="#ec4899" stroke-width="2"/>
+      <circle cx="120" cy="120" r="60" fill="rgba(236,72,153,.12)" stroke="#ec4899" stroke-width="2"/>
+      <text font-family="Helvetica Neue,Arial,sans-serif" font-weight="800" font-size="17" letter-spacing="2" fill="#ec4899"><textPath href="#haut" startOffset="50%" text-anchor="middle">PRÉCARITÉ GARANTIE</textPath></text>
+      <text font-family="Helvetica Neue,Arial,sans-serif" font-weight="700" font-size="13" letter-spacing="2" fill="#ec4899"><textPath href="#bas" startOffset="50%" text-anchor="middle" dominant-baseline="hanging">#JESUISLÉA · 2026</textPath></text>
+      <text x="120" y="114" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-weight="800" font-size="25" fill="#ec4899">43,50 €</text>
+      <text x="120" y="135" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-weight="700" font-size="10" letter-spacing=".8" fill="#ec4899">L’HEURE</text>
+      <text x="120" y="148" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-weight="700" font-size="10" letter-spacing=".8" fill="#ec4899">TOUT COMPRIS</text>
+      <text x="18" y="146" font-size="13" fill="#ec4899">★</text><text x="210" y="146" font-size="13" fill="#ec4899">★</text>
+    </svg>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <h2>Pourquoi ce label ?</h2>
+  <p class="sous">Le label européen « HR Excellence in Research » est attribué par la Commission européenne aux établissements qui s'engagent à appliquer la Charte européenne du chercheur.</p>
+  <p>Cette Charte comporte notamment deux principes : la <strong>stabilité et la permanence de l'emploi</strong>, et une <strong>rémunération équitable et attractive</strong>, y compris pour les chercheur·es en début de carrière. L'établissement adopte un plan d'action, puis il est réévalué.</p>
+  <p class="retenir"><strong>39 des 85 établissements</strong> que nous avons interrogés affichent ce label européen.</p>
+  <div class="duo">
+    <div class="c"><div class="nom">Université de Bordeaux</div><div class="l1">Label européen obtenu le <b>3 novembre 2026</b></div><div class="l2"><b>≈ 6 sur 10</b> personnes qui y enseignent sont vacataires</div></div>
+    <div class="c"><div class="nom">Université Le Havre Normandie</div><div class="l1">Label européen depuis <b>2024</b></div><div class="l2"><b>71 %</b> des intervenant·es en heures complémentaires</div></div>
+  </div>
+  <p class="src">Sources : <a href="https://euraxess.ec.europa.eu/hrexcellenceaward/awarded">liste officielle EURAXESS des établissements labellisés</a> (consultée le 8 novembre 2026) ; documents transmis par les établissements, détaillés sur notre page <a href="transparence.html">Transparence</a>.</p>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Les mentions</h2>
+  <p class="sous">Chaque mention repose sur un critère chiffré, public et identique pour tous les établissements.</p>
+  <div class="mentions">
+    <div class="mention"><h3><span>★★★</span> Précarité Garantie</h3><p>La mention suprême, pour l'établissement où les vacataires assurent la plus grande part des enseignements.</p><div class="crit">Critère : part des heures d'enseignement, ou à défaut des personnes qui enseignent, relevant de vacations.</div></div>
+    <div class="mention"><h3><span>★★</span> Grand Écart</h3><p>Pour l'établissement labellisé « HR Excellence in Research » qui présente les chiffres de précarité les plus élevés.</p><div class="crit">Critère : label européen en vigueur et part de vacataires la plus élevée.</div></div>
+    <div class="mention"><h3><span>★★</span> Silence Garanti</h3><p>Pour les établissements qui n'ont pas répondu à notre demande d'accès aux documents dans le délai légal.</p><div class="crit">Critère : absence de réponse un mois après la demande (art. R. 311-13 du code des relations entre le public et l'administration).</div></div>
+    <div class="mention"><h3><span>★</span> Payé·e en Juin</h3><p>Pour les plus longs délais de paiement, alors que la loi impose le paiement mensuel depuis 2022.</p><div class="crit">Critère : délais constatés dans les documents transmis et dans des témoignages recoupés.</div></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Ça existe déjà</h2>
+  <p>Selon leurs propres délibérations, des universités valorisent déjà une heure de responsabilité à <strong>100 €</strong> (Paris-Panthéon-Assas), voire <strong>150 €</strong> (Orléans). L'heure de TD d'un·e vacataire est payée environ 43,50 € brut, sans la préparation ni les corrections. Payer une heure à sa juste valeur, les universités savent donc le faire.</p>
+  <p class="src">Sources et liens vers les délibérations : page <a href="transparence.html#partie2">Transparence</a>, partie 2.</p>
+</div></section>
+
+<section id="nominer"><div class="wrap">
+  <h2>Nominez un établissement</h2>
+  <p class="sous">Vous connaissez un établissement qui mériterait le label ? Dites-nous lequel, et surtout pourquoi.</p>
+  <div class="appel">
+    <p>Tout le monde peut proposer une université, une école ou un organisme de recherche. Pour que votre nomination compte, expliquez ce qui la justifie, par exemple :</p>
+    <ul>
+      <li>la part des cours assurés par des vacataires dans votre formation ou votre département ;</li>
+      <li>des heures travaillées mais non payées (préparation, corrections, surveillances, jurys) ;</li>
+      <li>des retards de paiement, et leur durée ;</li>
+      <li>des contrats courts renouvelés pour des besoins permanents ;</li>
+      <li>tout document qui l'établit : délibération, rapport social unique, échange écrit.</li>
+    </ul>
+    <a class="bouton" href="mailto:contact@jesuislea.fr?subject=Nomination%20%E2%80%93%20Label%20Pr%C3%A9carit%C3%A9%20Garantie&body=%C3%89tablissement%20%3A%0AComposante%2C%20UFR%20ou%20d%C3%A9partement%20%28facultatif%29%20%3A%0A%0AMention%20propos%C3%A9e%20%28Pr%C3%A9carit%C3%A9%20Garantie%20/%20Grand%20%C3%89cart%20/%20Pay%C3%A9%C2%B7e%20en%20Juin%20/%20autre%29%20%3A%0A%0APourquoi%20%3F%20%28part%20de%20cours%20assur%C3%A9s%20par%20des%20vacataires%2C%20heures%20non%20pay%C3%A9es%2C%20retards%20de%20paiement%2C%20contrats%20pr%C3%A9caires%20renouvel%C3%A9s%2C%20etc.%29%20%3A%0A%0ASources%20ou%20documents%20%28facultatif%20%3A%20lien%2C%20d%C3%A9lib%C3%A9ration%2C%20rapport%20social%20unique%2C%20%C3%A9change%20%C3%A9crit%29%20%3A%0A%0AVotre%20statut%20%28facultatif%29%20%3A%0APouvons-nous%20vous%20recontacter%20%3F%20oui%20/%20non%0A">Proposer une nomination</a>
+    <p class="petit">Nominations ouvertes jusqu'au 6 décembre 2026. Nous vérifions chaque élément avant toute publication. Votre nom n'est jamais publié. Merci de ne nommer aucune personne : le label vise des établissements.</p>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Méthode</h2>
+  <ul class="questions">
+    <li><strong>Des chiffres, pas des opinions.</strong> Les mentions reposent sur des documents publics ou transmis par les établissements, cités et liés. Les nominations nous aident à savoir où chercher ; elles ne suffisent pas, seules, à attribuer une mention.</li>
+    <li><strong>Des établissements, pas des personnes.</strong> Nous ne visons ni des présidences ni des agents, qui sont souvent elles et eux aussi sous pression.</li>
+    <li><strong>Un droit de réponse.</strong> Chaque établissement nommé est prévenu avant la publication. Sa réponse est publiée en intégralité sur cette page.</li>
+    <li><strong>Une sortie possible.</strong> Il suffit de payer les heures réellement travaillées et de respecter le paiement mensuel pour perdre le label.</li>
+  </ul>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Calendrier</h2>
+  <div class="cal">
+    <b>6 décembre 2026</b><span>Clôture des nominations.</span>
+    <b>7 décembre 2026</b><span>Fin du délai légal de réponse pour les dernières demandes envoyées.</span>
+    <b>Décembre 2026</b><span>Annonce des établissements nommés, après information de chacun d'eux.</span>
+    <b>Janvier 2027</b><span>Remise du Label Précarité Garantie 2026.</span>
+  </div>
+</div></section>
+
+<footer><div class="wrap">#JeSuisLéa · <a href="index.html">jesuislea.fr</a> · contact@jesuislea.fr</div></footer>
+</body>
+</html>
