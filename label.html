@@ -58,6 +58,34 @@
   .appel li{margin-bottom:.35rem}
   .bouton{display:inline-block;font-family:var(--sans);font-weight:700;background:var(--rose);color:#fff;text-decoration:none;padding:.8rem 1.4rem;border-radius:999px;margin:.4rem 0 1rem}
   .petit{font-family:var(--sans);font-size:.8rem;color:var(--doux);margin:0}
+  .course{background:var(--surface-2);border:1px solid var(--trait);border-radius:10px;padding:1.4rem 1.3rem 1.2rem;font-family:var(--sans)}
+  .course-tete{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}
+  .direct{display:inline-flex;align-items:center;gap:.45rem;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--rose)}
+  .direct i{width:.55rem;height:.55rem;border-radius:50%;background:var(--rose);box-shadow:0 0 0 0 rgba(236,72,153,.6);animation:pouls 1.8s infinite}
+  @keyframes pouls{0%{box-shadow:0 0 0 0 rgba(236,72,153,.55)}70%{box-shadow:0 0 0 .55rem rgba(236,72,153,0)}100%{box-shadow:0 0 0 0 rgba(236,72,153,0)}}
+  @media (prefers-reduced-motion:reduce){.direct i{animation:none}}
+  .maj{font-size:.75rem;color:var(--doux)}
+  .rang{display:grid;grid-template-columns:2.6rem 1fr auto;gap:.2rem 1rem;align-items:center;padding:.95rem 0;border-top:1px solid var(--trait)}
+  .rang:first-of-type{border-top:0}
+  .rang .n{font-family:Georgia,serif;font-weight:700;font-size:1.9rem;line-height:1;text-align:center;color:var(--doux)}
+  .rang.r1 .n{color:var(--or)} .rang.r2 .n{color:#cfd4ea} .rang.r3 .n{color:#d9a066}
+  .rang .qui{font-weight:700;font-size:1.02rem;line-height:1.25}
+  .rang .qui small{display:block;font-weight:400;font-size:.78rem;color:var(--doux);margin-top:.15rem}
+  .rang .val{text-align:right;font-family:Georgia,serif;font-weight:700;font-size:1.5rem;color:var(--rose);line-height:1}
+  .rang .val small{display:block;max-width:8rem;margin-left:auto;font-family:var(--sans);font-weight:400;font-size:.7rem;color:var(--doux);margin-top:.2rem}
+  .rang .barre{grid-column:2/4;height:6px;background:rgba(255,255,255,.07);border-radius:3px;overflow:hidden;margin-top:.35rem}
+  .rang .barre b{display:block;height:100%;background:var(--rose);border-radius:3px}
+  .rang.r1 .barre b{background:linear-gradient(90deg,var(--rose),var(--or))}
+  .fleche{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.04em;padding:.1rem .45rem;border-radius:999px;margin-left:.4rem;vertical-align:middle}
+  .fleche.up{background:rgba(79,214,193,.15);color:var(--aqua)} .fleche.down{background:rgba(255,255,255,.08);color:var(--doux)}
+  .embuscade{margin-top:1.1rem;padding-top:1rem;border-top:1px dashed var(--trait)}
+  .embuscade h3{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--doux);margin-bottom:.6rem}
+  .embuscade ul{list-style:none;display:grid;gap:.45rem}
+  .embuscade li{font-size:.88rem;color:var(--doux)} .embuscade li b{color:var(--clair)}
+  .journal{margin-top:1.2rem;display:grid;grid-template-columns:5.2rem 1fr;gap:.35rem 1rem;font-family:var(--sans);font-size:.88rem}
+  .journal b{color:var(--aqua)} .journal span{color:var(--doux)}
+  .regle{font-family:var(--sans);font-size:.8rem;color:var(--doux);margin-top:1rem}
+  @media (max-width:640px){.rang{grid-template-columns:1.8rem 1fr auto;gap:.2rem .7rem}.rang .val{font-size:1.2rem}.rang .val small{display:none}.course{padding:1.1rem 1rem}.journal{grid-template-columns:1fr;gap:.05rem}.journal span{margin-bottom:.5rem}}
   footer{font-family:var(--sans);font-size:.8rem;color:var(--doux);padding:2rem 0 3rem;border-top:1px solid var(--trait);margin-top:3rem}
   @media (max-width:640px){
     .hero{grid-template-columns:1fr}
@@ -77,7 +105,7 @@
     <div>
       <h1>Ils ont le label <em>« Excellence RH »</em>.<br>Nous leur décernons le nôtre.</h1>
       <p class="chapo">La Commission européenne attribue le label « HR Excellence in Research » aux établissements qui s'engagent à appliquer la Charte européenne du chercheur. Celle-ci prévoit notamment la stabilité de l'emploi et une rémunération équitable. Or plusieurs de ces établissements reposent largement sur des vacataires, souvent doctorant·es ou docteur·es, qui gagnent pour beaucoup moins que le SMIC selon nos calculs. Pour saluer cet écart, #JeSuisLéa crée le <strong style="color:var(--clair)">Label Précarité Garantie</strong>.</p>
-      <a class="bouton" href="#nominer" style="margin-top:1.2rem">Nominer un établissement</a>
+      <a class="bouton" href="#nominer" style="margin-top:1.2rem">Nominer un établissement</a> <a class="bouton" href="#classement" style="margin-top:1.2rem;background:transparent;border:2px solid var(--or);color:var(--or)">Qui est favori ?</a>
     </div>
     <svg class="tampon" viewBox="0 0 240 240" role="img" aria-label="Tampon : Précarité garantie, #JeSuisLéa 2026">
       <defs><path id="haut" d="M 36 120 A 84 84 0 0 1 204 120"/><path id="bas" d="M 30 120 A 90 90 0 0 0 210 120"/></defs>
@@ -93,6 +121,31 @@
     </svg>
   </div>
 </div></header>
+
+<section id="classement"><div class="wrap">
+  <h2>Qui est favori ?</h2>
+  <p class="sous">Le classement évolue au fil des documents que nous obtenons. Revenez régulièrement : la course n'est pas finie.</p>
+  <div class="course">
+    <div class="course-tete"><span class="direct"><i></i>Classement provisoire</span><span class="maj">Mis à jour le 9 novembre 2026</span></div>
+    <div class="rang r1"><div class="n">1</div><div class="qui">Paris 1 Panthéon-Sorbonne<span class="fleche up">▲ nouveau leader</span><small>Label européen depuis 2021 · 3&nbsp;366 vacataires, 855 enseignant·es titulaires</small></div><div class="val">≈&nbsp;69 %<small>des personnes qui enseignent</small></div><div class="barre"><b style="width:69%"></b></div></div>
+    <div class="rang r2"><div class="n">2</div><div class="qui">La Rochelle Université<span class="fleche down">▼ 1 place</span><small>Label européen depuis 2024 · 879 vacataires</small></div><div class="val">≈&nbsp;64 %<small>des personnes qui enseignent</small></div><div class="barre"><b style="width:64%"></b></div></div>
+    <div class="rang r3"><div class="n">3</div><div class="qui">Université de Bordeaux<span class="fleche down">▼ 1 place</span><small>Label européen depuis le 3&nbsp;novembre&nbsp;2026 · 4&nbsp;853 vacataires</small></div><div class="val">≈&nbsp;59&nbsp;%<small>des personnes qui enseignent</small></div><div class="barre"><b style="width:59%"></b></div></div>
+    <div class="embuscade">
+      <h3>En embuscade</h3>
+      <ul>
+        <li><b>Université Le Havre Normandie</b> (label depuis 2024) : 71&nbsp;% des personnes qui assurent des heures complémentaires sont vacataires, et 23&nbsp;M€ de trésorerie fin 2023. Données détaillées attendues.</li>
+        <li><b>EHESS</b> : plus de la moitié des enseignant·es et chercheur·es en contrat temporaire. Le nombre de vacataires n'est pas encore connu.</li>
+        <li><b>Les autres établissements labellisés</b> n'ont pas encore transmis leurs chiffres. Ils peuvent encore créer la surprise.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="journal">
+    <b>3 nov.</b><span>L'université de Bordeaux obtient le label européen et entre dans la course.</span>
+    <b>9 nov.</b><span>La Rochelle Université prend la tête du premier classement.</span>
+    <b>9 nov.</b><span>Paris 1 Panthéon-Sorbonne publie son rapport social : 3&nbsp;366 vacataires. Elle passe en tête.</span>
+  </div>
+  <p class="regle">Comment nous classons : part des vacataires parmi les personnes qui enseignent, dans les établissements qui affichent le label européen, calculée par nous à partir des rapports officiels. Les chiffres ne sont pas strictement comparables d'un établissement à l'autre (années, modes de calcul). Détails et sources sur notre page <a href="transparence.html">Transparence</a>. Votre établissement manque à l'appel ? <a href="#nominer">Nominez-le.</a></p>
+</div></section>
 
 <section><div class="wrap">
   <h2>Pourquoi ce label ?</h2>
