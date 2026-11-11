@@ -422,7 +422,8 @@
 <section class="compteur">
   <div class="wrap">
     <div class="n" id="compteur-n">325</div>
-    <div class="lbl admin">témoignages reçus.<br>Chacun est une personne réelle derrière Léa. Celles et ceux qui l'ont accepté sont publié·es ci-dessous.</div>
+    <div class="lbl admin">témoignages reçus, dont <span id="compteur-pub">317</span> publiés ci-dessous.<br>Chacun est une personne réelle derrière Léa. Nous publions ceux dont les auteur·es l'ont accepté ; les autres nourrissent nos analyses.</div>
+    <script>document.addEventListener('DOMContentLoaded',function(){try{var n=document.querySelectorAll('.temoin[id^="lea-"]').length;if(n)document.getElementById('compteur-pub').textContent=n;}catch(e){}});</script>
   </div>
 </section>
 
