@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<title>#PayeTonVacataire · Je suis Léa</title>
+<meta name="description" content="Du 20 au 30 novembre 2026, les vacataires réclament le paiement de leurs heures, avec les intérêts de retard. Lettres types et mode d'emploi.">
+<meta property="og:title" content="#PayeTonVacataire : du 20 au 30 novembre, réclamons nos heures">
+<meta property="og:description" content="Lettre type, mode d'emploi et calendrier pour demander le paiement de vos vacations avec les intérêts de retard.">
+<style>
+  :root{
+    --nuit:#222a4d;--surface:#2e3868;--surface-2:#191f3d;
+    --clair:#e9ebf7;--doux:#a2a9cf;--rose:#ec4899;--aqua:#4fd6c1;
+    --trait:rgba(255,255,255,.12);
+    --sans:"Helvetica Neue",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    --degrade:linear-gradient(95deg,var(--rose),var(--aqua));
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--nuit);color:var(--clair);font-family:Georgia,"Iowan Old Style",serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--aqua)}
+  .wrap{max-width:760px;margin:0 auto;padding:0 1.25rem}
+  .bandeau{background:var(--surface-2);color:var(--doux);font-family:var(--sans);font-size:.72rem;letter-spacing:.06em;padding:.55rem 1.25rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;border-bottom:1px solid var(--trait)}
+  .bandeau a{color:var(--doux);text-decoration:none}
+  .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--doux);border-bottom:1px solid var(--trait);padding-bottom:.7rem;margin-bottom:2rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+  header{padding:3.5rem 0 2rem}
+  h1{font-family:var(--sans);font-size:clamp(2.2rem,7vw,3.8rem);line-height:1.02;font-weight:700;letter-spacing:-.02em;margin-bottom:1.3rem}
+  h1 em{font-style:normal;color:var(--rose)}
+  .chapo{font-size:1.12rem;color:var(--doux);max-width:60ch}
+  .date-j{display:inline-block;margin-top:1.6rem;font-family:var(--sans);font-weight:700;font-size:1rem;padding:.55rem 1rem;border-radius:6px;background:rgba(236,72,153,.14);border:1px solid rgba(236,72,153,.45);color:var(--clair)}
+  section{padding:3rem 0 .5rem}
+  h2{font-family:var(--sans);font-size:1.7rem;font-weight:700;letter-spacing:-.01em;margin-bottom:.8rem}
+  h3{font-family:var(--sans);font-size:1.05rem;font-weight:700;margin-bottom:.3rem}
+  p{margin-bottom:1rem;max-width:65ch}
+  .sous{font-family:var(--sans);font-size:.92rem;color:var(--doux);margin-bottom:1.6rem;max-width:60ch}
+  .encadre{background:var(--surface);border-radius:8px;padding:1.2rem 1.3rem;margin:1.2rem 0}
+  .encadre p:last-child{margin-bottom:0}
+  .etapes{list-style:none;counter-reset:e;display:grid;gap:1rem}
+  .etapes li{counter-increment:e;display:grid;grid-template-columns:2.6rem 1fr;gap:.9rem;align-items:start}
+  .etapes li::before{content:counter(e);font-family:var(--sans);font-weight:700;font-size:1.3rem;width:2.6rem;height:2.6rem;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--degrade);color:var(--nuit)}
+  .etapes p{margin:0;color:var(--doux)}
+  .lettre{background:var(--clair);color:#1b2142;border-radius:8px;padding:1.6rem 1.5rem;font-size:.98rem;line-height:1.55}
+  .lettre p{max-width:none;margin-bottom:.85rem}
+  .lettre ol{margin:0 0 .85rem 1.3rem}
+  .lettre li{margin-bottom:.35rem}
+  .lettre .a-remplir{background:#ffe3f1;border-radius:3px;padding:0 .2rem}
+  .actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1rem}
+  .btn{display:inline-block;background:var(--degrade);color:var(--nuit);font-family:var(--sans);font-size:.92rem;font-weight:700;text-decoration:none;padding:.9rem 1.6rem;border-radius:6px;border:0;cursor:pointer}
+  .btn.second{background:transparent;color:var(--clair);border:1px solid var(--trait)}
+  .ok{font-family:var(--sans);font-size:.85rem;color:var(--aqua);align-self:center}
+  ul.liste{margin:0 0 1rem 1.2rem}
+  ul.liste li{margin-bottom:.55rem;max-width:65ch}
+  table{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:.92rem}
+  td{padding:.7rem .5rem;border-bottom:1px solid var(--trait);vertical-align:top}
+  td:first-child{white-space:nowrap;color:var(--doux);padding-right:1rem}
+  tr.fort td{color:var(--clair);font-weight:700}
+  .cta{background:var(--surface-2);margin-top:3rem;padding:2.6rem 0 3rem}
+  .cta p{color:var(--doux);max-width:60ch;margin-bottom:1.4rem}
+  .mention{font-family:var(--sans);font-size:.8rem;color:var(--doux);margin-top:1.5rem}
+  footer{font-family:var(--sans);font-size:.8rem;color:var(--doux);padding:2rem 0 3rem;border-top:1px solid var(--trait)}
+  @media (max-width:520px){td:first-child{white-space:normal}}
+  @media print{body{background:#fff;color:#000}.bandeau,.actions,.cta,footer{display:none}.lettre{border:1px solid #999}}
+</style>
+</head>
+<body>
+
+<div class="bandeau"><a href="index.html">← Je suis Léa</a><span>#PayeTonVacataire · du 20 au 30 novembre 2026</span></div>
+
+<header>
+  <div class="wrap">
+    <div class="label"><span>Action nationale</span><span>Kit vacataires</span></div>
+    <h1>Nos heures sont faites.<br><em>Qu'elles soient payées.</em></h1>
+    <p class="chapo">À partir du 20 novembre, partout en France, les vacataires qui attendent leur rémunération demandent à leur université de les payer, avec les intérêts de retard. Une demande isolée se perd dans un service. Des centaines en quelques jours, c'est un fait politique.</p>
+    <span class="date-j">Lancement le vendredi 20 novembre · bilan national le lundi 30 novembre</span>
+    <p class="chapo" style="margin-top:1.2rem"><strong style="color:var(--clair)">Vous avez raté le lancement ? Envoyez quand même.</strong> La demande reste valable à tout moment, dans la limite de la prescription, et le compteur national reste ouvert.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Pourquoi c'est solide</h2>
+    <p>Depuis le 1<sup>er</sup> septembre 2022, l'article L.&nbsp;952-1 du code de l'éducation prévoit que la rémunération des chargé·es d'enseignement vacataires et des agents temporaires vacataires <strong>est versée mensuellement</strong>. Cette règle a été introduite par la loi de programmation de la recherche du 24 décembre 2020.</p>
+    <p>Une note ministérielle de juillet 2022 limitait cette obligation à certain·es vacataires. Le Conseil d'État l'a annulée le 6 février 2024 (n°&nbsp;473328). Payer en retard, c'est donc ne pas respecter la loi.</p>
+    <div class="encadre">
+      <h3>Qui peut participer ?</h3>
+      <p>Toute personne qui a assuré des heures de cours comme vacataire et n'a pas été payée chaque mois, cette année ou les années précédentes, dans la limite de la prescription de quatre ans, ainsi que celles et ceux qui enseignent <strong>sans contrat signé</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>À qui écrire, et pourquoi</h2>
+    <p><strong>Écrivez à la présidence de l'université, pas aux services.</strong> Ce sont les présidences qui décident des moyens et des priorités. Si le paiement mensuel n'est pas appliqué, c'est un choix politique et budgétaire, pas la faute des personnels administratifs.</p>
+    <p>Les personnels BIATSS sont souvent précaires eux aussi, mal payés et en sous-effectif. Ils n'ont aucun pouvoir de décision et appliquent les consignes qu'on leur donne. Ce n'est pas à eux de porter ces retards. Notre combat est aussi le leur : soyons solidaires.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>En 4 étapes</h2>
+    <ol class="etapes">
+      <li><div><h3>Rassembler ses pièces</h3><p>Le contrat ou l'arrêté de vacation, s'il existe ; la preuve du service fait (emploi du temps, attestation du ou de la responsable pédagogique, échanges de mails) ; les bulletins de paie et les dates de chaque paiement. Vous ne les avez pas reçus ? Demandez-les dans votre lettre : l'université doit vous les remettre.</p></div></li>
+      <li><div><h3>Calculer ce qui est dû</h3><p>Les heures effectuées mois par mois et, pour chaque mois, la date à laquelle vous auriez dû être payé·e et celle à laquelle vous l'avez été, ou pas encore.</p></div></li>
+      <li><div><h3>Choisir sa lettre et l'envoyer</h3><p>La <a href="#lettre">lettre A</a> si vous avez un contrat ou un arrêté, la <a href="#lettre-b">lettre B</a> si vous enseignez sans contrat signé. Par lettre recommandée avec accusé de réception, ou par courriel avec accusé de réception, à la présidence de l'université, avec une copie à la direction des ressources humaines. Gardez une copie de tout.</p></div></li>
+      <li><div><h3>Le signaler au collectif</h3><p>Indiquez-nous votre université, le montant réclamé et le retard en mois. Les données restent anonymes : elles servent à publier le compteur national.</p></div></li>
+    </ol>
+    <div class="actions"><a class="btn" href="https://framaforms.org/payetonvacataire-je-signale-ma-demande-1794763813" target="_blank" rel="noopener">Signaler ma demande</a></div>
+  </div>
+</section>
+
+<section id="lettre">
+  <div class="wrap">
+    <h2>Lettre A : demande de paiement</h2>
+    <p class="sous">Vous avez un contrat ou un arrêté de recrutement. Remplacez les passages surlignés, puis copiez ou imprimez la lettre.</p>
+    <div class="lettre" id="texte-lettre">
+      <p><span class="a-remplir">[Prénom Nom]</span><br><span class="a-remplir">[Adresse]</span><br><span class="a-remplir">[Courriel]</span></p>
+      <p>À Madame la Présidente / Monsieur le Président de <span class="a-remplir">[université]</span><br>Copie : direction des ressources humaines</p>
+      <p><span class="a-remplir">[Ville]</span>, le <span class="a-remplir">[date]</span></p>
+      <p><strong>Objet : demande de paiement de rémunérations de vacation et d'intérêts moratoires</strong></p>
+      <p>Madame la Présidente, Monsieur le Président,</p>
+      <p>J'ai assuré, en qualité de chargé·e d'enseignement vacataire, <span class="a-remplir">[nombre]</span> heures d'enseignement au sein de <span class="a-remplir">[composante]</span> entre le <span class="a-remplir">[date]</span> et le <span class="a-remplir">[date]</span>, sur le fondement de <span class="a-remplir">[contrat / arrêté de recrutement du …]</span>.</p>
+      <p>Aux termes de l'article L.&nbsp;952-1 du code de l'éducation, la rémunération des chargé·es d'enseignement vacataires est versée mensuellement. Or <span class="a-remplir">[je n'ai à ce jour perçu aucune rémunération au titre de ces heures / ces rémunérations m'ont été versées avec retard, le …]</span>.</p>
+      <p>Je vous demande en conséquence :</p>
+      <ol>
+        <li>de me verser, dans les meilleurs délais, la somme de <span class="a-remplir">[montant]</span> € brut, correspondant aux heures effectuées et non encore payées ;</li>
+        <li>de me verser les intérêts moratoires au taux légal sur les sommes restant dues, à compter de la réception de la présente demande, et, pour les sommes déjà versées en retard, sur la période de retard ;</li>
+        <li>la capitalisation de ces intérêts dès qu'ils seront dus pour une année entière ;</li>
+        <li>de me transmettre l'ensemble des bulletins de paie correspondant à ces rémunérations.</li>
+      </ol>
+      <p>La présente demande vaut réclamation préalable. À défaut de réponse favorable dans un délai de deux mois, je me réserve la possibilité de saisir le tribunal administratif.</p>
+      <p>Je vous prie d'agréer, Madame la Présidente, Monsieur le Président, l'expression de ma considération distinguée.</p>
+      <p><span class="a-remplir">[Signature]</span></p>
+      <p>Pièces jointes : <span class="a-remplir">[contrat ou arrêté, preuve du service fait, bulletins de paie]</span></p>
+    </div>
+    <div class="actions">
+      <button class="btn" type="button" data-copier="texte-lettre" data-ok="copie-ok">Copier la lettre A</button>
+      <button class="btn second" type="button" onclick="window.print()">Imprimer</button>
+      <span class="ok" id="copie-ok" hidden>Lettre copiée.</span>
+    </div>
+  </div>
+</section>
+
+<section id="lettre-b">
+  <div class="wrap">
+    <h2>Lettre B : demande de régularisation</h2>
+    <p class="sous">Vous enseignez sans contrat signé. Remplacez les passages surlignés, puis copiez ou imprimez la lettre.</p>
+    <div class="lettre" id="texte-lettre-b">
+      <p><span class="a-remplir">[Prénom Nom]</span><br><span class="a-remplir">[Adresse]</span><br><span class="a-remplir">[Courriel]</span></p>
+      <p>À Madame la Présidente / Monsieur le Président de <span class="a-remplir">[université]</span><br>Copie : direction des ressources humaines</p>
+      <p><span class="a-remplir">[Ville]</span>, le <span class="a-remplir">[date]</span></p>
+      <p><strong>Objet : demande de régularisation de mon recrutement et de paiement de mes heures d'enseignement</strong></p>
+      <p>Madame la Présidente, Monsieur le Président,</p>
+      <p>J'interviens depuis le <span class="a-remplir">[date]</span> au sein de <span class="a-remplir">[composante]</span> en qualité d'enseignant·e vacataire, à la demande de l'établissement, et j'ai déjà assuré <span class="a-remplir">[nombre]</span> heures d'enseignement.</p>
+      <p>Or, à ce jour, aucun contrat ni arrêté de recrutement ne m'a été transmis pour signature, et aucune rémunération ne m'a été versée au titre des heures effectuées.</p>
+      <p>L'article L.&nbsp;952-1 du code de l'éducation prévoit pourtant le versement mensuel de la rémunération des chargé·es d'enseignement et des agents temporaires vacataires, obligation rappelée par le Conseil d'État le 6 février 2024. Par ailleurs, l'absence de formalisation écrite de mon recrutement ne saurait, à elle seule, justifier le non-paiement d'enseignements effectivement réalisés à la demande ou avec l'accord de l'établissement.</p>
+      <p>Je vous demande en conséquence :</p>
+      <ol>
+        <li>de régulariser sans délai ma situation administrative en me transmettant mon contrat ou mon arrêté de recrutement ;</li>
+        <li>de faire recenser et valider les heures déjà effectuées ;</li>
+        <li>de mettre en paiement l'intégralité des rémunérations correspondantes, avec les intérêts moratoires au taux légal ;</li>
+        <li>de garantir, pour la suite de mes interventions, le respect de l'obligation de paiement mensuel, et de me transmettre mes bulletins de paie.</li>
+      </ol>
+      <p>La présente demande vaut réclamation préalable. Je souhaite privilégier une résolution amiable et rapide. À défaut de réponse favorable dans un délai de deux mois, je me réserve la possibilité de saisir le tribunal administratif.</p>
+      <p>Je vous prie d'agréer, Madame la Présidente, Monsieur le Président, l'expression de ma considération distinguée.</p>
+      <p><span class="a-remplir">[Signature]</span></p>
+      <p>Pièces jointes : <span class="a-remplir">[preuve du service fait : emploi du temps, mails, attestation]</span></p>
+    </div>
+    <div class="actions">
+      <button class="btn" type="button" data-copier="texte-lettre-b" data-ok="copie-ok-b">Copier la lettre B</button>
+      <button class="btn second" type="button" onclick="window.print()">Imprimer</button>
+      <span class="ok" id="copie-ok-b" hidden>Lettre copiée.</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Et après ?</h2>
+    <ul class="liste">
+      <li><strong>Sans réponse sous deux mois,</strong> le silence vaut refus. Vous pouvez alors saisir le tribunal administratif dans les deux mois qui suivent.</li>
+      <li><strong>Pour aller plus vite,</strong> le référé-provision (article R.&nbsp;541-1 du code de justice administrative) permet d'obtenir une provision quand la dette n'est pas sérieusement contestable, ce qui est le cas d'heures faites et non payées.</li>
+      <li><strong>Vos difficultés comptent :</strong> si ces retards vous ont causé des frais bancaires, des difficultés pour payer votre loyer ou des conséquences sur votre santé (par exemple un suivi psychologique), gardez-en les justificatifs. Ils peuvent appuyer une demande d'indemnisation du préjudice moral et des troubles dans les conditions d'existence. Un tribunal a ainsi accordé une indemnité à un vacataire resté trois ans sans être payé (TA Paris, 9 octobre 2024, n°&nbsp;2308411).</li>
+      <li><strong>Sans avocat :</strong> pour les litiges individuels des agents publics, le recours au tribunal administratif est dispensé d'avocat. Le collectif peut vous aider à rédiger.</li>
+      <li><strong>Pas de représailles :</strong> refuser de vous recruter parce que vous avez demandé votre dû serait illégal. Signalez-nous toute pression.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Faire pression, ensemble</h2>
+    <ul class="liste">
+      <li><strong>Le compteur national :</strong> un premier point le soir du 20 novembre, puis le bilan le 30 novembre : nombre de demandes envoyées, sommes réclamées, universités concernées.</li>
+      <li><strong>Les titulaires :</strong> en conseil d'administration ou en conseil d'UFR, demandez combien de vacataires sont payé·es en retard, et proposez une motion pour le paiement mensuel.</li>
+      <li><strong>Les réseaux :</strong> postez une photo de votre enveloppe ou de votre accusé de réception avec #PayeTonVacataire, sans données personnelles.</li>
+      <li><strong>Les parlementaires :</strong> le compteur leur sera transmis avant le vote du budget de l'enseignement supérieur au Sénat, début décembre.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Calendrier</h2>
+    <table>
+      <tr><td>Jusqu'au 19 novembre</td><td>Rassembler ses pièces, relayer dans son université</td></tr>
+      <tr class="fort"><td>Vendredi 20 novembre</td><td>Lancement : premiers envois, premier compteur le soir</td></tr>
+      <tr class="fort"><td>Lundi 30 novembre</td><td>Bilan national (les envois restent possibles après)</td></tr>
+      <tr><td>Début décembre</td><td>Compteur transmis aux sénatrices et sénateurs avant le vote du budget</td></tr>
+      <tr><td>Fin janvier</td><td>Sans réponse : premiers recours au tribunal administratif</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Une question ?</h2>
+    <p>Écrivez-nous pour une relecture de votre lettre ou pour toute difficulté avec votre université. Les échanges restent confidentiels.</p>
+    <a class="btn" href="mailto:contact@jesuislea.fr?subject=PayeTonVacataire">Nous écrire</a>
+    <p class="mention">Ce kit est une information générale. Il ne constitue pas un avis juridique individuel.</p>
+  </div>
+</section>
+
+<footer><div class="wrap">#JeSuisLéa · <a href="index.html">jesuislea.fr</a> · contact@jesuislea.fr</div></footer>
+
+<script>
+document.querySelectorAll('[data-copier]').forEach(function(b){ b.addEventListener('click', function(){
+  var t = document.getElementById(b.getAttribute('data-copier')).innerText;
+  var ok = document.getElementById(b.getAttribute('data-ok'));
+  function done(){ ok.hidden = false; setTimeout(function(){ ok.hidden = true; }, 2500); }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(t).then(done, function(){ fallback(t); done(); });
+  } else { fallback(t); done(); }
+  function fallback(s){ var a=document.createElement('textarea'); a.value=s; document.body.appendChild(a); a.select(); try{document.execCommand('copy');}catch(e){} a.remove(); }
+}); });
+</script>
+</body>
+</html>
