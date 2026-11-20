@@ -144,10 +144,39 @@
   .fiche p.src{font-family:var(--sans);font-size:.78rem;color:var(--doux);margin-top:.6rem}
   @media (max-width:560px){.barre3{font-size:.7rem}.barre3 .hc{font-size:0}}
 </style>
+<style>
+  body{font-family:var(--sans);line-height:1.65}
+  .chapo{font-size:1.05rem}
+  .fiche{padding:1.3rem 1.4rem;border-radius:8px}
+  .fiche .nom{font-size:1.12rem;margin-bottom:.5rem}
+  .fiche p{color:#c9cde6;font-size:.96rem;line-height:1.65;margin-top:.55rem}
+  .fiche p strong{color:var(--clair)}
+  .fiches{gap:1.1rem}
+  .src-d{margin-top:.8rem;border-top:1px solid var(--trait);padding-top:.55rem}
+  .src-d summary{cursor:pointer;font-size:.78rem;font-weight:600;color:var(--doux);list-style:none}
+  .src-d summary::-webkit-details-marker{display:none}
+  .src-d summary::before{content:"+ ";color:var(--aqua);font-weight:700}
+  .src-d[open] summary::before{content:"− "}
+  .src-d p.src{margin-top:.4rem}
+  .minibar{position:sticky;top:0;z-index:20;background:rgba(25,31,61,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--trait)}
+  .minibar .wrap{display:flex;gap:1.4rem;overflow-x:auto;white-space:nowrap;padding:.7rem 1.25rem;scrollbar-width:none}
+  .minibar a{color:var(--doux);text-decoration:none;font-size:.82rem;font-weight:600}
+  .minibar a:hover{color:var(--aqua)}
+  .sauts{display:flex;flex-wrap:wrap;gap:.45rem;align-items:center;margin:0 0 1.2rem;font-size:.82rem}
+  .sauts span{color:var(--doux);margin-right:.2rem}
+  .sauts a{color:var(--clair);text-decoration:none;border:1px solid var(--trait);background:var(--surface);padding:.25rem .7rem;border-radius:20px}
+  .sauts a:hover{border-color:var(--aqua);color:var(--aqua)}
+  .fiche[id],section[id]{scroll-margin-top:3.4rem}
+  .questions{background:var(--surface-2);border:1px solid var(--trait);border-radius:8px;padding:1.3rem 1.4rem .6rem 1.4rem;max-width:none}
+  .questions li{padding-left:1.9rem;line-height:1.6}
+  .questions li strong{color:var(--clair)}
+  .tab{font-size:.88rem}
+  @media (max-width:640px){.fiche{padding:1.1rem}.minibar .wrap{gap:1rem}}
+</style>
 </head>
 <body>
 
-<div class="bandeau"><a href="index.html">← Je suis Léa</a><span>Transparence · mis à jour le 17 novembre 2026</span></div>
+<div class="bandeau"><a href="index.html">← Je suis Léa</a><span>Transparence · mis à jour le 20 novembre 2026</span></div>
 
 <header>
   <div class="wrap">
@@ -171,12 +200,14 @@
   </div>
 </div>
 
+<nav class="minibar" aria-label="Sections"><div class="wrap"><a href="#partie1">1 · Combien de vacataires ?</a><a href="#partie2">2 · Ce qu'on sait payer</a><a href="#demandes">3 · Nos demandes</a></div></nav>
 <section id="partie1">
   <div class="wrap">
     <div class="partie">Partie 1</div>
     <h2>Combien de cours reposent sur les vacataires ?</h2>
     <p class="sous">Les données reçues, telles que les établissements les publient dans leurs propres rapports.</p>
-    <div class="fiches">
+    <nav class="sauts" aria-label="Aller à un établissement"><span>Aller à :</span><a href="#u-sciences-po-bordeaux">Sciences Po Bordeaux</a><a href="#u-universite-de-bordeaux">Bordeaux</a><a href="#u-universite-le-havre-normandie">Le Havre</a><a href="#u-universite-paris-1-pantheon-sorbonne">Paris 1</a><a href="#u-avignon-universite">Avignon</a><a href="#u-la-rochelle-universite">La Rochelle</a><a href="#u-ehess">EHESS</a><a href="#u-universite-de-lille">Lille</a><a href="#u-universite-de-reims-champagne-ardenne">Reims</a><a href="#u-universite-rennes-2">Rennes 2</a></nav>
+      <div class="fiches">
       <div class="apercu">
         <div class="ap-titre">En un coup d'œil</div>
         <div class="ap-ligne"><div class="ap-nom">Paris 1 Panthéon-Sorbonne<small>des personnes qui enseignent (2024)</small></div><div class="ap-piste"><b style="width:69%"></b></div><div class="ap-v">≈ 69 %</div></div>
@@ -188,7 +219,7 @@
         <div class="ap-ligne"><div class="ap-nom">Rennes 2<small>des heures de cours (2024-2025)</small></div><div class="ap-piste"><b style="width:22%"></b></div><div class="ap-v">22 %</div></div>
         <p class="ap-note">Part des vacataires. Les établissements ne mesurent pas tous la même chose (heures, personnes) : les chiffres ne sont pas strictement comparables, mais ils vont tous dans le même sens. Détails et sources ci-dessous.</p>
       </div>
-      <div class="fiche">
+      <div class="fiche" id="u-sciences-po-bordeaux">
         <div class="nom">Sciences Po Bordeaux <span class="tag vert">Données reçues le 29 octobre</span></div>
         <p>En 2024, les vacataires ont assuré <strong style="color:var(--clair)">9 312 heures</strong> d'enseignement sur environ 28 550 : <strong style="color:var(--rose)">près d'une heure sur trois</strong>. Le service statutaire des enseignant·es permanent·es n'en couvre qu'un peu plus de la moitié. La part des vacations est stable depuis 2023 (32,4 %), tandis que les heures complémentaires des permanent·es augmentent fortement : +73 % en 2023, +14 % en 2024, selon le rapport.</p>
         <div class="barre3">
@@ -196,60 +227,60 @@
           <div class="hc" style="width:13.1%;background:#ffd666">HC 13 %</div>
           <div style="width:32.6%;background:var(--rose);color:#fff">Vacataires 33 %</div>
         </div>
-        <p class="src">Source : rapport social unique 2024 de Sciences Po Bordeaux, p. 11 (heures équivalent TD), transmis le 29 octobre 2026 en réponse à notre demande. Total et pourcentages calculés par nous. Les 9 312 heures incluent 1 172 heures assurées par des personnels de l'université de Bordeaux.</p>
+        <details class="src-d"><summary>Sources et méthode</summary><p class="src">Source : rapport social unique 2024 de Sciences Po Bordeaux, p. 11 (heures équivalent TD), transmis le 29 octobre 2026 en réponse à notre demande. Total et pourcentages calculés par nous. Les 9 312 heures incluent 1 172 heures assurées par des personnels de l'université de Bordeaux.</p></details>
       </div>
-      <div class="fiche">
+      <div class="fiche" id="u-universite-de-bordeaux">
         <div class="nom">Université de Bordeaux <span class="tag jaune">Données partielles</span></div>
         <p>L'université présente <strong style="color:var(--clair)">4 853 vacataires d'enseignement</strong> comme des « collaborateurs ponctuels », pour un potentiel de 116 276 heures. Elle compte 3 387 personnels d'enseignement et de recherche, titulaires et contractuel·les. Autrement dit, <strong style="color:var(--rose)">environ six personnes sur dix qui enseignent à l'université de Bordeaux sont vacataires</strong>. L'université examine notre demande de données plus détaillées.</p>
-        <p class="src">Source : rapport social unique 2025 de l'université de Bordeaux, annexe « Chiffres clés », transmis par l'université le 27 octobre 2026 en réponse à notre demande. La proportion est calculée par nous sur les effectifs, pas sur les heures : beaucoup de vacataires n'assurent que quelques heures.</p>
+        <details class="src-d"><summary>Sources et méthode</summary><p class="src">Source : rapport social unique 2025 de l'université de Bordeaux, annexe « Chiffres clés », transmis par l'université le 27 octobre 2026 en réponse à notre demande. La proportion est calculée par nous sur les effectifs, pas sur les heures : beaucoup de vacataires n'assurent que quelques heures.</p></details>
       </div>
-      <div class="fiche">
+      <div class="fiche" id="u-universite-le-havre-normandie">
         <div class="nom">Université Le Havre Normandie <span class="tag jaune">Données partielles · 2 novembre</span></div>
         <p>En 2025, <strong style="color:var(--clair)">1 100 personnes</strong> ont assuré des heures ou cours complémentaires à l'université. Parmi elles, <strong style="color:var(--rose)">71 % étaient des vacataires</strong>, soit environ 780 personnes, une proportion « constante » selon l'université. L'université doit encore nous transmettre ses données détaillées sur les vacataires.</p>
         <p>À titre de comparaison, son compte financier 2023 recense <strong style="color:var(--clair)">318 emplois d'enseignant·es titulaires</strong> et <strong style="color:var(--clair)">123 en CDD</strong> (en équivalents temps plein travaillé). Fin 2023, l'université disposait d'un fonds de roulement de 20,1 millions d'euros et d'une trésorerie de 23 millions d'euros.</p>
-        <p class="src">Source : <a href="https://www.univ-lehavre.fr/wp-content/uploads/2026/06/RSU-2025-V_finale.pdf">rapport social unique 2025 de l'université Le Havre Normandie</a>, p. 45, indiqué par l'université le 2 novembre 2026 en réponse à notre demande. Le nombre d'environ 780 vacataires est calculé par nous. Compte financier 2023 (tableau des emplois et tableau de financement), approuvé par le conseil d'administration le 14 mars 2024 et transmis par l'université. Les emplois sont comptés en équivalents temps plein, les vacataires en personnes : les deux chiffres ne sont pas directement comparables.</p>
+        <details class="src-d"><summary>Sources et méthode</summary><p class="src">Source : <a href="https://www.univ-lehavre.fr/wp-content/uploads/2026/06/RSU-2025-V_finale.pdf">rapport social unique 2025 de l'université Le Havre Normandie</a>, p. 45, indiqué par l'université le 2 novembre 2026 en réponse à notre demande. Le nombre d'environ 780 vacataires est calculé par nous. Compte financier 2023 (tableau des emplois et tableau de financement), approuvé par le conseil d'administration le 14 mars 2024 et transmis par l'université. Les emplois sont comptés en équivalents temps plein, les vacataires en personnes : les deux chiffres ne sont pas directement comparables.</p></details>
       </div>
-      <div class="fiche">
+      <div class="fiche" id="u-universite-paris-1-pantheon-sorbonne">
         <div class="nom">Université Paris 1 Panthéon-Sorbonne <span class="tag jaune">Premiers documents reçus · 9 novembre</span></div>
         <p>En 2024, l'université a fait appel à <strong style="color:var(--clair)">3 366 vacataires d'enseignement</strong>, qui ont assuré 135 949 heures équivalent TD, soit 66 % des heures complémentaires et vacations. Elle compte 1 544 enseignant·es et enseignant·es-chercheur·es, dont 855 titulaires. Autrement dit, <strong style="color:var(--rose)">plus de deux personnes sur trois qui enseignent à Paris 1 sont vacataires</strong>, et l'on compte près de quatre vacataires pour un·e enseignant·e titulaire.</p>
         <p>L'université détient le label européen « HR Excellence in Research » depuis 2021. En juillet 2023, son conseil d'administration a adopté une motion reconnaissant que la situation de certain·es vacataires est « particulièrement difficile » et demandant à l'État davantage de postes et une meilleure rémunération des vacations.</p>
-        <p class="src">Sources : <a href="https://www.pantheonsorbonne.fr/universite/publications-reglementaires">rapport social unique 2024 de l'université Paris 1 Panthéon-Sorbonne</a> (soumis au comité social d'administration le 23 juin 2026), p. 12 et 90-91, indiqué par l'université le 9 novembre 2026 en réponse à notre demande ; délibération du conseil d'administration du 6 juillet 2023 (motion relative aux enseignants vacataires). La proportion est calculée par nous sur les effectifs, pas sur les heures : beaucoup de vacataires n'assurent que quelques heures. Les vacataires sont comptés sur l'année 2024, les personnels au 31 décembre 2024. Label : <a href="https://recherche.pantheonsorbonne.fr/politique-scientifique/european-hrs4r-label">page HRS4R de l'université</a>.</p>
+        <details class="src-d"><summary>Sources et méthode</summary><p class="src">Sources : <a href="https://www.pantheonsorbonne.fr/universite/publications-reglementaires">rapport social unique 2024 de l'université Paris 1 Panthéon-Sorbonne</a> (soumis au comité social d'administration le 23 juin 2026), p. 12 et 90-91, indiqué par l'université le 9 novembre 2026 en réponse à notre demande ; délibération du conseil d'administration du 6 juillet 2023 (motion relative aux enseignants vacataires). La proportion est calculée par nous sur les effectifs, pas sur les heures : beaucoup de vacataires n'assurent que quelques heures. Les vacataires sont comptés sur l'année 2024, les personnels au 31 décembre 2024. Label : <a href="https://recherche.pantheonsorbonne.fr/politique-scientifique/european-hrs4r-label">page HRS4R de l'université</a>.</p></details>
       </div>
-      <div class="fiche">
+      <div class="fiche" id="u-avignon-universite">
         <div class="nom">Avignon Université <span class="tag jaune">Documents reçus · 17 novembre</span></div>
         <p><strong style="color:var(--clair)">Plus de la moitié des heures d'enseignement en plus du service normal est payée à des vacataires extérieur·es</strong> : <strong style="color:var(--rose)">55 %</strong>, soit 1,33 million d'euros en 2024. Cela représente environ 30 000 heures de cours, l'équivalent d'environ 150 postes d'enseignant·e à plein temps, à comparer aux 378 enseignant·es titulaires et contractuel·les de l'université.</p>
         <p><strong style="color:var(--clair)">Ces vacataires sont invisibles</strong> : le rapport social ne les compte pas, au motif que l'université n'est pas leur « employeur principal ».</p>
         <p><strong style="color:var(--clair)">L'argent existe pourtant</strong> : en 2025, l'université a dégagé un <strong style="color:var(--rose)">excédent de 1,7 million d'euros</strong>, plus que tout ce qu'elle a versé à ses vacataires extérieur·es en 2024. Elle disposait aussi de 18,9 millions d'euros de trésorerie.</p>
-        <p class="src">Sources : rapport social unique 2024 d'Avignon Université (délibération du conseil d'administration du 14 avril 2026), p. 17-18 ; compte financier 2025, approuvé par le conseil d'administration le 10 mars 2026 ; transmis par l'université le 17 novembre 2026 en réponse à notre demande. Le volume d'heures est une estimation calculée par nous : les montants incluent aussi des cours magistraux, payés plus cher, et l'université ne publie pas le nombre d'heures.</p>
+        <details class="src-d"><summary>Sources et méthode</summary><p class="src">Sources : rapport social unique 2024 d'Avignon Université (délibération du conseil d'administration du 14 avril 2026), p. 17-18 ; compte financier 2025, approuvé par le conseil d'administration le 10 mars 2026 ; transmis par l'université le 17 novembre 2026 en réponse à notre demande. Le volume d'heures est une estimation calculée par nous : les montants incluent aussi des cours magistraux, payés plus cher, et l'université ne publie pas le nombre d'heures.</p></details>
       </div>
-      <div class="fiche">
+      <div class="fiche" id="u-la-rochelle-universite">
         <div class="nom">La Rochelle Université <span class="tag gris">Données publiées par l'université · 9 novembre</span></div>
         <p>En 2023-2024, l'université a fait appel à <strong style="color:var(--clair)">879 vacataires d'enseignement</strong>, un chiffre stable depuis quatre ans (entre 871 et 929). Elle compte 484 enseignant·es et enseignant·es-chercheur·es titulaires et contractuel·les, doctorant·es contractuel·les compris. Autrement dit, <strong style="color:var(--rose)">près de deux personnes sur trois qui enseignent à La Rochelle Université sont vacataires</strong>.</p>
         <p>L'université détient le label européen « HR Excellence in Research » depuis le 30 août 2024. Elle a accusé réception de notre demande et nous a renvoyé·es vers ses rapports publiés.</p>
-        <p class="src">Source : <a href="https://www.univ-larochelle.fr/wp-content/uploads/Rapport-social-unique-2024-de-La-Rochelle-Universite.pdf">rapport social unique 2024 de La Rochelle Université</a>, p. 16-18. La proportion est calculée par nous sur les effectifs, pas sur les heures : beaucoup de vacataires n'assurent que quelques heures. Les vacataires sont comptés sur l'année universitaire 2023-2024, les personnels au 31 décembre 2024. Label : <a href="https://euraxess.ec.europa.eu/hrexcellenceaward/awarded">liste EURAXESS</a>.</p>
+        <details class="src-d"><summary>Sources et méthode</summary><p class="src">Source : <a href="https://www.univ-larochelle.fr/wp-content/uploads/Rapport-social-unique-2024-de-La-Rochelle-Universite.pdf">rapport social unique 2024 de La Rochelle Université</a>, p. 16-18. La proportion est calculée par nous sur les effectifs, pas sur les heures : beaucoup de vacataires n'assurent que quelques heures. Les vacataires sont comptés sur l'année universitaire 2023-2024, les personnels au 31 décembre 2024. Label : <a href="https://euraxess.ec.europa.eu/hrexcellenceaward/awarded">liste EURAXESS</a>.</p></details>
       </div>
-      <div class="fiche">
+      <div class="fiche" id="u-ehess">
         <div class="nom">EHESS <span class="tag jaune">Premiers documents reçus · 9 novembre</span></div>
         <p>Les rapports sociaux uniques de l'École (2020 à 2025) <strong style="color:var(--clair)">ne comportent aucun chiffre sur les vacataires d'enseignement</strong>. Ils montrent en revanche que <strong style="color:var(--rose)">plus de la moitié des 446 enseignant·es et chercheur·es de l'EHESS ont un contrat temporaire</strong> en 2025 : 174 doctorant·es contractuel·les, 22 chercheur·es en CDD, 17 post-doctorant·es, 14 ATER et 3 maîtres de langue.</p>
         <p>Le nombre de titulaires baisse (223 en 2023, 215 en 2025, pour les emplois sous plafond de l'État), tandis que celui des contractuel·les augmente (+6,7 % en 2025). Fin 2025, l'École dispose d'un fonds de roulement de 24 millions d'euros et d'une trésorerie de 29,5 millions d'euros. Nous attendons les chiffres sur les vacataires.</p>
-        <p class="src">Sources : rapport social unique 2024-2025 de l'EHESS, p. 9 à 11, et rapport de présentation du compte financier 2025, p. 21, transmis le 9 novembre 2026 en réponse à notre demande. Proportion calculée par nous sur les effectifs.</p>
+        <details class="src-d"><summary>Sources et méthode</summary><p class="src">Sources : rapport social unique 2024-2025 de l'EHESS, p. 9 à 11, et rapport de présentation du compte financier 2025, p. 21, transmis le 9 novembre 2026 en réponse à notre demande. Proportion calculée par nous sur les effectifs.</p></details>
       </div>
-      <div class="fiche">
+      <div class="fiche" id="u-universite-de-lille">
         <div class="nom">Université de Lille <span class="tag gris">Données publiées par l'université · pas encore de réponse</span></div>
         <p>En 2024, l'université a fait appel à <strong style="color:var(--clair)">5 696 vacataires d'enseignement</strong>, dont 85,6 % de chargé·es d'enseignement vacataires. Elle compte 4 015 enseignant·es et enseignant·es-chercheur·es, titulaires et contractuel·les, dont 2 615 titulaires. Autrement dit, <strong style="color:var(--rose)">environ six personnes sur dix qui enseignent à l'Université de Lille sont vacataires</strong>.</p>
         <p>L'université n'a pas encore répondu à notre demande de données sur ses vacataires, le volume d'heures qu'ils et elles assurent et leurs délais de paiement.</p>
-        <p class="src">Source : <a href="https://www.univ-lille.fr/fileadmin/user_upload/Universite/Comprendre_notre_organisation/Fiche_d_identite/RSU_2024__29042026__compressed.pdf">rapport social unique 2024 de l'Université de Lille</a>, p. 24-25 et 28-29. La proportion est calculée par nous sur les effectifs, pas sur les heures : beaucoup de vacataires n'assurent que quelques heures.</p>
+        <details class="src-d"><summary>Sources et méthode</summary><p class="src">Source : <a href="https://www.univ-lille.fr/fileadmin/user_upload/Universite/Comprendre_notre_organisation/Fiche_d_identite/RSU_2024__29042026__compressed.pdf">rapport social unique 2024 de l'Université de Lille</a>, p. 24-25 et 28-29. La proportion est calculée par nous sur les effectifs, pas sur les heures : beaucoup de vacataires n'assurent que quelques heures.</p></details>
       </div>
-      <div class="fiche">
+      <div class="fiche" id="u-universite-de-reims-champagne-ardenne">
         <div class="nom">Université de Reims Champagne-Ardenne <span class="tag gris">Témoignage · pas encore de réponse</span></div>
         <p>Une vacataire, docteure qualifiée maîtresse de conférences, raconte attendre <strong style="color:var(--rose)">jusqu'à six mois</strong> pour être payée, avec des bulletins de paie décalés qui la privent d'indemnités pendant des mois (<a href="index.html#lea-325">Léa n°&nbsp;325</a>). Dans le même temps, l'université a conclu un accord-cadre d'ingénierie informatique, de conseil et d'assistance à maîtrise d'ouvrage pouvant atteindre <strong style="color:var(--clair)">8 millions d'euros</strong> sur quatre ans.</p>
         <p>L'université n'a pas encore répondu à notre demande de données sur ses vacataires et ses délais de paiement.</p>
-        <p class="src">Sources : témoignage publié avec l'accord de son autrice ; base nationale de la commande publique (accord-cadre de 2024, montant maximal).</p>
+        <details class="src-d"><summary>Sources et méthode</summary><p class="src">Sources : témoignage publié avec l'accord de son autrice ; base nationale de la commande publique (accord-cadre de 2024, montant maximal).</p></details>
       </div>
-      <div class="fiche">
+      <div class="fiche" id="u-universite-rennes-2">
         <div class="nom">Université Rennes 2 <span class="tag gris">Chiffres de l'université, via la presse et un syndicat</span></div>
         <p>En 2024-2025, <strong style="color:var(--clair)">1 987 enseignant·es vacataires</strong> ont assuré <strong style="color:var(--clair)">55 000 heures de cours sur 250 000</strong>, soit environ 22 %. Sur 911 enseignant·es-chercheur·es, 577 sont titulaires. Notre propre demande à l'université est en cours.</p>
-        <p class="src">Sources : chiffres transmis par l'université Rennes 2 à une journaliste, relayés par Sud Éducation Rennes 2 dans un message aux personnels du 4 novembre 2026 ; <a href="https://www.ouest-france.fr/bretagne/rennes-35000/vacataire-a-rennes-2-lea-temoigne-de-la-precarite-de-lenseignement-universitaire-f4511e58-ce36-11f1-bb5f-3dc5c0feacca">Ouest-France, 24 octobre 2026</a>. Pourcentage calculé par nous.</p>
+        <details class="src-d"><summary>Sources et méthode</summary><p class="src">Sources : chiffres transmis par l'université Rennes 2 à une journaliste, relayés par Sud Éducation Rennes 2 dans un message aux personnels du 4 novembre 2026 ; <a href="https://www.ouest-france.fr/bretagne/rennes-35000/vacataire-a-rennes-2-lea-temoigne-de-la-precarite-de-lenseignement-universitaire-f4511e58-ce36-11f1-bb5f-3dc5c0feacca">Ouest-France, 24 octobre 2026</a>. Pourcentage calculé par nous.</p></details>
       </div>
     </div>
     <h3 class="h3">Ce que cela veut dire</h3>
@@ -268,12 +299,12 @@
     <h2>Ce que les universités savent payer</h2>
 <p class="sous">Nous ne contestons ni les primes des collègues titulaires, qui rémunèrent de vraies responsabilités, ni le recours ponctuel à des prestataires. Mais ces chiffres publics montrent que l'argent existe quand l'université le décide, alors que les vacataires restent payé·es 43,50 € brut l'heure de TD, un taux censé couvrir aussi la préparation et les corrections, et que leurs surveillances d'examen sont souvent non rémunérées.</p>
     <div class="fiches" style="margin:1.4rem 0 .4rem">
-      <div class="fiche">
+      <div class="fiche" id="u-universite-paris-pantheon-assas">
         <div class="nom">Université Paris-Panthéon-Assas <span class="tag gris">Délibération du conseil d'administration</span></div>
         <p>Le conseil d'administration du 1<sup>er</sup> juillet 2026 fixe les primes de fonction des enseignant·es-chercheur·ses titulaires. Un vice-président statutaire touche <strong style="color:var(--clair)">10 500 € par an</strong>, soit environ six mois de salaire net d'un·e ATER. Un président de département, jusqu'à 8 750 €. Une responsabilité de master, 3 500 €.</p>
         <p>Surtout, la délibération convertit chaque prime en heures de cours : 3 500 € valent 35 heures de cours magistral. <strong style="color:var(--rose)">Une heure de responsabilité y vaut donc 100 €. Une heure de TD assurée par un·e vacataire est payée 43,50 € brut, et une heure de cours magistral, qui compte pour 1,5 heure de TD, environ 65 €.</strong></p>
         <p>Ces primes rémunèrent des responsabilités réelles, et nous ne les contestons pas. Mais elles montrent ce que l'université sait payer, et ce qu'elle refuse aux vacataires.</p>
-        <p class="src">Source : <a href="https://www.assas-universite.fr/sites/default/files/document/texte-officiel/deliberations-du-ca-plenier-du-1er-juillet-2026.pdf">délibérations du conseil d'administration de l'université Paris-Panthéon-Assas du 1<sup>er</sup> juillet 2026</a>, publiées sur le site de l'université (référentiel d'équivalences horaires et composante fonctionnelle C2 du RIPEC, à compter du 1<sup>er</sup> septembre 2026). Salaire ATER : environ 2 200 € brut par mois à temps plein (<a href="https://organisation.univ-pau.fr/fr/recrutement/recrutement-des-personnels-enseignants-chercheurs-postdoc/recrutement-ater.html">2 195 € selon l'université de Pau</a>).</p>
+        <details class="src-d"><summary>Sources et méthode</summary><p class="src">Source : <a href="https://www.assas-universite.fr/sites/default/files/document/texte-officiel/deliberations-du-ca-plenier-du-1er-juillet-2026.pdf">délibérations du conseil d'administration de l'université Paris-Panthéon-Assas du 1<sup>er</sup> juillet 2026</a>, publiées sur le site de l'université (référentiel d'équivalences horaires et composante fonctionnelle C2 du RIPEC, à compter du 1<sup>er</sup> septembre 2026). Salaire ATER : environ 2 200 € brut par mois à temps plein (<a href="https://organisation.univ-pau.fr/fr/recrutement/recrutement-des-personnels-enseignants-chercheurs-postdoc/recrutement-ater.html">2 195 € selon l'université de Pau</a>).</p></details>
       </div>
     </div>
     <h3 style="font-family:var(--sans);font-size:1.15rem;margin:1.6rem 0 .6rem">Les primes de fonction des titulaires</h3>
@@ -330,12 +361,12 @@
     <h2>Où en sont nos demandes ?</h2>
     <p class="sous">Les établissements ont un mois pour répondre. Sans réponse, le silence vaut refus et nous pourrons saisir la Commission d'accès aux documents administratifs (CADA). Échéances : du 25 au 28 novembre 2026 pour les 42 premières demandes, le 30 novembre pour les 15 suivantes, le 7 décembre pour les 28 envoyées le 7 novembre.</p>
         <div class="compteurs"><div><span class="cn ok">6</span>ont transmis des données</div><div><span class="cn ar">12</span>instruisent notre demande</div><div><span class="cn att">67</span>n'ont pas encore répondu</div></div>
-    <div class="grille"><div class="etab"><b>Université Paris 1 Panthéon-Sorbonne</b><span><span class="statut s-ok">Premiers documents reçus</span></span></div><div class="etab"><b>Sciences Po Bordeaux</b><span><span class="statut s-ok">Données reçues</span></span></div><div class="etab"><b>Université de Bordeaux</b><span><span class="statut s-ok">Données reçues</span></span></div><div class="etab"><b>Université Le Havre Normandie</b><span><span class="statut s-ok">Données partielles reçues</span></span></div><div class="etab"><b>EHESS</b><span><span class="statut s-ok">Premiers documents reçus</span></span></div><div class="etab"><b>Université d’Artois</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>La Rochelle Université</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>Université Marie et Louis Pasteur</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>Université Polytechnique Hauts-de-France</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>Université Côte d’Azur</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>Université Paris Dauphine-PSL</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>Université Bordeaux Montaigne</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>Université de Rouen Normandie</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>Université de Tours</b><span><span class="statut s-ar">Documents publics indiqués, données sur les vacataires annoncées</span></span></div><div class="etab"><b>Avignon Université</b><span><span class="statut s-ok">Documents reçus</span></span></div><div class="etab"><b>Université de Perpignan Via Domitia</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>Sciences Po Grenoble</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>Université Paris-Saclay</b><span><span class="statut s-ar">Délai supplémentaire annoncé</span></span></div></div>
+    <div class="grille"><div class="etab"><b>Université Paris 1 Panthéon-Sorbonne</b><span><span class="statut s-ok">Premiers documents reçus</span></span></div><div class="etab"><b>Sciences Po Bordeaux</b><span><span class="statut s-ok">Données reçues</span></span></div><div class="etab"><b>Université de Bordeaux</b><span><span class="statut s-ok">Données reçues</span></span></div><div class="etab"><b>Université Le Havre Normandie</b><span><span class="statut s-ok">Données partielles reçues</span></span></div><div class="etab"><b>EHESS</b><span><span class="statut s-ok">Premiers documents reçus</span></span></div><div class="etab"><b>Université d’Artois</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>La Rochelle Université</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>Université Marie et Louis Pasteur</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>Université Polytechnique Hauts-de-France</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>Université Côte d’Azur</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>Université Paris Dauphine-PSL</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>Université Bordeaux Montaigne</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>Université de Rouen Normandie</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>Université de Tours</b><span><span class="statut s-ar">Données annoncées</span></span></div><div class="etab"><b>Avignon Université</b><span><span class="statut s-ok">Documents reçus</span></span></div><div class="etab"><b>Université de Perpignan Via Domitia</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>Sciences Po Grenoble</b><span><span class="statut s-ar">En cours d'instruction</span></span></div><div class="etab"><b>Université Paris-Saclay</b><span><span class="statut s-ar">Délai supplémentaire annoncé</span></span></div></div>
     <details class="attente"><summary>Voir les 67 établissements qui n'ont pas encore répondu</summary><p class="liste-att">Aix-Marseille Université · Université d’Angers · Université des Antilles · Université Bourgogne Europe · Université de Bretagne Occidentale · Université Bretagne Sud · Université de Caen Normandie · INU Champollion · Université Claude Bernard Lyon 1 · Université Clermont Auvergne · Cnam · Université de Corse Pasquale Paoli · CY Cergy Paris Université · EPHE-PSL · Université d’Évry Paris-Saclay · Université Grenoble Alpes · Université Gustave Eiffel · Université de Guyane · Université de Haute-Alsace · Inalco · Université Jean Monnet Saint-Étienne · Université Jean Moulin Lyon 3 · Université de La Réunion · Le Mans Université · Université de Lille · Université de Limoges · Université du Littoral Côte d’Opale · Université de Lorraine · Université Lumière Lyon 2 · Université de Mayotte · Université de Montpellier · Nantes Université · Université de Nîmes · Université de la Nouvelle-Calédonie · Université d’Orléans · Université Paris 8 · Université Paris Cité · Université Paris Nanterre · Université Paris-Est Créteil · Université Paris-Panthéon-Assas · Université de Pau et des Pays de l’Adour · Université Paul-Valéry Montpellier 3 · Université de Picardie Jules Verne · Université de Poitiers · Université de la Polynésie française · Institut Polytechnique de Paris · Université PSL · Université de Reims Champagne-Ardenne · Université de Rennes · Université Rennes 2 · Université Savoie Mont Blanc · Sciences Po · Sciences Po Aix · Sciences Po Lille · Sciences Po Lyon · Sciences Po Rennes · Sciences Po Saint-Germain-en-Laye · Sciences Po Toulouse · Sorbonne Nouvelle · Université Sorbonne Paris Nord · Sorbonne Université · Université de Strasbourg · Université de Toulon · Université Toulouse Capitole · Université Toulouse III Paul Sabatier · Université Toulouse Jean Jaurès · Université de Versailles Saint-Quentin-en-Yvelines</p></details>
     <h3 class="h3">Ce que cela veut dire</h3>
     <ul class="questions">
       <li><strong style="color:var(--clair)">La transparence est un droit, pas une faveur.</strong> Le code des relations entre le public et l'administration (articles L. 300-1 et suivants) oblige les universités à communiquer ces documents. Un mois sans réponse vaut refus, et nous permet de saisir la Commission d'accès aux documents administratifs (CADA).</li>
-      <li><strong style="color:var(--clair)">Peu d'établissements ont répondu à ce jour.</strong> Sur 85 demandes, 6 ont transmis des données et 11 les instruisent. Les chiffres demandés existent pourtant dans leurs fichiers de paie et de services d'enseignement. Ils ne figurent simplement pas toujours dans les rapports publiés.</li>
+      <li><strong style="color:var(--clair)">Peu d'établissements ont répondu à ce jour.</strong> Sur 85 demandes, 6 ont transmis des données et 12 les instruisent. Les chiffres demandés existent pourtant dans leurs fichiers de paie et de services d'enseignement. Ils ne figurent simplement pas toujours dans les rapports publiés.</li>
       <li><strong style="color:var(--clair)">Nous irons jusqu'au bout.</strong> Sans réponse à l'échéance, nous saisirons la CADA, puis, si nécessaire, le tribunal administratif. Nous publierons tout ce que nous recevrons, établissement par établissement.</li>
       <li><strong style="color:var(--clair)">Chacun·e peut accélérer les choses.</strong> Élu·es dans les conseils, syndicats, personnels : demandez que le rapport social de votre établissement publie le nombre de vacataires, leurs heures et les délais de paiement.</li>
     </ul>
