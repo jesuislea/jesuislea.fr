@@ -354,6 +354,30 @@
   .baro-btns a{font-family:var(--sans);font-size:.9rem;font-weight:600;text-decoration:none;padding:.55rem 1rem;border-radius:999px;white-space:nowrap}
   .baro-btns .b1{background:var(--rose);color:#fff}
   .baro-btns .b2{border:1px solid var(--aqua);color:var(--aqua)}
+.immediat{background:var(--surface);border:1px solid var(--trait);border-left:3px solid var(--rose);border-radius:6px;padding:1.4rem 1.6rem 1.1rem;margin:0 0 1.6rem}
+.immediat-titre{font-family:var(--sans);font-weight:800;font-size:1.15rem;color:var(--clair);margin-bottom:.3rem}
+.immediat-sous{font-family:var(--sans);font-size:.88rem;color:var(--doux);margin-bottom:1rem}
+.immediat ol{list-style:none;margin:0;padding:0;display:grid;gap:.9rem}
+.immediat li{font-family:var(--sans);font-size:.95rem;color:var(--clair);line-height:1.45}
+.immediat li strong{display:block;font-size:1rem;margin-bottom:.2rem}
+.immediat .imm-qui{display:block;color:var(--doux);font-size:.86rem}
+.immediat .imm-qui b{color:var(--aqua);font-weight:700}
+.carte-note{font-family:var(--sans);font-size:.9rem;color:var(--doux);margin:-1.4rem 0 2.4rem;max-width:62ch}
+.etat{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.2rem 0 1rem}
+.etat-col{background:var(--surface);border:1px solid var(--trait);border-radius:6px;padding:1.1rem 1.2rem}
+.etat-col h4{font-family:var(--sans);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--aqua);margin:0 0 .6rem}
+.etat-col ul{margin:0;padding-left:1.1rem;font-family:var(--sans);font-size:.9rem;color:var(--clair);line-height:1.45}
+.etat-col li{margin-bottom:.45rem}
+.etat-col a,.carte-note a{color:var(--aqua)}
+.etat-col.obtenu h4{color:var(--rose)}
+.etat-col p{font-family:var(--sans);font-size:.9rem;color:var(--clair);margin:0}
+.titu{background:var(--surface);border:1px solid var(--trait);border-left:3px solid var(--aqua);border-radius:6px;padding:1.3rem 1.5rem;margin:2rem 0 1.2rem}
+.titu h3,.etat-wrap h3{font-family:var(--sans);font-size:1.15rem;font-weight:800;color:var(--clair);margin:0 0 .7rem}
+.titu ol{margin:0;padding-left:1.2rem;font-family:var(--sans);font-size:.95rem;color:var(--clair);line-height:1.5}
+.titu li{margin-bottom:.5rem}
+.etat-wrap{margin:2.2rem 0 1rem}
+.etat-wrap .sous{font-family:var(--sans);font-size:.9rem;color:var(--doux);max-width:62ch}
+@media (max-width:720px){.etat{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -425,7 +449,7 @@
 
 <section class="compteur">
   <div class="wrap">
-    <div class="n" id="compteur-n">351</div>
+    <div class="n" id="compteur-n">352</div>
     <div class="lbl admin">témoignages reçus, dont <span id="compteur-pub">317</span> publiés ci-dessous.<br>Chacun est une personne réelle derrière Léa. Nous publions ceux dont les auteur·es l'ont accepté ; les autres nourrissent nos analyses.</div>
     <script>document.addEventListener('DOMContentLoaded',function(){try{var n=document.querySelectorAll('.temoin[id^="lea-"]').length;if(n)document.getElementById('compteur-pub').textContent=n;}catch(e){}});</script>
   </div>
@@ -450,11 +474,22 @@
     <h2 class="rev-titre">Ce que nous demandons</h2>
     <p class="rev-intro admin">Pas des doléances. Des exigences — précises, chiffrables, opposables. Parce que ce n'est pas une collection de malchances à traiter au cas par cas : c'est un système qui tourne au travail sous-payé. Elles sont classées par ordre d'urgence. Les deux premières ne se négocient pas : le scandale le mieux documenté, et le plus simple à faire cesser. La troisième peut être obtenue dès maintenant, par un seul groupe de député·es. Les trois suivantes se jouent dans le budget 2027 : d'où vient l'argent de l'enseignement supérieur, et où il part. Reste à vouloir.</p>
 
+    <div class="immediat" id="immediat">
+      <div class="immediat-titre">Trois demandes immédiates</div>
+      <p class="immediat-sous">Elles ne demandent ni loi nouvelle ni réforme d'ampleur. Chacune a un·e responsable et une échéance.</p>
+      <ol>
+        <li><strong>1. Payer les vacataires chaque mois, avec des intérêts en cas de retard</strong>C'est la loi depuis 2022 ; il reste à l'appliquer.<span class="imm-qui"><b>Qui :</b> le ministre de l'Enseignement supérieur, par une instruction aux établissements, et chaque président·e d'université. <b>Quand :</b> dès la paie de janvier 2027.</span></li>
+        <li><strong>2. Relever le taux horaire des vacations</strong>Il est fixé par un simple arrêté ministériel, qui n'a pas suivi l'inflation depuis 1989.<span class="imm-qui"><b>Qui :</b> les ministres de l'Enseignement supérieur et des Comptes publics, sans passer par le Parlement. <b>Quand :</b> avec le budget 2027.</span></li>
+        <li><strong>3. Une commission d'enquête parlementaire sur la précarité dans l'ESR</strong>Pour établir les faits, université par université, et les responsabilités.<span class="imm-qui"><b>Qui :</b> un groupe d'opposition ou minoritaire de l'Assemblée nationale, qui peut l'obtenir une fois par session. <b>Quand :</b> avant la fin de la session, le 30 juin 2027.</span></li>
+      </ol>
+    </div>
+
     <div class="bref">
       <div class="bref-titre">En bref : nos 12 revendications</div>
-      <ol class="bref-liste"><li><a href="#rev-1"><span class="bref-n">1</span><span class="bref-t"><strong>Payer chaque mois, comme la loi l'exige</strong> — avec des intérêts de retard automatiques, et toutes les heures travaillées payées : préparation, corrections, surveillances.</span></a></li><li><a href="#rev-2"><span class="bref-n">2</span><span class="bref-t"><strong>80 € bruts de l'heure, et des postes stables</strong> — au lieu d'environ 43 € aujourd'hui ; un besoin permanent, un poste permanent.</span></a></li><li><a href="#rev-3"><span class="bref-n">3</span><span class="bref-t"><strong>Une commission d'enquête parlementaire</strong> — sur la précarité dans l'ESR, comme pour Bétharram. Un seul groupe de député·es peut l'obtenir dès maintenant.</span></a></li><li><a href="#rev-4"><span class="bref-n">4</span><span class="bref-t"><strong>Des postes, et des financements durables</strong> — des dotations pérennes pour les laboratoires plutôt que des appels à projets de l'ANR.</span></a></li><li><a href="#rev-5"><span class="bref-n">5</span><span class="bref-t"><strong>Pas d'argent public sans exigences</strong> — l'argent public de la formation à des formations contrôlées par l'État, et les économies à l'université publique.</span></a></li><li><a href="#rev-6"><span class="bref-n">6</span><span class="bref-t"><strong>Avec les lycéen·nes : supprimer Parcoursup</strong> — rétablir le droit d'accès à une université quasi gratuite, et ouvrir les places et les postes qui vont avec.</span></a></li><li><a href="#rev-7"><span class="bref-n">7</span><span class="bref-t"><strong>Handicap : appliquer la loi</strong> — le respect des 6 % d'emploi de personnes handicapées, y compris parmi les enseignant·es-chercheur·es.</span></a></li><li><a href="#rev-8"><span class="bref-n">8</span><span class="bref-t"><strong>Reconnaître le doctorat</strong> — dans les grilles salariales, et par une voie spécifique vers le CAPES.</span></a></li><li><a href="#rev-9"><span class="bref-n">9</span><span class="bref-t"><strong>Protéger contre les abus et les violences</strong> — une instance indépendante de l'employeur pour recevoir les signalements et protéger les victimes.</span></a></li><li><a href="#rev-10"><span class="bref-n">10</span><span class="bref-t"><strong>En finir avec les faux CDI</strong> — un CDI qui ne s'arrête pas avec le projet, et un vrai accès à l'emploi stable.</span></a></li><li><a href="#rev-11"><span class="bref-n">11</span><span class="bref-t"><strong>Rendre la vacation à sa fonction</strong> — un cours confié chaque année à la même personne, c'est un emploi : il doit devenir un contrat, puis un poste.</span></a></li><li><a href="#rev-12"><span class="bref-n">12</span><span class="bref-t"><strong>Compter, et rendre des comptes</strong> — que chaque université publie sa part de cours assurés par des précaires, et ses dépenses de conseil.</span></a></li></ol>
+      <ol class="bref-liste"><li><a href="#rev-1"><span class="bref-n">1</span><span class="bref-t"><strong>Payer chaque mois, comme la loi l'exige</strong> — avec des intérêts de retard automatiques, et toutes les heures travaillées payées : préparation, corrections, surveillances.</span></a></li><li><a href="#rev-2"><span class="bref-n">2</span><span class="bref-t"><strong>80 € bruts pour chaque heure réellement travaillée, et des postes stables</strong> — préparation et corrections comprises ; aujourd'hui, 43,50 € pour une heure de TD et rien pour le reste.</span></a></li><li><a href="#rev-3"><span class="bref-n">3</span><span class="bref-t"><strong>Une commission d'enquête parlementaire</strong> — sur la précarité dans l'ESR, comme pour Bétharram. Un seul groupe de député·es peut l'obtenir dès maintenant.</span></a></li><li><a href="#rev-4"><span class="bref-n">4</span><span class="bref-t"><strong>Des postes, et des financements durables</strong> — des dotations pérennes pour les laboratoires plutôt que des appels à projets de l'ANR.</span></a></li><li><a href="#rev-5"><span class="bref-n">5</span><span class="bref-t"><strong>Pas d'argent public sans exigences</strong> — l'argent public de la formation à des formations contrôlées par l'État, et les économies à l'université publique.</span></a></li><li><a href="#rev-6"><span class="bref-n">6</span><span class="bref-t"><strong>Avec les lycéen·nes : supprimer Parcoursup</strong> — rétablir le droit d'accès à une université quasi gratuite, et ouvrir les places et les postes qui vont avec.</span></a></li><li><a href="#rev-7"><span class="bref-n">7</span><span class="bref-t"><strong>Handicap : appliquer la loi</strong> — le respect des 6 % d'emploi de personnes handicapées, y compris parmi les enseignant·es-chercheur·es.</span></a></li><li><a href="#rev-8"><span class="bref-n">8</span><span class="bref-t"><strong>Reconnaître le doctorat</strong> — dans les grilles salariales, et par une voie spécifique vers le CAPES.</span></a></li><li><a href="#rev-9"><span class="bref-n">9</span><span class="bref-t"><strong>Protéger contre les abus et les violences</strong> — une instance indépendante de l'employeur pour recevoir les signalements et protéger les victimes.</span></a></li><li><a href="#rev-10"><span class="bref-n">10</span><span class="bref-t"><strong>En finir avec les faux CDI</strong> — un CDI qui ne s'arrête pas avec le projet, et un vrai accès à l'emploi stable.</span></a></li><li><a href="#rev-11"><span class="bref-n">11</span><span class="bref-t"><strong>Rendre la vacation à sa fonction</strong> — un cours confié chaque année à la même personne, c'est un emploi : il doit devenir un contrat, puis un poste.</span></a></li><li><a href="#rev-12"><span class="bref-n">12</span><span class="bref-t"><strong>Compter, et rendre des comptes</strong> — que chaque université publie sa part de cours assurés par des précaires, et ses dépenses de conseil.</span></a></li></ol>
       <p class="bref-note">Cliquez sur une revendication pour lire le détail, les chiffres et les sources.</p>
     </div>
+    <p class="carte-note"><strong>Soutenir à la carte.</strong> Vous pouvez soutenir une ou plusieurs de ces demandes sans adhérer à toutes, par exemple le paiement mensuel et la rémunération du travail réel, sans nous suivre sur Parcoursup ou l'ANR. Dites-nous lesquelles : <a href="mailto:contact@jesuislea.fr?subject=Je%20soutiens%20les%20demandes%20n%C2%B0">contact@jesuislea.fr</a>.</p>
 
     <div id="rev-1" class="bloc fer">
       <div class="bloc-tete">
@@ -476,10 +511,11 @@
         <span class="fer-tag">Priorité</span>
       </div>
       <ul class="bloc-liste">
-        <li><strong>Partout ailleurs, une expertise se paie.</strong> Un cours particulier de tennis coûte entre 50 et 80 euros de l'heure, tout comme une séance avec un·e coach sportif ; une séance chez un·e psychologue, environ 65 euros en moyenne, jusqu'à 120 euros en Île-de-France. Une heure de cours à l'université, préparée et assurée par un·e docteur·e, est payée environ 43 euros bruts, et la préparation n'est pas payée du tout. <span class="sources-inline">(Sources : <a href="https://groupe-reussite.fr/ressources/cp-sport-tarifs-cours-tennis/" target="_blank" rel="noopener">tarifs des cours de tennis</a> et <a href="https://groupe-reussite.fr/ressources/cp-sport-prix-coach-sportif/" target="_blank" rel="noopener">du coaching sportif</a>, Groupe Réussite, 2024-2025 ; <a href="https://lessentieldeleco.fr/4616-combien-gagne-un-psychologue/" target="_blank" rel="noopener">tarifs des psychologues</a>, L'Essentiel de l'Éco, novembre 2025 ; <a href="https://www.univ-lyon2.fr/medias/fichier/arrete-2026-026-valorisation-de-l-hetd-janv2026-2_1769071129210-pdf" target="_blank" rel="noopener">arrêté n° 2026-026</a>, Université Lyon 2.)</span></li>
-        <li><strong>L'université sait très bien ce que vaut une heure de cours.</strong> Quand elle facture son enseignement dans ses propres projets, l'Université Lyon 2 valorise une heure équivalent TD à 179 euros (<a href="https://www.univ-lyon2.fr/medias/fichier/arrete-2026-026-valorisation-de-l-hetd-janv2026-2_1769071129210-pdf" target="_blank" rel="noopener">arrêté du 16 janvier 2026</a>). Le même travail, assuré par un·e vacataire, est payé quatre fois moins.</li>
-        <li><strong>Nous demandons 80 euros bruts de l'heure</strong> : pour chaque heure de cours, et pour toutes les heures réellement travaillées autour (préparation, corrections, surveillances, réunions). Ni privilège, ni faveur : simplement le prix d'une expertise, aligné sur ce que paie le reste de la société.</li>
-        <li><strong>Pourquoi 80 euros ? Les arguments de n'importe quelle négociation salariale.</strong> <em>La qualification</em> : un doctorat, c'est au moins huit ans de formation, et souvent des années d'expérience d'enseignement et de recherche. <em>Le travail réel</em> : une heure de cours exige des heures de préparation, de corrections et de suivi des étudiant·es. <em>Le prix du marché</em> : à expertise comparable, le reste de la société paie entre 50 et 120 euros de l'heure (voir les sources ci-dessus). <em>La valeur produite</em> : sans nous, des cours ne seraient pas assurés et des diplômes ne seraient pas délivrés. <em>Le risque</em> : un·e indépendant·e facture plus cher qu'un·e salarié·e parce qu'il ou elle n'a ni congés payés, ni sécurité de l'emploi, ni prise en charge de ses frais ; nous avons tous ces inconvénients, sans la rémunération qui va avec. <em>Et la survie</em> : en France, en 2026, même un SMIC à temps plein suffit à peine à se loger dans une ville universitaire, à fonder une famille ou à tenir les mois sans contrat.</li>
+        <li><strong>Ce que l'État paie déjà à ses enseignant·es.</strong> L'Éducation nationale rémunère l'heure supplémentaire d'un·e professeur·e agrégé·e entre 53 et 58 euros, et celle d'un·e professeur·e de classes préparatoires entre 72 et 100 euros. À l'université, un·e docteur·e est payé·e 43,50 euros bruts l'heure de TD, et la préparation n'est pas payée du tout. <span class="sources-inline">(Source : Inspection générale de l'éducation, du sport et de la recherche, rapport sur les vacataires, avril 2025, p. 36.)</span></li>
+        <li><strong>Et sur le marché.</strong> Un cours particulier de tennis coûte entre 50 et 80 euros de l'heure, tout comme une séance avec un·e coach sportif ; une séance chez un·e psychologue, environ 65 euros en moyenne, jusqu'à 120 euros en Île-de-France. Ce sont des tarifs, pas des salaires : un·e indépendant·e paie sur ce prix ses cotisations, ses congés et ses frais. Ils donnent tout de même l'ordre de grandeur de ce que la société paie pour une heure d'expertise. <span class="sources-inline">(Sources : <a href="https://groupe-reussite.fr/ressources/cp-sport-tarifs-cours-tennis/" target="_blank" rel="noopener">tarifs des cours de tennis</a> et <a href="https://groupe-reussite.fr/ressources/cp-sport-prix-coach-sportif/" target="_blank" rel="noopener">du coaching sportif</a>, Groupe Réussite, 2024-2025 ; <a href="https://lessentieldeleco.fr/4616-combien-gagne-un-psychologue/" target="_blank" rel="noopener">tarifs des psychologues</a>, L'Essentiel de l'Éco, novembre 2025.)</span></li>
+        <li><strong>L'université sait chiffrer une heure de cours.</strong> Quand elle valorise son enseignement dans ses propres projets, l'Université Lyon 2 compte une heure équivalent TD à 179 euros (<a href="https://www.univ-lyon2.fr/medias/fichier/arrete-2026-026-valorisation-de-l-hetd-janv2026-2_1769071129210-pdf" target="_blank" rel="noopener">arrêté du 16 janvier 2026</a>). C'est un coût complet, charges et frais compris, et non ce que touche l'enseignant·e. Mais l'écart est parlant entre ce qu'une heure de cours vaut pour l'université et ce qu'elle verse au vacataire qui l'assure.</li>
+        <li><strong>Nous demandons 80 euros bruts pour chaque heure réellement travaillée</strong> : l'heure de cours, et chacune des heures de préparation, de correction, de surveillance et de réunion qui l'entourent. L'État le reconnaît lui-même : pour ses titulaires, il compte qu'une heure de TD représente 4,2 heures de travail effectif (référentiel national d'équivalences horaires, 2009). <em>Un exemple</em> : un TD de 2 heures, préparé en 3 heures, avec 2 heures de corrections, représente 7 heures de travail. Il serait payé 560 euros bruts ; il l'est aujourd'hui 87 euros (2 × 43,50 €), soit environ 12 euros par heure travaillée, à peine le SMIC.</li>
+        <li><strong>Pourquoi 80 euros ? Les arguments de n'importe quelle négociation salariale.</strong> <em>La qualification</em> : un doctorat, c'est au moins huit ans de formation, et souvent des années d'expérience d'enseignement et de recherche. <em>Le travail réel</em> : une heure de cours exige des heures de préparation, de corrections et de suivi des étudiant·es. <em>Les comparaisons</em> : l'État paie déjà jusqu'à 100 euros l'heure supplémentaire d'enseignement en classes préparatoires, et les tarifs d'expertise vont de 50 à 120 euros de l'heure (voir les sources ci-dessus). <em>La valeur produite</em> : sans nous, des cours ne seraient pas assurés et des diplômes ne seraient pas délivrés. <em>Le risque</em> : un·e indépendant·e facture plus cher qu'un·e salarié·e parce qu'il ou elle n'a ni congés payés, ni sécurité de l'emploi, ni prise en charge de ses frais ; nous avons tous ces inconvénients, sans la rémunération qui va avec. <em>Et la survie</em> : en France, en 2026, même un SMIC à temps plein suffit à peine à se loger dans une ville universitaire, à fonder une famille ou à tenir les mois sans contrat.</li>
         <li><strong>Un besoin permanent, un poste permanent.</strong> Limiter la durée des contrats par personne ne règle rien : l'établissement prendrait simplement quelqu'un de nouveau à chaque fois. C'est le besoin qu'il faut viser, pas la personne. Un enseignement ou une mission de recherche qui revient chaque année doit être assuré par un poste stable ; les contrats temporaires doivent être réservés aux besoins réellement temporaires — un remplacement, ou l'intervention ponctuelle d'un·e professionnel·le dont c'est l'activité principale ailleurs (avocat·e, magistrat·e, chef·fe d'entreprise, médecin…).</li>
         <li><strong>Un plan de titularisation</strong> pour celles et ceux qui assurent déjà ces besoins permanents, comme la loi Sauvadet l'a prévu en 2012 pour les contractuel·les de la fonction publique.</li>
       </ul>
@@ -612,6 +648,26 @@
       </ul>
     </div>
 
+
+    <div class="titu" id="titulaires">
+      <h3>Vous êtes titulaire ? Trois engagements concrets</h3>
+      <ol>
+        <li><strong>Porter une motion</strong> en conseil d'UFR, en CFVU ou en conseil d'administration : paiement mensuel des vacataires, et rémunération de la préparation et des corrections.</li>
+        <li><strong>Demander les chiffres</strong> en conseil : combien de vacataires, combien d'heures, et quels délais de paiement dans votre composante et votre université.</li>
+        <li><strong>Soutenir publiquement vos collègues précaires</strong> : signer la tribune, relayer les témoignages, témoigner avec #JaiEteLea si vous avez connu cette précarité.</li>
+      </ol>
+    </div>
+
+    <div class="etat-wrap" id="ou-en-sommes-nous">
+      <h3>Où en sommes-nous ?</h3>
+      <p class="sous">Nous distinguons ce qui est dit, ce qui est écrit et ce qui est obtenu. Un rendez-vous n'est pas encore une victoire.</p>
+      <div class="etat">
+        <div class="etat-col"><h4>Soutiens déclarés</h4><ul><li>La tribune publiée dans <em>Libération</em> et ses <a href="signataires.html">signataires</a> ;</li><li>des syndicats, des collectifs et des sociétés savantes ;</li><li>des député·es qui nous ont reçu·es ou répondu (<a href="barometre.html">voir le baromètre</a>).</li></ul></div>
+        <div class="etat-col"><h4>Engagements écrits</h4><ul><li>Une députée s'est engagée par écrit à appuyer auprès du ministre notre demande d'être reçu·es (16 novembre 2026) ;</li><li>un député s'est engagé à écrire au Premier ministre.</li></ul></div>
+        <div class="etat-col obtenu"><h4>Mesures obtenues</h4><p>Aucune à ce jour. Nous l'indiquerons ici dès qu'une mesure sera décidée.</p></div>
+      </div>
+      <p class="sous">À venir : rendez-vous au Sénat le 2 décembre et colloque à l'Assemblée nationale le 7 décembre 2026.</p>
+    </div>
     <p class="mission-note"><strong>Ces demandes, nous les posons aussi aux candidat·es à la présidentielle de 2027.</strong> <a href="#questionnaire">Voir nos questions aux candidat·es →</a></p>
 
     <div class="propositions-wrap">
@@ -682,6 +738,15 @@
         <p class="sommation">J'ai longtemps hésité à montrer mon visage. Je le fais pour toutes celles et ceux qui ne peuvent pas. Nous faisons tourner l'université ; nous méritons d'être payé·es, reconnu·es, et d'avoir un avenir.</p>
         <p>Je suis Léa. Nous sommes Léa. Et nous ne nous tairons plus.</p>
         <div class="meta">Carina · cofondatrice de #JeSuisLéa, docteure en droit international</div>
+      </div>
+      <div class="temoin" id="lea-352" data-n="352">
+        <div class="je">«&nbsp;Je suis Léa.&nbsp;» <span class="nouveau">Nouveau</span></div>
+        <p>Vivant peu des vacations, je suis un précaire de luxe&nbsp;: j'ai enchainé et épuisé différents types de contrats d'enseignant-chercheurs, avec «&nbsp;seulement&nbsp;» trois années de chômage et deux burn-out en une douzaine d'années. Il faut être doté d'un bon entourage familial et amical pour ne pas perdre pied socialement et financièrement. <span class="fort">La précarité n'est durable qu'à condition de ce soutien&nbsp;!</span></p>
+        <p>Je monte, et obtiens, des programmes de recherche, pour me salarier dessus, mais sans apparaitre dans le dossier, car seul·s les titulaires peuvent le porter. Bien qu'ayant peur d'être dépossédé de mon travail, ce que j'ai déjà connu dans d'autres circonstances, je n'ai pas d'autres choix que de l'accepter.</p>
+        <p>Mes collègues pensent beaucoup à moi pour «&nbsp;dépanner&nbsp;». Que cela soit quand je suis en contrat (un encadrement d'étudiants ou un cours qui ne me sera jamais payé, car on ne paye pas les heures sup), ou quand je suis en chômage (évaluation d'article, rédaction d'un chapitre d'ouvrage, présentation ou animation d'un séminaire, etc.). Je n'ai entendu qu'un seul message de leur part&nbsp;: <span class="fort">c'est un plus pour ton dossier, cela va se savoir si tu es celui qui dit non.</span> Mais dire oui ou non ne changera rien à notre place dans la hiérarchie universitaire, qui est le résultat d'un jeu de pouvoir qui nous échappe.</p>
+        <p>Le niveau de dégradation de l'université me donne de moins en moins envie d'avoir un poste pérenne dans l'ESR, ce que mes collègues titulaires n'arrivent pas à entendre. Je continue d'occuper cette place parce que j'ai pas trouvé d'opportunités ailleurs pour le moment. Mon envie d'investissement dans les tâches et les moments collectifs de la recherche diminue les années passant. Et même dans les luttes collectives, je dois bien l'avouer. Pourtant <span class="fort">«&nbsp;nous sommes Léa&nbsp;» est bien plus puissant·e que «&nbsp;je suis Léa&nbsp;».</span></p>
+        <div class="meta">Post-doctorant · Bretagne · depuis une douzaine d'années</div>
+        <div class="lea-pied"><a class="lea-num" href="#lea-352">Léa n°&nbsp;352</a><button type="button" class="lea-partager" data-n="352">Partager ce témoignage</button></div>
       </div>
       <div class="temoin" id="lea-351" data-n="351">
         <div class="je">«&nbsp;Je suis Léa.&nbsp;» <span class="nouveau">Nouveau</span></div>
@@ -3404,7 +3469,7 @@
       <details>
         <summary>Je suis titulaire, étudiant·e ou simple citoyen·ne : comment aider ?</summary>
         <div class="rep">
-          <p>Partagez les témoignages et nos vidéos, écrivez à votre député·e, parlez-en autour de vous. Les titulaires peuvent aussi relayer publiquement : leur voix montre que la précarité de leurs collègues est l'affaire de toute l'université. Tout est expliqué dans la rubrique <a href="#soutenir">Soutenir le mouvement</a>.</p>
+          <p>Partagez les témoignages et nos vidéos, écrivez à votre député·e, parlez-en autour de vous. Les titulaires peuvent aller plus loin : porter une motion dans leurs conseils, y demander les chiffres des vacations et des retards de paiement, et soutenir publiquement leurs collègues précaires (<a href="#titulaires">voir les trois engagements</a>). Tout est expliqué dans la rubrique <a href="#soutenir">Soutenir le mouvement</a>.</p>
         </div>
       </details>
       <details>
