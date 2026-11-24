@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Petit guide de l'émancipation de l'universitaire · Je suis Léa</title>
+<meta name="description" content="Pourquoi #JeSuisLéa est une lutte collective qui concerne aussi nos collègues titulaires, et ce que chacun·e peut faire concrètement.">
+<style>
+:root{--ink:#1d2140;--muted:#555b7d;--accent:#982e62;--aqua:#13877a;--nuit:#222a4d;--trait:#d9dbe8;--fond:#f4f5fa;--encadre:#f7f1f5}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fond);color:var(--ink);font-family:"Liberation Sans",Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6}
+.page{max-width:780px;margin:1.5rem auto 3rem;background:#fff;padding:2.6rem 2.8rem;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.08)}
+.actions{max-width:780px;margin:1rem auto 0;display:flex;gap:.8rem;flex-wrap:wrap;padding:0 1rem}
+.actions a,.actions button{font:inherit;font-size:.9rem;padding:.5rem 1rem;border-radius:20px;border:1px solid var(--accent);background:#fff;color:var(--accent);text-decoration:none;cursor:pointer}
+.actions button{background:var(--accent);color:#fff}
+.marque{font-weight:800;letter-spacing:.14em;font-size:.8rem;color:var(--accent)}
+h1{font-size:2rem;line-height:1.15;margin:.4rem 0 .6rem;color:var(--nuit)}
+.sous-titre{font-size:1.05rem;color:var(--muted);margin:0 0 1rem}
+.meta{font-size:.8rem;color:var(--muted);margin-bottom:1.5rem}
+nav.sommaire{background:var(--fond);border-radius:6px;padding:1rem 1.3rem;margin:1.5rem 0}
+nav.sommaire ol{margin:.3rem 0 0;padding-left:1.3rem}
+nav.sommaire a{color:var(--ink)}
+h2{font-size:1.4rem;line-height:1.25;color:var(--nuit);margin:2.6rem 0 1rem;padding-top:1rem;border-top:2px solid var(--accent)}
+h2 .num{color:var(--accent);margin-right:.4rem}
+h3{font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:1.8rem 0 .7rem}
+p{margin:0 0 .9rem}
+ul,ol{margin:0 0 1rem;padding-left:1.3rem}
+li{margin-bottom:.45rem}
+blockquote{margin:1rem 0;padding:.6rem 1rem;border-left:3px solid var(--accent);background:var(--encadre);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-size:.85rem;color:var(--muted);margin-top:.3rem}
+.encadre{background:var(--fond);border-radius:6px;padding:1rem 1.3rem;margin:1.2rem 0}
+.encadre h3{margin-top:0}
+.fort{font-weight:700;color:var(--accent);font-size:1.1rem;text-align:center;margin:1.6rem 0}
+.priorites{list-style:none;padding:0;counter-reset:p}
+.priorites li{counter-increment:p;padding-left:2.4rem;position:relative;margin-bottom:.8rem}
+.priorites li::before{content:counter(p);position:absolute;left:0;top:0;width:1.8rem;height:1.8rem;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:.9rem}
+.objection{margin:1rem 0}
+.objection .q{font-weight:700}
+.demandes{counter-reset:d;list-style:none;padding:0}
+.demandes li{counter-increment:d;padding:.7rem 1rem .7rem 3rem;position:relative;background:var(--fond);border-radius:6px;margin-bottom:.6rem}
+.demandes li::before{content:counter(d);position:absolute;left:1rem;top:.65rem;font-weight:800;color:var(--accent);font-size:1.2rem}
+.lettre{border:1px solid var(--trait);border-radius:6px;padding:1rem 1.3rem;margin:1rem 0;font-size:.95rem}
+.lettre .obj{font-weight:700}
+.sources{font-size:.85rem;color:var(--muted)}
+.note{font-size:.85rem;color:var(--muted)}
+.pied{margin-top:2rem;font-size:.85rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;border-top:1px solid var(--trait);padding-top:1rem}
+a{color:var(--aqua)}
+@media (max-width:600px){.page{margin:1rem;padding:1.5rem 1.2rem}h1{font-size:1.5rem}h2{font-size:1.2rem}}
+@media print{body{background:#fff;font-size:10.5pt}.page{box-shadow:none;margin:0;max-width:none;padding:0}.actions{display:none}h2{break-after:avoid}blockquote,.encadre,.lettre,.objection{break-inside:avoid}@page{size:A4;margin:16mm 18mm}}
+</style>
+</head>
+<body>
+<div class="actions"><a href="https://jesuislea.fr/#titulaires">← jesuislea.fr</a><button type="button" onclick="window.print()">Télécharger en PDF</button></div>
+<main class="page">
+<div class="marque">#JESUISLÉA</div>
+<h1>Petit guide de l'émancipation de l'universitaire</h1>
+<p class="sous-titre">ou pourquoi #JeSuisLéa est une lutte collective qui concerne aussi nos collègues titulaires</p>
+<p class="meta">Carina Bury et Anaïs Vallet, pour le collectif #JeSuisLéa · version 2, novembre 2026</p>
+
+<blockquote>« Les titulaires ont un salaire, une position, des réseaux et parfois un pouvoir de décision. Tout ça peut servir à autre chose qu'à expliquer aux précaires comment ils devraient lutter. »<cite>Ralph Balez, cofondateur d'un collectif de chercheur·es précaires en 2006</cite></blockquote>
+
+<nav class="sommaire"><strong>Sommaire</strong>
+<ol>
+<li><a href="#constat">Le constat : une violence ordinaire</a></li>
+<li><a href="#silence">« On vous soutient, mais… » : le silence n'est jamais neutre</a></li>
+<li><a href="#universite">Ce que ce silence dit de l'université, et de nous</a></li>
+<li><a href="#individualisme">Sortir de l'individualisme</a></li>
+<li><a href="#interet">Pourquoi c'est dans votre intérêt de vous impliquer</a></li>
+<li><a href="#agir">Que faire, concrètement</a></li>
+<li><a href="#objections">Objections fréquentes</a></li>
+<li><a href="#demandes">Ce que nous demandons</a></li>
+</ol>
+<p class="note" style="margin:.4rem 0 0">Annexe : <a href="#lettres">modèles de lettres</a> · <a href="#sources">sources</a></p>
+</nav>
+
+<h2 id="avant-propos">Avant-propos : à vous, nos collègues titulaires</h2>
+<p>Ce guide vise à encourager celles et ceux qui ont un poste à prendre leur part du combat contre la précarité, et à ne pas le laisser aux seul·es précaires.</p>
+<p>Nous sommes docteur·es, ATER, post-docs, vacataires, doctorant·es. Nous assurons une part considérable des cours de vos composantes. Depuis septembre, #JeSuisLéa a recueilli plus de 350 témoignages sur jesuislea.fr. Ils racontent la même chose : la précarité n'est pas un mauvais moment à passer, c'est une violence organisée.</p>
+<p>Vous êtes nombreux et nombreuses à nous dire votre soutien, et nous vous en remercions. Beaucoup nous conseillent sur la façon de lutter ; moins nombreux sont celles et ceux qui agissent à nos côtés. Ce guide propose de transformer la sympathie en actes, avec des gestes précis, à votre portée.</p>
+<p>Le moment compte : le budget de l'enseignement supérieur arrive au Sénat début décembre. Ce que vous ferez dans les prochaines semaines peut peser.</p>
+
+<h2 id="constat"><span class="num">1</span>Le constat : une violence que beaucoup ne voient pas, ou ne veulent pas voir</h2>
+<p>La précarité universitaire est une violence. Pas une métaphore : des salaires sous le Smic, des mois sans paie, des contrats qui disparaissent du jour au lendemain, et des femmes qui paient plus cher que les hommes.</p>
+<div class="encadre"><h3>Les chiffres</h3>
+<ul>
+<li>Entre 160 000 et 170 000 vacataires assurent environ 20 % des heures d'enseignement, soit un cours sur cinq (IGÉSR, 2025).</li>
+<li>Une heure de TD est payée 43,50 € brut, préparation et corrections comprises.</li>
+<li>À Bordeaux, des chargé·es de TD ont fait le calcul : 15 h de TD représentent 104 h de travail réel, soit 62 % du Smic (enquête 2013-2014 ; le taux est passé depuis de 40,91 € à 43,50 €).</li>
+<li>À la rentrée 2007, 2 135 postes de maître·sses de conférences étaient ouverts au recrutement. En 2024, 1 628 seulement ont été publiés. Le nombre d'étudiant·es, lui, n'a cessé d'augmenter.</li>
+<li>Aucune université n'est tenue de dire combien de précaires elle emploie. Beaucoup de vacataires commencent à enseigner sans contrat de travail, qu'ils et elles signent plus tard, de façon rétroactive. Pendant ce temps, ces personnes n'apparaissent dans aucune statistique.</li>
+</ul></div>
+
+<h3>Ce que nous vivons, avec nos mots</h3>
+<p>Ces situations viennent du mur de témoignages de jesuislea.fr.</p>
+<p><strong>Travailler sans être payé·e pour ce qu'on fait.</strong></p>
+<ul>
+<li>Un·e vacataire payé·e cinq mois après ses cours : autour de 4 € de l'heure, une fois la préparation et les corrections comptées.</li>
+<li>Un docteur, ancien enseignant à l'université, qui vit aujourd'hui des minima sociaux.</li>
+</ul>
+<blockquote>« Je fais la queue à l'aide alimentaire, glacé·e à l'idée d'y croiser mes propres étudiants. »</blockquote>
+<p><strong>Être payé·e en retard… ou pas en euros.</strong></p>
+<blockquote>« Premiers cours donnés mi-septembre, première paye (partielle !) fin mars. »<cite>Léa n° 201</cite></blockquote>
+<blockquote>« Cette année-là, j'ai été payée un an après la fin de mes TD. »<cite>Léa n° 214</cite></blockquote>
+<p>Une vacataire, impayée pendant des mois pour 63 heures de cours, s'est vu proposer un frigo par son université. Une autre a reçu un ordinateur portable pour 12 heures de cours et les copies, « car impossible de rémunérer autrement ». Un séminaire a été payé avec un livre. Et une vacataire a été menacée d'une plainte pour harcèlement… pour avoir réclamé sa paie (Léa n° 155).</p>
+<p class="fort">L'administration peut attendre quatre mois pour nous payer. Nous ne pouvons pas attendre quatre mois pour manger ou nous loger.</p>
+<p><strong>Être jetable.</strong> Une doctorante a été remplacée dans le couloir, juste avant sa troisième séance de TD : « aucun mot d'excuse ni aucune rémunération », faute de contrat signé (Léa n° 216). Sans contrat de travail, on n'a aucune des protections qu'il apporte : ni préavis, ni recours, ni garantie d'être payé·e.</p>
+
+<h3>Tout le monde n'a pas vécu la même précarité</h3>
+<p>Beaucoup de titulaires nous disent : « Moi aussi, j'ai galéré. » Sans doute. Mais la précarité d'aujourd'hui dure plus longtemps, pour moins de postes au bout. Le regard porté depuis un poste stable est souvent tourné vers son propre parcours.</p>
+<p>Le contrat social est rompu. Longtemps, l'université a promis qu'en faisant les choses bien, on finirait par trouver sa place. Aujourd'hui, une grande école, une thèse avec la plus haute mention, des publications et des années d'enseignement ne suffisent plus :</p>
+<blockquote>« Classe prépa, grande école, doctorat, réseau, publications : je pensais avoir coché toutes les cases. »<cite>Léa n° 147</cite></blockquote>
+<blockquote>« Deux masters dont un dans une grande école censée "garantir un emploi et un salaire décents", un doctorat en cotutelle à l'étranger. »<cite>Léa n° 68</cite></blockquote>
+<p>Et la précarité ne frappe pas tout le monde de la même façon, en particulier les personnes qui n'ont ni conjoint pour assumer un foyer, ni famille pour amortir les besoins financiers. Elle pèse sur le choix d'avoir ou non des enfants, et sur le moment de le faire.</p>
+<p>Elle pèse aussi davantage sur celles et ceux qui ne viennent pas du sérail. Les témoignages se rejoignent :</p>
+<blockquote>« Je viens d'un petit village, d'une famille ouvrière ; j'ai grandi en HLM. » (Léa n° 26)<br>« Les concours ? Sans réseau, rien. » (Léa n° 44)<br>« Thèse faite en province, sans réseau parisien. » (Léa n° 107)<br>« Si vous n'êtes pas assez socialisé·e dans le milieu universitaire parisien, voilà ce qui vous attend. » (Léa n° 172)</blockquote>
+<p>Le problème n'est pas seulement l'argent : ce sont des codes, souvent bourgeois. Celles et ceux qui ne les maîtrisent pas, ou qui refusent de s'y conformer, sont les premiers à qui l'on montre la porte. Une enseignante en CDD n'a pas été reconduite parce qu'elle « ne se pliait pas assez » à la façon d'évaluer d'un collègue titulaire ; on lui a rappelé que sa fonction était de « soulager les permanents » (Léa n° 121). Les enseignant·es les plus apprécié·es des étudiant·es ne sont pas forcément celles et ceux qui restent : ce sont parfois justement celles et ceux qui ne se laissent pas marcher dessus.</p>
+<p>Or ce sont souvent ces personnes-là qui bousculent les évidences et font avancer la science. Une université qui les écarte ne peut plus se dire le lieu de l'esprit critique et de l'innovation : elle se prive d'une partie de la recherche. Et l'égal accès aux emplois publics, « selon leur capacité » (article 6 de la Déclaration des droits de l'homme et du citoyen), devient un principe sans réalité.</p>
+<p>Pierre Bourdieu le montrait déjà dans <em>Homo academicus</em> : l'université tend à reproduire sa propre composition sociale. Notre présidente, Carina Bury, qui ne vient pas elle non plus d'un milieu parisien et bourgeois, montre dans un <a href="https://verfassungsblog.de/making-precarity-orderly/">article du Verfassungsblog</a> (23 novembre 2026) que la précarité renforce ce tri, en faisant du conformisme une condition de survie. Et, comme l'ont montré les épistémologues Sandra Harding et Donna Haraway, le savoir s'appauvrit quand il écarte les regards de la marge.</p>
+<blockquote>« Une université qui ne garde que les conformes se prive de ce qui la fait avancer. »<cite>Carina Bury, présidente de #JeSuisLéa</cite></blockquote>
+
+<p><strong>Être précaire et mère.</strong> Une doctorante vacataire prend son congé maternité : elle ne pourra pas enseigner au second semestre et, sans droits sociaux, elle perd ses revenus.</p>
+<blockquote>« C'est la violence de trop pour moi. »<cite>Léa n° 214</cite></blockquote>
+<p>Une ATER, sur un contrat d'un an, a dit oui à tout : un cours de plus au pied levé, des jours entiers de commissions. Elle s'est même excusée de prendre dix jours de congé, pourtant autorisés. Et elle raconte :</p>
+<blockquote>« J'ai dû cacher ma grossesse pendant près de six mois. Tout ça pour être sûre d'être renouvelée. »<cite>Léa n° 137</cite></blockquote>
+<p>Une autre Léa s'est entendu dire par la responsable de son premier post-doc :</p>
+<blockquote>« Tu ne vas pas me faire le coup de tomber enceinte. »<cite>Léa n° 187</cite></blockquote>
+<p>Marie, membre de notre collectif, enquête auprès de docteures non titulaires devenues mères. Entre la thèse et le poste, on exige de publier, d'enseigner, de partir en mobilité, sans rémunération ni garantie : c'est ce que la sociologie appelle le <em>hope labour</em>, un travail gratuit fourni dans l'espoir d'un poste. Ce que son enquête met en évidence :</p>
+<ul>
+<li>des journées doubles ou triples : emploi alimentaire, vacations, travail domestique et parental, et la recherche par-dessus ;</li>
+<li>une dépendance au conjoint, qui peut aller jusqu'aux violences, y compris sexuelles ;</li>
+<li>des atteintes au droit : tâches imposées pendant le congé prénatal, avortement suggéré par une direction de labo, contrat non renouvelé pour cause de grossesse ;</li>
+<li>le silence : grossesses cachées, projets d'enfant reportés, peur de « se tirer une balle dans le pied ».</li>
+</ul>
+<blockquote>« La directrice [de mon labo] m'a conseillé d'avorter. »<cite>enquête de Marie auprès de docteures devenues mères</cite></blockquote>
+<blockquote>« Vous n'avez pas des capotes ? »<cite>une directrice de thèse, à l'annonce d'une grossesse (enquête de Marie)</cite></blockquote>
+<p class="fort">Ces récits ne sont pas des exceptions. Ce sont les symptômes d'un système.</p>
+
+<div class="encadre"><h3>La souffrance psychique, en chiffres</h3>
+<p>La précarité ne vide pas seulement les comptes en banque. Elle abîme la santé mentale, et les études convergent : la souffrance des jeunes chercheur·es est massive, et elle tient d'abord aux conditions de travail.</p>
+<ul>
+<li><strong>Un·e doctorant·e sur deux en détresse.</strong> Dans une étude représentative portant sur 3 659 doctorant·es en Flandre, 51 % présentaient des signes de détresse psychologique, et 32 % étaient à risque de développer un trouble psychiatrique courant, surtout la dépression. C'est plus de deux fois plus que chez des diplômé·es du supérieur comparables. Premier facteur : le conflit entre travail et vie familiale (Levecque et al., <em>Research Policy</em>, 2017).</li>
+<li><strong>En France, stress et isolement.</strong> Selon l'enquête du Réseau national des collèges doctoraux auprès des inscrit·es de 2022-2023, 54 % des doctorant·es se disent exposé·es au stress et 50 % s'estiment isolé·es.</li>
+<li><strong>Après la thèse, la moitié pense à partir.</strong> Dans l'enquête de <em>Nature</em> auprès de plus de 7 600 post-docs de 93 pays, 51 % ont envisagé de quitter la science à cause de problèmes de santé mentale liés à leur travail : 55 % des femmes, contre 46 % des hommes. 49 % voulaient de l'aide pour une dépression ou une anxiété causée par leur travail, et 26 % ne l'avaient jamais demandée. Près d'un quart avaient subi harcèlement ou discrimination, le plus souvent de la part de leur responsable (<em>Nature</em>, 2020).</li>
+<li><strong>Anxiété et dépression, surtout chez les femmes.</strong> Une enquête internationale auprès de 2 279 étudiant·es en doctorat et master relève 41 % d'anxiété et 39 % de dépression modérée à sévère, les femmes étant plus touchées que les hommes. L'échantillon n'est pas représentatif, mais l'ordre de grandeur rejoint les autres études (Evans et al., <em>Nature Biotechnology</em>, 2018).</li>
+</ul>
+<p>Ces chiffres portent surtout sur les doctorant·es et les post-docs. Pour les vacataires et les docteur·es sans poste en France, il n'existe presque rien : personne ne mesure. C'est une raison de plus pour une commission d'enquête.</p>
+<p class="note">Si vous traversez une période difficile : le 3114, numéro national de prévention du suicide, répond 24 h/24 et 7 j/7, gratuitement. Les services de santé universitaires et les représentant·es syndicaux peuvent aussi vous accompagner.</p>
+</div>
+
+<h2 id="silence"><span class="num">2</span>« On vous soutient, mais… » : le silence n'est jamais neutre</h2>
+<p>Dans une relation de pouvoir, il n'y a pas de position neutre. Celui ou celle qui a un poste et se tait laisse les choses en l'état, et l'état actuel, c'est la précarité.</p>
+<h3>Ce que nous entendons</h3>
+<p>Quand nous demandons de l'aide, la réponse est rarement non. Elle est le plus souvent : « oui, mais pas comme ça », « pas maintenant », « pas moi ». Quelques formules reviennent sans cesse :</p>
+<ul>
+<li><strong>Le conseil à la place de l'acte.</strong> « Vous devriez vous syndiquer, écrire aux député·es, faire une pétition. » Le titulaire explique comment lutter ; le précaire est prié de lutter.</li>
+<li><strong>La solidarité discrète.</strong> « Je vous soutiens à 100 %, mais je préfère ne pas signer. » En 2026, à l'université, on a encore peur de signer de son nom. Résultat : sur les 338 signataires de notre tribune dans <em>Libération</em>, 99 ont signé anonymement.</li>
+<li><strong>Le « c'est compliqué ».</strong> Le budget, la composante, la présidence, les maquettes : le problème serait toujours ailleurs, toujours au-dessus.</li>
+<li><strong>Le « moi aussi j'ai galéré ».</strong> Une précarité passée devient une preuve que la nôtre est supportable, formatrice, voire un rite de passage.</li>
+<li><strong>Le silence des élu·es.</strong> Nous avons écrit à 44 député·es. La plupart n'ont jamais répondu. Les autres se disent « attentive », « préoccupé », assurent de leur « vigilance ». Aucun engagement clair pour une commission d'enquête (<a href="https://jesuislea.fr/barometre.html">voir notre baromètre</a>).</li>
+<li><strong>Le « c'est trop politique ».</strong> Une membre de notre collectif a simplement demandé que notre appel soit relayé dans son labo. La gestionnaire administrative et financière a répondu, en mettant le directeur en copie :
+<blockquote>« Je ne vais pas prendre la décision au vu du mail de ton amie. Pour moi c'est un peu trop politique. »</blockquote>
+Le directeur a ensuite répondu que ce n'était pas le rôle du labo de diffuser ce message sur ses listes. Dans un autre labo, la réponse a été :
+<blockquote>« Pour être honnête, je ne me sens pas de relayer ce type de mail, en mon nom, auprès de toute l'équipe. Il s'agit plus de communication de la DRH, des représentants du personnel, des syndicats. »</blockquote>
+Payer des vacataires sous le Smic, avec des mois de retard, ce serait « neutre » ; le dire, ce serait « politique ». Refuser de relayer n'est pas une absence de position : c'est choisir le statu quo. C'est ainsi que se maintient une injustice : non par la malveillance, mais par la prudence de chacun·e.</li>
+<li><strong>Le mail resté sans réponse.</strong> Une Léa a écrit à plusieurs reprises à son réseau de collègues, dans plusieurs villes, pour les informer d'abord, puis leur demander de relayer. Presque aucune réaction. Celles et ceux qu'elle a relancé·es n'avaient pas eu le temps d'ouvrir le mail, ou n'avaient rien fait. Ce n'est pas de l'hostilité. C'est le manque de temps que produit l'organisation du travail, où chaque tâche est urgente et où nos conditions de travail passent toujours après. C'est aussi une indifférence ordinaire, nourrie par un sentiment d'impuissance ou par l'impression de ne pas être concerné·e.</li>
+</ul>
+<blockquote>« C'est pénible parce qu'on passe du temps et on dépense de l'énergie à écrire des mails pour qu'au final les gens ne fassent rien ou presque. À peine s'ils les lisent… »</blockquote>
+<p>Ce temps-là n'est payé par personne. Il est pris sur des jours de recherche déjà comptés, par celles et ceux qui ont le moins de temps et le plus à perdre.</p>
+<p>Ce qui a marché, en revanche : appeler directement un·e titulaire, lui expliquer, et lui demander explicitement de faire circuler. Nous en tirons une leçon : un mail collectif se perd, une demande personnelle engage. Si un·e précaire vous demande personnellement de relayer, le faire, puis le lui dire, change beaucoup.</p>
+<p>Ralph Balez, psychologue et ancien enseignant-chercheur, cofondait en 2006 un collectif de chercheur·es précaires qui portait déjà nos revendications. Vingt ans plus tard, il nous écrit :</p>
+<blockquote>« Les titulaires ont un salaire, une position, des réseaux et parfois un pouvoir de décision. Tout ça peut servir à autre chose qu'à expliquer aux précaires comment ils devraient lutter. »</blockquote>
+<h3>Pourquoi le silence n'est pas neutre</h3>
+<p>Selon une formule attribuée à Desmond Tutu, rester neutre face à l'injustice, c'est avoir choisi le camp de l'oppresseur. À l'université, ce mécanisme est très concret.</p>
+<ul>
+<li><strong>Le système tient aussi grâce au silence.</strong> Il ne fonctionne que parce que, chaque année, les mêmes TD sont confiés à des vacataires, des services qui en dépendent sont signés, des budgets qui l'organisent sont votés.</li>
+<li><strong>Tout le monde en dépend.</strong> Les précaires prennent les TD de première année, les copies, les remplacements de dernière minute. Leur travail libère du temps de recherche pour d'autres.</li>
+<li><strong>Le risque est inégalement réparti.</strong> Un·e titulaire qui proteste risque un froid en conseil. Un·e précaire qui proteste risque de ne pas être reconduit·e, voire, on l'a vu, une plainte pour avoir réclamé sa paie.</li>
+<li><strong>Le coût de la parole pèse sur les plus vulnérables.</strong> Nous sommes celles et ceux qui avons le plus à perdre à prendre la parole. Votre statut vous permet de la prendre avec nous.</li>
+</ul>
+<p>Une ATER nous l'a écrit :</p>
+<blockquote>« Chers collègues au salaire décent : nous sommes vos ancien·nes étudiant·es, vos doctorant·es. Où est votre indignation ? »<cite>Léa n° 147</cite></blockquote>
+
+<h2 id="universite"><span class="num">3</span>Ce que ce silence dit de l'université, et de nous</h2>
+<p>L'inaction n'est pas une somme de petites lâchetés individuelles. C'est un fait social, que la sociologie du travail et la philosophie permettent de nommer.</p>
+<h3>Le regard de la sociologie du travail</h3>
+<ul>
+<li><strong>Un marché du travail coupé en deux.</strong> L'université fonctionne comme un marché dual : un noyau protégé de titulaires, une périphérie de précaires qui absorbe la flexibilité. Le noyau tient parce que la périphérie existe. La solidarité entre les deux n'a rien de spontané : chaque groupe a appris à ne plus se voir dans l'autre.</li>
+<li><strong>La précarité comme mode de gouvernement.</strong> Pierre Bourdieu le disait dès 1997 (« La précarité est aujourd'hui partout », repris dans <em>Contre-feux</em>) : la précarité empêche de se projeter dans l'avenir, donc de se révolter. Elle ne frappe pas seulement les précaires : en rendant la menace omniprésente, elle rend aussi l'action collective plus difficile pour toutes et tous.</li>
+<li><strong>La désaffiliation.</strong> Robert Castel (<em>Les Métamorphoses de la question sociale</em>, 1995) a montré comment l'effritement du salariat produit des individus « désaffiliés », sans prise sur leur condition. Le docteur au RSA, la vacataire payée en frigo : la désaffiliation est arrivée au cœur de l'institution qui forme les élites intellectuelles.</li>
+<li><strong>La banalisation de l'injustice.</strong> Christophe Dejours (<em>Souffrance en France</em>, 1998) explique comment des gens ordinaires, ni cyniques ni cruels, finissent par tolérer, voire faire fonctionner, l'injustice : en se protégeant par l'indifférence, en ne voulant pas savoir, en se répétant que « c'est comme ça ». Le « c'est trop politique » de la gestionnaire en est un exemple.</li>
+<li><strong>Le travail gratuit.</strong> Maud Simonet (<em>Travail gratuit : la nouvelle exploitation ?</em>, 2018), signataire de notre tribune, a montré comment le travail non payé, souvent féminin, est devenu un rouage de l'économie. Le <em>hope labour</em> universitaire (enseigner, publier, évaluer gratuitement dans l'espoir d'un poste) en est une forme exemplaire.</li>
+<li><strong>Exit, voice, loyalty.</strong> Albert Hirschman (1970) distinguait trois réponses au déclin d'une organisation : partir, protester, ou rester loyal et se taire. Beaucoup de précaires partent en silence ; beaucoup de titulaires restent loyaux en silence. Aucune de ces deux attitudes ne change l'institution. Pour l'instant, la prise de parole, celle qui fait changer les choses, est portée en grande majorité par des précaires.</li>
+</ul>
+<h3>Ce que cela annonce pour l'université et la société</h3>
+<p>Une université qui fonctionne grâce au travail mal payé de ses docteur·es se condamne à recruter non les meilleur·es, mais celles et ceux qui peuvent se permettre d'attendre : les mieux doté·es, les mieux entouré·es, et rarement les mères. La précarité est un filtre social et genré.</p>
+<p>Elle appauvrit aussi le savoir : moins de temps pour chercher, moins de liberté pour déplaire, des recherches calibrées pour le prochain contrat. Et quand celles et ceux qui transmettent le savoir sont aussi mal traité·es, la jeunesse comprend vite que faire des études ne protège plus de la précarité.</p>
+<p>Rien de tout cela n'est nouveau. Dans <em>Le Métier et la vocation de savant</em> (1917), Max Weber décrivait déjà la carrière universitaire comme un pur hasard, et la condition du <em>Privatdozent</em> allemand, enseignant sans salaire fixe. Un siècle plus tard, nous en sommes revenu·es là.</p>
+<h3>Le regard de la philosophie</h3>
+<ul>
+<li><strong>La responsabilité sans faute.</strong> Pour Iris Marion Young (<em>Responsibility for Justice</em>, 2011), l'injustice structurelle n'a pas de coupable unique : elle résulte de la participation ordinaire de chacun·e à des structures injustes. Nul besoin d'être fautif pour être responsable. Qui participe au système, en confiant des TD, en votant un budget, en se taisant, a la responsabilité d'aider à le changer, à proportion de son pouvoir.</li>
+<li><strong>Le déni de reconnaissance.</strong> Axel Honneth (<em>La Lutte pour la reconnaissance</em>, 1992) montre que le mépris social blesse autant qu'une privation matérielle. Être payé·e en livre ou en ordinateur, remplacé·e dans le couloir, ignoré·e quand on demande de l'aide : c'est se voir signifier qu'on ne compte pas.</li>
+<li><strong>La servitude volontaire.</strong> Étienne de La Boétie (<em>Discours de la servitude volontaire</em>, vers 1550) posait une question troublante : la domination ne tient que parce que ceux qui la subissent ou la servent y consentent. Aucun système de précarité ne survit à des titulaires qui refusent collectivement d'y prêter la main.</li>
+<li><strong>Penser ce que l'on fait.</strong> Hannah Arendt a montré que les injustices les plus graves peuvent naître non de la méchanceté, mais de l'absence de pensée : de gens qui font leur travail sans se demander ce qu'il produit. Les universitaires, dont le métier est de penser, sont bien placé·es pour s'interroger sur ce que produit le silence.</li>
+</ul>
+<h3>Le regard du droit : une question de liberté académique</h3>
+<p>La précarité n'est pas seulement une question de salaire. C'est aussi une question de liberté. Comme le montre Éric Fassin (<em>De la liberté académique</em>, Tracts Gallimard, 2026), « en l'absence de statut, mieux vaut en effet ne pas déplaire à ses employeurs ». Une vacataire peut perdre ses cours d'une année sur l'autre, sans motif. Alors on évite les sujets qui fâchent, on ne critique pas sa hiérarchie, on ne signale pas un harcèlement. Cette autocensure ne laisse aucune trace.</p>
+<p>Le Conseil constitutionnel protège l'indépendance des enseignant·es-chercheur·es depuis 1984. Mais cette protection ne vaut que pour celles et ceux qui ont un statut. Les 99 signataires anonymes de notre tribune en sont la preuve.</p>
+<p>Notre présidente, Carina Bury, développe ce point dans un article publié sur le Verfassungsblog le 23 novembre 2026, « <a href="https://verfassungsblog.de/making-precarity-orderly/">Making Precarity Orderly: Germany's Fixed-Term Reform and the Material Conditions of Academic Freedom</a> ». À partir de la réforme allemande des contrats à durée déterminée dans la recherche et du cas français des vacataires, elle montre que la liberté académique a des conditions matérielles : tant que les chercheur·es dépendent du renouvellement de leur contrat, elle reste théorique. Encadrer la précarité ne suffit pas ; il faut réduire la dépendance.</p>
+<h3>Le regard féministe</h3>
+<p>La précarité frappe d'abord les femmes. Et l'indifférence n'est pas neutre : c'est celle de qui peut ne pas voir.</p>
+<ul>
+<li><strong>« C'est trop politique » ? Le privé est politique.</strong> Une grossesse cachée, une dépendance financière au conjoint, des nuits à corriger des copies : ce que l'institution renvoie au « privé » est le produit de rapports de pouvoir. Les féministes le disent depuis 1969 (Carol Hanisch). Qui refuse d'en parler parce que « c'est trop politique » a déjà pris position.</li>
+<li><strong>Un travail gratuit, invisible et féminin.</strong> Silvia Federici réclamait dès 1975 un salaire pour le travail ménager, pour montrer que l'économie repose sur un travail non payé, présenté comme naturel pour les femmes. L'université fonctionne de la même façon. Elle repose d'abord sur le travail non rémunéré des vacataires : préparation, copies, surveillances. Elle repose aussi sur un travail émotionnel et relationnel (accueillir les étudiant·es en difficulté, organiser la vie d'équipe, les pots de départ) et sur le travail militant de défense des collègues. Ces tâches sont surtout assurées par des femmes, et ne comptent pour aucune carrière. Joan Tronto appelle « irresponsabilité des privilégiés » le fait de ne pas voir ce que d'autres font pour vous.</li>
+<li><strong>Le mur maternel.</strong> La juriste Joan C. Williams a nommé ainsi la pénalité qui frappe les mères au travail. Pour une précaire, la grossesse devient un risque à cacher pendant six mois, un « coup » qu'on lui reproche, une décision que sa hiérarchie se permet de commenter, jusqu'à lui conseiller d'avorter.</li>
+<li><strong>Celle qui se plaint devient le problème.</strong> Sara Ahmed (<em>Complaint!</em>, 2021) montre que dans les universités, la personne qui signale une injustice finit traitée comme la source du trouble. Une vacataire menacée d'une plainte pour harcèlement parce qu'elle réclamait sa paie (Léa n° 155) : la démonstration est complète.</li>
+</ul>
+<p>Un regard féministe ne demande pas seulement justice pour les précaires femmes. Il exige que tout ce qui fait vivre l'université soit reconnu comme du travail.</p>
+<p class="fort">L'université se veut le lieu de l'esprit critique. Elle ne peut pas l'exercer sur le monde entier, et le suspendre dès qu'il s'agit de ses propres couloirs.</p>
+
+<h2 id="individualisme"><span class="num">4</span>Sortir de l'individualisme : changer ce qui est récompensé</h2>
+<p>L'individualisme universitaire n'est pas un trait de caractère : il est produit par ce que les carrières récompensent. Tant que seules les publications comptent, s'engager pour les autres reste un sacrifice. Il faut donc changer les règles.</p>
+<p>Ce n'est pas un hasard. La sociologue Danièle Linhart a montré comment l'individualisation de la gestion du travail, avec ses évaluations et ses primes individuelles, fragilise les collectifs de travail. Celles et ceux qui passent leurs soirées à défendre les précaires publient moins, et ça leur coûte leur carrière. Cet engagement doit compter dans les dossiers, au lieu d'être sanctionné.</p>
+<h3>Au CNU</h3>
+<ul>
+<li><strong>Inscrire l'engagement dans les critères.</strong> Chaque section publie ses critères de qualification et de promotion : qu'elle y fasse figurer l'engagement pour une meilleure université (défense des précaires, mandats électifs, encadrement, médiation). Les comités de sélection doivent, eux aussi, en tenir compte dans le recrutement.</li>
+<li><strong>Tenir compte des années de précarité.</strong> Le volume de publications doit être lu au regard des années passées en vacations, en emploi alimentaire, au chômage, en congé maternité ou parental, ou en engagement collectif.</li>
+<li><strong>Ne plus exclure d'emblée.</strong> La qualification écarte des docteur·es aux parcours internationaux ou interdisciplinaires avant même l'examen de leur dossier, et les sections interdisciplinaires mettent parfois des décennies à s'ouvrir. C'est un levier de précarisation de plus.</li>
+<li><strong>Peser sur les élections.</strong> La plupart des membres du CNU sont élu·es par les titulaires. Aux prochaines élections, demandez aux listes de s'engager sur ces points.</li>
+</ul>
+<h3>Dans les établissements</h3>
+<ul>
+<li><strong>Des décharges de service</strong> pour celles et ceux qui portent ces engagements collectifs, comme pour toute autre responsabilité collective.</li>
+<li><strong>Une ligne dans les rapports d'activité</strong> pour le travail de défense des collègues, valorisée au même titre qu'une direction de diplôme.</li>
+<li><strong>La transparence comme obligation</strong> : publier chaque année le nombre de vacataires, d'heures assurées par elles et eux, et les délais de paiement, composante par composante.</li>
+</ul>
+<h3>Dans le financement</h3>
+<p>Les appels à projets mettent les équipes en concurrence. Nous en sommes le produit : contrats de quelques mois, post-docs enchaînés sans poste au bout. Revenir à des crédits récurrents, c'est rendre possible le recrutement plutôt que la rotation des précaires.</p>
+
+<h2 id="interet"><span class="num">5</span>Pourquoi c'est dans votre intérêt de vous impliquer</h2>
+<p>Même sans solidarité, l'intérêt suffit : la précarité des autres pèse déjà sur votre charge de travail, votre recherche et la qualité de votre université.</p>
+<ul>
+<li><strong>Vos heures complémentaires sont payées au même tarif.</strong> Le taux de la vacation est aussi celui de vos heures complémentaires. Revaloriser l'heure de vacation, c'est aussi revaloriser la vôtre.</li>
+<li><strong>Moins de surservice subi.</strong> Tant qu'une heure coûte 43,50 €, un surservice ou un·e vacataire coûtera toujours moins cher qu'un poste. Revaloriser l'heure, c'est rendre le recrutement plus intéressant que votre épuisement.</li>
+<li><strong>Pas de postes, pas de collègues.</strong> Chaque besoin permanent confié à des précaires est un poste qui ne viendra pas alléger vos services, vos responsabilités administratives et vos jurys.</li>
+<li><strong>Des équipes qui se défont.</strong> Des collègues avec qui vous avez travaillé pendant des années, parfois depuis leur thèse, contraint·es de partir faute de poste ; des collectifs construits patiemment qui se fragilisent ou disparaissent.</li>
+<li><strong>Votre recherche s'arrête faute de temps.</strong> Ce que les précaires ne peuvent plus assurer retombe sur vous : encadrement, coordination, examens. S'y ajoute une part croissante du travail consacrée à chercher des financements pour recruter ou prolonger des collègues en CDD, et une pression toujours plus forte à multiplier publications et projets, avec des conséquences parfois lourdes sur la santé.</li>
+<li><strong>Une recherche enfin libre.</strong> Aujourd'hui, la recherche n'est pas libre quand celles et ceux qui la font dépendent du renouvellement de leur contrat : on évite de critiquer, de déplaire, de prendre des risques. Des collègues stables pourraient chercher librement. La stabilité de l'emploi est une condition de la liberté académique, pour elles et eux comme pour vous (voir chapitre 3).</li>
+<li><strong>Vos étudiant·es en paient le prix.</strong> On leur confie des enseignant·es épuisé·es, qui changent chaque année. Sans postes, pas de places ; sans places, le tri à l'entrée (Parcoursup, MonMaster).</li>
+<li><strong>Vos doctorant·es sont les prochain·es.</strong> Celles et ceux que vous formez aujourd'hui seront les Léa de demain. Les laisser seul·es, c'est dévaloriser votre propre travail de formation à la recherche.</li>
+<li><strong>L'argent est une question de choix.</strong> L'État consacre chaque année plus de 7 milliards d'euros au crédit d'impôt recherche, sans condition d'embauche. Défendre les postes, c'est défendre vos propres moyens.</li>
+<li><strong>Votre statut est une protection, pas un privilège à garder.</strong> Il vous permet de parler sans risquer votre poste. Il peut aussi nous protéger.</li>
+</ul>
+
+<h2 id="agir"><span class="num">6</span>Que faire, concrètement</h2>
+<p>Voici des gestes classés par effort, du plus simple au plus engagé. Un seul vaut mieux qu'aucun.</p>
+<div class="encadre"><h3>Par où commencer : nos cinq priorités</h3>
+<ol class="priorites">
+<li><strong>Avant le vote du budget au Sénat, début décembre :</strong> écrire à vos parlementaires (<a href="#lettre-2">lettre 2 en annexe</a>) pour soutenir 80 € net pour chaque heure réellement travaillée et le paiement mensuel.</li>
+<li><strong>D'ici le 1<sup>er</sup> décembre :</strong> faire témoigner les précaires autour de vous sur jesuislea.fr. Nous visons 500 témoignages.</li>
+<li><strong>À votre prochain conseil :</strong> demander combien de vacataires ne sont pas payé·es chaque mois ou n'ont pas signé leur contrat, et pourquoi leurs vacations ne deviennent pas des contrats.</li>
+<li><strong>Dès maintenant :</strong> écrire à la présidence de votre université (<a href="#lettre-1">lettre 1 en annexe</a>), et accompagner les vacataires qui réclament leur paie (#PayeTonVacataire).</li>
+<li><strong>Toujours :</strong> signer de votre nom, et nous dire ce que vous avez fait.</li>
+</ol></div>
+<h3>En dix minutes</h3>
+<ul>
+<li>Écrire à votre député·e ou à vos sénateur·ices : leur demander de soutenir les vacataires dans le budget en cours d'examen, puis d'écrire au ministre pour qu'il reçoive #JeSuisLéa et relève le taux des vacations, fixé par un arrêté de 1989. Modèle de lettre en annexe, à adapter.</li>
+<li>Écrire à la présidence de votre université pour lui demander pourquoi les vacataires ne sont pas payé·es chaque mois, pourquoi leurs vacations ne deviennent pas des contrats, et combien elle en emploie. Modèle de lettre en annexe.</li>
+<li>Signer de votre nom : la tribune, les motions, les interpellations. Votre statut vous protège ; il peut nous protéger aussi.</li>
+<li>Quand un·e précaire vous demande de relayer : le faire, et lui répondre que c'est fait.</li>
+<li>Ne pas vous contenter d'un mail collectif : appeler deux collègues, leur expliquer, leur demander explicitement de diffuser.</li>
+<li>Relayer publiquement : #JeSuisLéa, #JaiEteLea si vous avez connu cette précarité avant d'obtenir votre poste, et #JeTravailleAvecLéa pour dire que vous travaillez chaque jour avec des précaires.</li>
+<li>Faire circuler jesuislea.fr auprès des précaires de votre composante, pour qu'ils et elles témoignent, même anonymement.</li>
+<li>Témoigner vous-même sur jesuislea.fr de ce que la précarité fait à vos équipes : recrutements bloqués, heures d'enseignement réduites, charge administrative supplémentaire, financements par projets.</li>
+</ul>
+<h3>À votre prochain conseil</h3>
+<ul>
+<li>En conseil de composante ou en CA, demander combien de vacataires ne sont toujours pas payé·es, et combien n'ont toujours pas signé leur contrat.</li>
+<li>Déposer une motion pour le paiement mensuel. Ce n'est pas une faveur : c'est la loi depuis 2022, et le Conseil d'État l'a rappelé en 2024.</li>
+<li>Demander que la composante publie le nombre d'heures assurées par des vacataires.</li>
+<li>Quand un même enseignement est confié à des vacataires année après année, le dire : c'est un besoin permanent, il appelle un poste.</li>
+<li>Demander à la présidence pourquoi elle ne transforme pas les vacations en contrats à durée déterminée, comme le font certaines universités : un contrat, c'est au moins un salaire chaque mois et des droits sociaux.</li>
+<li>Faire reconnaître par le conseil d'administration la situation faite aux précaires. À Paris 1, le conseil d'administration a adopté en juillet 2023 une motion reconnaissant que la situation de certain·es vacataires est « particulièrement difficile », et demandant à l'État davantage de postes et une meilleure rémunération des vacations. Chaque université peut en faire autant, et aller plus loin.</li>
+<li>Porter nos demandes et voter des motions de soutien.</li>
+</ul>
+<h3>Dans votre pratique quotidienne</h3>
+<ul>
+<li>Refuser de recruter en vacations pour des enseignements réguliers, et demander des contrats : un CDD d'enseignement, un poste d'ATER, un contrat avec droits sociaux et congé maternité. La vacation ne devrait couvrir que des interventions ponctuelles.</li>
+<li>Refuser qu'un·e collègue commence un TD sans contrat signé.</li>
+<li>Ne pas laisser les précaires seul·es face à l'administration : accompagner une réclamation de paiement, la porter en votre nom.</li>
+<li>Laisser la parole, et le crédit, aux précaires dans les réunions, les colloques et les publications qu'ils et elles ont contribué à rendre possibles.</li>
+<li>Tenir compte des années de précarité, de maternité et d'engagement lorsque vous siégez dans un comité de sélection.</li>
+</ul>
+<h3>Dans la durée</h3>
+<ul>
+<li>Au CNU et dans les comités de sélection : demander que l'engagement pour une meilleure université et les années de précarité comptent dans la qualification, la promotion et le recrutement.</li>
+<li>Défendre des créations de postes dans votre composante, à partir des besoins permanents identifiés.</li>
+<li>Contribuer à une caisse de solidarité, gérée avec les précaires, pour financer déplacements, actions et recours.</li>
+<li>Nous écrire pour proposer des actions concrètes, dans votre établissement ou ailleurs : <a href="mailto:contact@jesuislea.fr">contact@jesuislea.fr</a>.</li>
+<li>Nous proposer une courte vidéo où vous parlez de votre engagement, pour inspirer d'autres collègues.</li>
+</ul>
+<div class="encadre"><h3>Dites-nous ce que vous avez fait</h3>
+<p>Nous recensons toutes les actions menées par des titulaires, pour les faire connaître et donner des idées à d'autres. Écrivez-nous à <a href="mailto:contact@jesuislea.fr">contact@jesuislea.fr</a> :</p>
+<ul>
+<li>ce que vous avez fait : question posée, motion déposée, lettre envoyée, réclamation accompagnée ;</li>
+<li>quand, et dans quelle instance ou quel établissement ;</li>
+<li>ce que vous avez obtenu : réponse, vote, engagement, ou silence.</li>
+</ul>
+<p>Même un refus nous intéresse : il montre où ça bloque.</p></div>
+
+<h2 id="objections"><span class="num">7</span>Objections fréquentes, et nos réponses</h2>
+<p>S'engager, c'est aussi discuter sur le fond. Une professeure de droit public, globalement d'accord avec nous, nous a adressé des objections précises. C'est exactement le type d'échange que nous voulons : le voici, avec nos réponses.</p>
+<div class="objection"><p class="q">« Certaines filières manquent d'étudiant·es. »</p><p>C'est vrai : en langues ou en lettres classiques, des licences et des masters ferment. Mais Parcoursup trie dans les filières en tension, dont le droit. C'est de ces filières que parle d'abord notre tribune.</p></div>
+<div class="objection"><p class="q">« Les cours magistraux sont pourvus. »</p><p>Souvent, oui, mais au prix d'une réduction des volumes horaires pour faire des économies. La pression retombe alors sur les TD, très majoritairement assurés par des vacataires, dans des groupes qui peuvent atteindre 45 étudiant·es. Et sur les responsables de formation, qui doivent réorganiser contenus, durées et évaluations pour faire avec moins.</p></div>
+<div class="objection"><p class="q">« Les enseignant·es-chercheur·es ne veulent pas faire de TD : recruter des MCF ne règle rien. »</p><p>Un poste permanent n'est pas forcément un poste de maître·sse de conférences. Ce peut être un contrat stable de chargé·e d'enseignement, qui permette d'en vivre et d'évoluer. Et les contrats LRU reconduits d'année en année doivent devenir des postes.</p></div>
+<div class="objection"><p class="q">« L'après-thèse, c'est un autre sujet. »</p><p>Non, c'est le même. Sans recrutements, les docteur·es n'ont plus de débouchés, et on continue de leur confier les TD à la vacation.</p></div>
+<div class="objection"><p class="q">« Il n'y a pas d'argent. »</p><p>C'est un choix. L'État consacre chaque année plus de 7 milliards d'euros au crédit d'impôt recherche, sans condition d'embauche. Il prévoyait encore près de 3,5 milliards d'euros en 2025 pour les seules aides aux employeurs d'apprentis, et l'apprentissage coûte au total près de 25 milliards d'euros par an aux finances publiques, selon l'OFCE. Payer correctement les vacataires coûterait une fraction de ces sommes (<a href="https://jesuislea.fr/prise-de-position-budget.html">voir notre prise de position sur le budget</a>).</p></div>
+
+<h2 id="demandes"><span class="num">8</span>Ce que nous demandons</h2>
+<p>Nos trois demandes sont simples, et vous pouvez les porter avec nous :</p>
+<ol class="demandes">
+<li><strong>80 € net pour chaque heure réellement travaillée</strong> (environ 100 € brut), payés chaque mois : l'heure de cours, et les heures de préparation, de correction et de surveillance qui l'entourent.</li>
+<li><strong>Un poste stable pour chaque besoin permanent</strong> : un poste d'enseignant·e-chercheur·e, ou un contrat stable de chargé·e d'enseignement qui permette d'en vivre. À terme, la vacation ne doit plus couvrir de besoins permanents.</li>
+<li><strong>Une commission d'enquête parlementaire</strong> sur la précarité dans l'enseignement supérieur et la recherche, pour enfin avoir des chiffres établissement par établissement.</li>
+</ol>
+<p>Ça commence à bouger : en commission à l'Assemblée, l'amendement II-AC102, qui vise à doubler à terme le taux horaire des vacations, a été adopté. Le combat se poursuit au Sénat, début décembre.</p>
+<p>Nous ne demandons pas la charité. Nous demandons à être payé·es pour le travail que nous faisons déjà. Et nous vous demandons de ne plus nous laisser seul·es.</p>
+<p class="fort">Je suis Léa. Nous sommes Léa.<br>Et vous, que ferez-vous dans les prochaines semaines ?</p>
+<p style="text-align:center">Témoigner, nous proposer une action ou une vidéo : <a href="https://jesuislea.fr">jesuislea.fr</a> · <a href="mailto:contact@jesuislea.fr">contact@jesuislea.fr</a></p>
+
+<h2 id="lettres">Annexe : deux modèles de lettres</h2>
+<p>Une lettre respectueuse des formes porte davantage. Trois conseils avant d'envoyer :</p>
+<ul>
+<li>Titulaires, signez de votre nom et de votre fonction : c'est ce qui donne du poids à la lettre. Précaires, écrivez depuis une adresse personnelle si vous le préférez.</li>
+<li>Écrivez à plusieurs : une lettre cosignée par plusieurs collègues d'une même composante pèse bien plus qu'un courrier isolé.</li>
+<li>Envoyez-nous la réponse, ou l'absence de réponse, à <a href="mailto:contact@jesuislea.fr">contact@jesuislea.fr</a> : nous la recensons.</li>
+</ul>
+<h3 id="lettre-1">Lettre 1 : à la présidence de votre université</h3>
+<div class="lettre">
+<p class="obj">Objet : Situation des vacataires et des personnels précaires de notre université</p>
+<p>Madame la Présidente, Monsieur le Président,</p>
+<p>[Fonction] à [composante], je souhaite vous interroger sur la situation des vacataires de notre université, qui assurent une part importante de nos enseignements. Pourriez-vous m'indiquer :</p>
+<ul>
+<li>pourquoi les vacataires ne sont pas payé·es chaque mois, alors que le paiement mensuel est obligatoire depuis le 1<sup>er</sup> septembre 2022 (article L. 952-1 du code de l'éducation), et dans quel délai il le sera ;</li>
+<li>pourquoi des vacataires commencent à enseigner avant d'avoir signé leur contrat, et ce qui est prévu pour que tout contrat soit signé avant le premier cours ;</li>
+<li>pourquoi les vacations qui couvrent depuis des années les mêmes enseignements ne sont pas transformées en contrats à durée déterminée, qui garantiraient un salaire mensuel et des droits sociaux ;</li>
+<li>pourquoi davantage de postes de titulaires ne sont pas ouverts pour ces besoins permanents ;</li>
+<li>combien de vacataires notre université emploie, quelle part des heures d'enseignement ils et elles assurent, et quel est le délai moyen de paiement, composante par composante.</li>
+</ul>
+<p>Je vous suggère enfin que le conseil d'administration se prononce sur la situation des personnels précaires, comme l'a fait celui de l'université Paris 1 Panthéon-Sorbonne en juillet 2023.</p>
+<p>Je vous remercie de votre réponse et vous prie d'agréer, Madame la Présidente, Monsieur le Président, l'expression de ma considération distinguée.</p>
+<p>[Prénom Nom]<br>[Fonction, composante]</p>
+</div>
+<h3 id="lettre-2">Lettre 2 : à votre député·e ou à vos sénateur·ices</h3>
+<div class="lettre">
+<p class="obj">Objet : Précarité dans l'enseignement supérieur et la recherche</p>
+<p>Madame, Monsieur,</p>
+<p>[Fonction] à [établissement], je vous écris au sujet de la précarité qui touche une part croissante des personnels de l'enseignement supérieur et de la recherche. Les vacataires assurent environ un cours sur cinq à l'université, pour 43,50 € brut l'heure de TD, préparation et corrections comprises, et souvent avec plusieurs mois de retard de paiement, malgré l'obligation de paiement mensuel en vigueur depuis 2022.</p>
+<p>Pour le budget en cours d'examen, je vous demande de soutenir :</p>
+<ul>
+<li>le respect effectif du paiement mensuel des vacataires, avec des intérêts de retard ;</li>
+<li>une rémunération de 80 € net pour chaque heure réellement travaillée, préparation et corrections comprises ;</li>
+<li>des crédits pour créer des postes stables, à la place des vacations qui couvrent des besoins permanents.</li>
+</ul>
+<p>Au-delà du budget, je vous demande :</p>
+<ul>
+<li>d'écrire au ministre de l'Enseignement supérieur et de la Recherche pour qu'il reçoive le collectif #JeSuisLéa, qui porte la voix de ces personnels ;</li>
+<li>de lui demander de revoir l'arrêté du 6 novembre 1989 qui fixe le taux des vacations : ce taux ne rémunère que le temps passé devant les étudiant·es, ce qui revient à payer l'ensemble du travail en dessous du salaire minimum ;</li>
+<li>de soutenir la création de postes stables pour chaque besoin permanent ;</li>
+<li>de soutenir une commission d'enquête parlementaire sur la précarité dans l'enseignement supérieur et la recherche.</li>
+</ul>
+<p>Je vous serais reconnaissant·e de bien vouloir me faire connaître votre position, et vous prie d'agréer, Madame, Monsieur, l'expression de ma haute considération.</p>
+<p>[Prénom Nom]<br>[Fonction, établissement]</p>
+</div>
+<p class="note">Trouver votre député·e : assemblee-nationale.fr (« Vos députés ») ; vos sénateur·ices : senat.fr.</p>
+
+<div class="encadre"><h3>À lire aussi</h3>
+<p>Carina Bury, « <a href="https://verfassungsblog.de/making-precarity-orderly/">Making Precarity Orderly: Germany's Fixed-Term Reform and the Material Conditions of Academic Freedom</a> », Verfassungsblog, 23 novembre 2026. Pourquoi la liberté académique a des conditions matérielles, et pourquoi encadrer la précarité ne suffit pas : il faut réduire la dépendance.</p></div>
+
+<h3 id="sources">Sources</h3>
+<ul class="sources">
+<li>Vacataires et part des heures d'enseignement : Inspection générale de l'éducation, du sport et de la recherche (IGÉSR), rapport de 2025.</li>
+<li>Temps de travail réel d'un TD : enquête des chargé·es de TD de l'université Bordeaux IV, 2013-2014 (63 répondant·es).</li>
+<li>Apprentissage : Sénat, rapport sur le projet de loi de finances pour 2025, mission « Travail et emploi » (aides aux employeurs d'apprentis, 3 465 M€ en crédits de paiement), et estimation de l'OFCE (24,6 Md€ en 2024) citée dans ce rapport.</li>
+<li>Postes de maître·sses de conférences : bilan du recrutement 2007 et note DGRH n° 1 - 2026, campagne 2024, ministère de l'Enseignement supérieur et de la Recherche.</li>
+<li>Santé mentale : Levecque et al., <em>Research Policy</em>, 2017 ; enquête RNCD 2022-2023, via L'Étudiant ; enquête <em>Nature</em> auprès des post-docs, 2020 ; Evans et al., <em>Nature Biotechnology</em>, 2018.</li>
+<li>Tribune #JeSuisLéa, <em>Libération</em>, 22 octobre 2026.</li>
+<li>Liberté académique : Éric Fassin, <em>De la liberté académique</em>, Tracts Gallimard, 2026 ; Carina Bury, « Making Precarity Orderly », Verfassungsblog, 23 novembre 2026.</li>
+<li>Témoignages : mur de témoignages de jesuislea.fr, publiés avec l'accord de leurs autrices et auteurs, anonymisés.</li>
+</ul>
+<p class="note">Pour citer ce guide : Carina Bury et Anaïs Vallet, <em>Petit guide de l'émancipation de l'universitaire</em>, collectif #JeSuisLéa, version 2, novembre 2026, jesuislea.fr.</p>
+<div class="pied"><span>Je suis Léa · jesuislea.fr · #JeSuisLea</span><span>contact@jesuislea.fr</span></div>
+</main>
+</body>
+</html>
