@@ -411,6 +411,14 @@
   @media (max-width:640px){.dix-s{padding:1.1rem 1rem}.dix-s-constats{grid-template-columns:1fr;gap:.5rem}}
   .vers-mur{display:inline-block;margin-top:.9rem;background:linear-gradient(90deg,var(--rose),var(--aqua));color:#111;font-weight:700;font-size:.95rem;letter-spacing:.01em;text-decoration:none;padding:.6rem 1.2rem;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.3)}
   .vers-mur:hover,.vers-mur:focus-visible{filter:brightness(1.08);transform:translateY(-1px)}
+  .piliers{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+  .piliers li{position:relative;background:var(--surface);border:1px solid var(--trait);border-radius:10px;padding:1.2rem 1.2rem 1.1rem 3.6rem;font-family:var(--sans)}
+  .piliers .p-n{position:absolute;left:1.1rem;top:1.05rem;width:1.8rem;height:1.8rem;border-radius:50%;background:var(--degrade,linear-gradient(95deg,var(--rose),var(--aqua)));color:#111;font-weight:800;font-size:.95rem;display:flex;align-items:center;justify-content:center}
+  .piliers b{display:block;font-size:1.15rem;color:var(--clair);margin-bottom:.35rem}
+  .piliers p{color:var(--doux);font-size:.95rem;line-height:1.5;margin:0 0 .6rem}
+  .piliers a{color:var(--aqua);font-weight:700;font-size:.9rem;text-decoration:none}
+  .piliers a:hover{text-decoration:underline}
+  @media (max-width:640px){.piliers{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -523,13 +531,14 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')ms.forEach(f
 <section class="mission" id="mission">
   <div class="wrap">
     <h2 class="rev-titre">À quoi sert Je suis Léa</h2>
-    <p class="rev-intro admin">Connue, et tolérée. Des chercheur·ses payé·es sous le SMIC : ça n'émeut personne — un visage, si. Notre rôle : rendre cette précarité impossible à ignorer.</p>
-    <ul class="mission-liste">
-      <li><strong>Rassembler et incarner les témoignages.</strong> Transformer des situations vécues comme isolées en une réalité collective, documentée, impossible à ignorer — et lui donner un visage.</li>
-      <li><strong>Sensibiliser le grand public.</strong> Faire sortir la précarité de l'université de nos seuls cercles, pour qu'elle cesse d'être un dossier technique et devienne ce qu'elle est : des vies, des visages, un scandale que l'on ne peut plus regarder sans réagir.</li>
-      <li><strong>Peser sur le débat public, à commencer par la présidentielle de 2027.</strong> En convergence de lutte avec d'autres collectifs, nous portons des revendications au gouvernement et au législateur — pour combler ce que la loi ne protège pas encore — et nous posons nos questions aux candidat·es.<span class="li-actions"><a href="#questionnaire" class="btn-mini">Voir nos questions →</a><span class="li-invite">Une question ou un point à ajouter ? <a href="mailto:contact@jesuislea.fr?subject=Question%20ou%20point%20%C3%A0%20consid%C3%A9rer">Écrivez-nous</a>.</span></span></li>
-    </ul>
-    <p class="mission-note"><strong>Sur le terrain du droit, aux côtés des syndicats.</strong> SNESUP-FSU, CGT FERC Sup et SUD Éducation informent sur les droits et accompagnent les recours ; la Confédération des jeunes chercheurs publie un <a href="https://cjc.jeunes-chercheurs.org" target="_blank" rel="noopener">guide des droits de l'enseignant·e vacataire</a>. Des avancées existent : la loi impose désormais de payer les vacataires chaque mois. Nous voulons aller plus loin et occupons aussi ce terrain, en France, devant l'Union européenne et aux Nations unies : <a href="contentieux.html">nos actions contentieuses</a>. Les collectifs, associations et syndicats qui veulent faire cause commune sont les bienvenus.</p>
+    <p class="rev-intro admin">La précarité à l'université est connue de tous, et tolérée. Notre rôle&nbsp;: la rendre impossible à ignorer, puis impossible à ne pas traiter.</p>
+    <ol class="piliers">
+      <li><span class="p-n">1</span><b>Témoigner</b><p>Donner un visage à la précarité. Plus de 370 témoignages anonymes montrent qu'il ne s'agit pas de cas isolés, mais d'un système.</p><a href="#temoignages">Le mur des Léa →</a></li>
+      <li><span class="p-n">2</span><b>Établir les faits</b><p>Chiffrer ce que les universités ne publient pas&nbsp;: nous avons demandé leurs données à 85 établissements, et nous publions ce qu'ils répondent.</p><a href="transparence.html">Transparence →</a></li>
+      <li><span class="p-n">3</span><b>Faire valoir le droit</b><p>Lettres types pour être payé·e, recours en France, devant l'Union européenne et aux Nations unies, aux côtés des syndicats.</p><a href="contentieux.html">Nos actions en justice →</a></li>
+      <li><span class="p-n">4</span><b>Peser sur les décisions</b><p>Porter nos revendications auprès du gouvernement et du Parlement, et interroger les candidat·es à la présidentielle de 2027.</p><a href="#questionnaire">Nos questions →</a></li>
+    </ol>
+    <p class="mission-note"><strong>Nous ne remplaçons pas les syndicats, nous agissons avec eux.</strong> SNESUP-FSU, CGT FERC Sup et SUD Éducation accompagnent les recours ; la Confédération des jeunes chercheurs publie un <a href="https://cjc.jeunes-chercheurs.org" target="_blank" rel="noopener">guide des droits de l'enseignant·e vacataire</a>. Collectifs, associations et syndicats qui veulent faire cause commune&nbsp;: <a href="mailto:contact@jesuislea.fr">écrivez-nous</a>.</p>
     <p class="droits-avert admin">Ces informations juridiques sont générales et ne remplacent pas un conseil individualisé : pour votre situation, rapprochez-vous d'un syndicat, d'un·e juriste, ou écrivez-nous.</p>
   </div>
 </section>
