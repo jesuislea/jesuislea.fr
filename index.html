@@ -269,18 +269,29 @@
   .topnav{position:sticky;top:0;z-index:100;background:rgba(25,31,61,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--trait)}
   .topnav-wrap{max-width:1500px;margin:0 auto;padding:.6rem 1.3rem;display:flex;align-items:center;gap:1.2rem}
   .topnav-brand{font-family:var(--sans);font-weight:700;color:var(--clair);text-decoration:none;font-size:1rem;white-space:nowrap;letter-spacing:.01em}
-  .topnav-links{display:flex;flex-wrap:wrap;column-gap:1.1rem;row-gap:.3rem;flex:1;justify-content:center}
-  .topnav-links::-webkit-scrollbar{display:none}
-  .topnav-links a{font-family:var(--sans);font-size:.86rem;color:var(--doux);text-decoration:none;white-space:nowrap;padding:.15rem 0;transition:color .15s}
-  .topnav-links a:hover{color:var(--clair)}
+  .topnav-links{display:flex;align-items:center;gap:.3rem;flex:1;justify-content:center}
+  .topnav-links .lien,.topnav .menu>summary{font-family:var(--sans);font-size:.92rem;font-weight:600;color:var(--clair);text-decoration:none;white-space:nowrap;padding:.45rem .75rem;border-radius:6px;cursor:pointer;list-style:none;transition:background .15s}
+  .topnav .menu>summary::-webkit-details-marker{display:none}
+  .topnav .menu>summary::after{content:"";display:inline-block;width:.38rem;height:.38rem;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin:0 0 .2rem .45rem;opacity:.7;transition:transform .15s}
+  .topnav .menu[open]>summary::after{transform:rotate(225deg);margin-bottom:-.05rem}
+  .topnav-links .lien:hover,.topnav .menu>summary:hover,.topnav .menu[open]>summary{background:rgba(255,255,255,.07)}
+  .topnav .menu{position:relative}
+  .topnav .drop{position:absolute;top:calc(100% + .45rem);left:0;min-width:17rem;background:var(--surface,#232a52);border:1px solid var(--trait);border-radius:10px;padding:.4rem;box-shadow:0 14px 34px rgba(0,0,0,.35);display:grid;z-index:110}
+  .topnav .drop-d{left:auto;right:0}
+  .topnav .drop a{display:block;padding:.55rem .7rem;border-radius:6px;text-decoration:none;font-family:var(--sans)}
+  .topnav .drop a:hover,.topnav .drop a:focus-visible{background:rgba(255,255,255,.07)}
+  .topnav .drop b{display:block;color:var(--clair);font-size:.9rem;font-weight:600}
+  .topnav .drop span{display:block;color:var(--doux);font-size:.78rem;margin-top:.1rem}
   .topnav-cta{font-family:var(--sans);font-size:.88rem;font-weight:600;color:#fff;background:var(--rose);padding:.5rem 1rem;border-radius:999px;text-decoration:none;white-space:nowrap}
   .topnav-cta:hover{filter:brightness(1.06)}
-  @media(max-width:720px){
+  @media(max-width:860px){
     .topnav-brand{display:none}
-    .topnav-wrap{padding:.55rem .9rem;gap:.9rem}
-    .topnav-links{gap:.9rem;flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-    .topnav-links a{font-size:.8rem}
-    .topnav-links a[href="medias.html"]{order:-1}
+    .topnav-wrap{padding:.5rem .7rem;gap:.5rem}
+    .topnav-links{justify-content:flex-start;gap:0;overflow-x:auto;scrollbar-width:none}
+    .topnav-links::-webkit-scrollbar{display:none}
+    .topnav-links .lien,.topnav .menu>summary{font-size:.82rem;padding:.4rem .5rem}
+    .topnav .menu{position:static}
+    .topnav .drop,.topnav .drop-d{position:fixed;top:3.1rem;left:.6rem;right:.6rem;min-width:0;max-height:75vh;overflow-y:auto}
     .topnav-cta{font-size:.8rem;padding:.42rem .8rem}
   }
   /* ---- newsletter ---- */
@@ -382,32 +393,48 @@
 </head>
 <body>
 
-<nav class="topnav">
+<nav class="topnav" aria-label="Navigation principale">
   <div class="topnav-wrap">
-    <a href="#top" class="topnav-brand">Je suis Léa</a>
+    <a href="#top" class="topnav-brand">#JeSuisLéa</a>
     <div class="topnav-links">
-      <a href="payetonvacataire.html" style="color:var(--rose);font-weight:700">#PayeTonVacataire</a>
-      <a href="guide-titulaires.html" style="color:var(--aqua);font-weight:700">Guide titulaires</a>
-      <a href="medias.html" style="color:var(--clair);font-weight:600">On parle de Léa</a>
-      <a href="#qui" style="color:var(--clair);font-weight:600">Qui sommes-nous ?</a>
-      <a href="barometre.html">Baromètre</a>
-      <a href="transparence.html" style="color:var(--aqua);font-weight:600">Transparence</a>
-      <a href="label.html" style="color:var(--rose);font-weight:600">Label Précarité Garantie</a>
-      <a href="contentieux.html" style="color:var(--aqua);font-weight:600">Contentieux</a>
-      <a href="signataires.html">Signataires</a>
-      <a href="#temoignages">Le mur</a>
-      <a href="#revendications">Nos demandes</a>
-      <a href="#questionnaire">Présidentielle</a>
-      <a href="#position">Position</a>
-      <a href="#faq">FAQ</a>
-      <a href="#soutenir">Soutenir</a>
-      <a href="#cartes">Cartes</a>
-      <a href="#imprimer">À imprimer</a>
-      <a href="#newsletter">Newsletter</a>
+      <details class="menu"><summary>Témoignages</summary><div class="drop">
+        <a href="#temoignages"><b>Le mur des Léa</b><span>Lire les témoignages</span></a>
+        <a href="#ajouter"><b>Témoigner</b><span>Ajouter ma voix en 2 minutes</span></a>
+        <a href="#cartes"><b>Cartes à partager</b><span>Les témoignages en visuels</span></a>
+      </div></details>
+      <details class="menu"><summary>Nos demandes</summary><div class="drop">
+        <a href="#revendications"><b>Nos revendications</b><span>Ce que nous demandons</span></a>
+        <a href="#position"><b>Budget</b><span>Notre prise de position</span></a>
+        <a href="#questionnaire"><b>Présidentielle 2027</b><span>Nos questions aux candidat·es</span></a>
+        <a href="guide-titulaires.html"><b>Guide pour les titulaires</b><span>Comment nos collègues peuvent agir</span></a>
+      </div></details>
+      <details class="menu"><summary>Nos actions</summary><div class="drop">
+        <a href="payetonvacataire.html"><b>#PayeTonVacataire</b><span>Lettres types pour être payé·e</span></a>
+        <a href="transparence.html"><b>Transparence</b><span>Les chiffres des universités</span></a>
+        <a href="contentieux.html"><b>Contentieux</b><span>Faire valoir le droit</span></a>
+        <a href="barometre.html"><b>Baromètre</b><span>Ce que répondent les député·es</span></a>
+        <a href="label.html"><b>Label Précarité Garantie</b><span>Notre palmarès 2026</span></a>
+        <a href="signataires.html"><b>La tribune</b><span>Signataires et soutiens</span></a>
+      </div></details>
+      <a href="medias.html" class="lien">Médias</a>
+      <details class="menu"><summary>Le collectif</summary><div class="drop drop-d">
+        <a href="#qui"><b>Qui sommes-nous ?</b></a>
+        <a href="#faq"><b>Questions fréquentes</b></a>
+        <a href="#soutenir"><b>Nous soutenir</b></a>
+        <a href="#newsletter"><b>Newsletter</b></a>
+        <a href="#imprimer"><b>À imprimer</b><span>Affiches et tracts</span></a>
+      </div></details>
     </div>
     <a href="#ajouter" class="topnav-cta">Témoigner</a>
   </div>
 </nav>
+<script>
+(function(){var ms=document.querySelectorAll('.topnav details.menu');
+ms.forEach(function(d){d.addEventListener('toggle',function(){if(d.open)ms.forEach(function(o){if(o!==d)o.open=false})});
+d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){d.open=false})})});
+document.addEventListener('click',function(e){if(!e.target.closest('.topnav'))ms.forEach(function(o){o.open=false})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')ms.forEach(function(o){o.open=false})});})();
+</script>
 
 <div class="baro-bandeau" id="ptv-bandeau">
   <div class="wrap">
