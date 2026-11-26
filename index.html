@@ -448,6 +448,14 @@
   .titu-btns .t1{background:var(--rose);color:#fff}
   .titu-btns .t2{border:1.5px solid var(--aqua);color:var(--aqua)}
   .titu-btns a:hover{opacity:.85}
+  .horizon .questionnaire{margin-top:2.6rem;padding-top:2rem;border-top:1px solid var(--trait)}
+  .horizon .q-titre{font-family:var(--sans);font-size:1.45rem;font-weight:700;color:var(--clair);margin:0 0 .8rem}
+  .horizon .questionnaire>p{font-family:var(--sans);font-size:1rem;color:var(--doux)}
+  .horizon .questionnaire .questions-pied{font-size:.95rem}
+  .horizon .propositions-wrap{margin-top:1.8rem}
+  .horizon .bientot{background:rgba(255,255,255,.04)}
+  .horizon .bientot-titre{font-size:1.1rem}
+  .horizon .bientot p{font-size:.95rem}
 </style>
 </head>
 <body>
@@ -778,35 +786,21 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')ms.forEach(f
       </div>
       <p class="sous">À venir : rendez-vous au Sénat le 2 décembre et colloque à l'Assemblée nationale le 7 décembre 2026.</p>
     </div>
-    <p class="mission-note"><strong>Ces demandes, nous les posons aussi aux candidat·es à la présidentielle de 2027.</strong> <a href="#questionnaire">Voir nos questions aux candidat·es →</a></p>
 
-    <div class="propositions-wrap">
-      <div class="propositions-titre" id="propositions-titre">Propositions de la communauté</div>
-      <div id="propositions"></div>
-
-      <div class="bientot">
-        <p class="bientot-titre">Proposez vos revendications — et vos questions aux candidat·es.</p>
-        <p>Une revendication qui manque, ou une question que nous devrions poser aux candidat·es à la présidentielle ? Écrivez-nous à <a href="mailto:contact@jesuislea.fr?subject=Proposition%20%2F%20question%20aux%20candidat%C2%B7es">contact@jesuislea.fr</a>. L'espace pour les proposer directement sur le site ouvrira très bientôt.</p>
-      </div>
-    </div>
   </div>
 </section>
 
 <section class="horizon">
   <div class="wrap">
-    <div class="kicker admin">Où nous voulons aller — et pourquoi maintenant</div>
+    <div class="kicker admin">Présidentielle 2027</div>
     <h2>Faire entrer la précarité de l'université dans la présidentielle.</h2>
     <p>À l'approche de l'élection présidentielle, nous demandons que la précarité de celles et ceux qui font vivre l'université entre enfin dans le débat, dont elle est aujourd'hui absente. En Allemagne, un simple mot-clic — #IchBinHanna — a rendu visible tout un système et forcé la réforme à l'agenda politique. En France, ce système a un nom : Léa.</p>
     <p>Nous voulons une université qui cesse de tenir sur le travail gratuit : ces heures de préparation, de correction, de surveillance données sans qu'elles ne comptent nulle part. Une université qui paie à l'heure juste et sans des mois de retard, où aucun salaire ne tombe sous le SMIC. Où l'on cesse de remplacer des postes par des contrats précaires reconduits sans fin, et où un « CDI » ne s'éteint pas avec un projet. Où contester un abus ne signifie plus perdre son contrat, sa thèse ou sa carrière.</p>
     <p>Ce dernier point — briser la loi du silence qui protège les abus — semble le plus hors de portée. Il ne l'est pas : en Rhénanie-du-Nord-Westphalie, une coalition entre un parti conservateur et les écologistes vient d'inscrire dans la loi un cadre clair contre l'abus de pouvoir à l'université. La preuve que rien de ce que nous demandons n'est une utopie.</p>
     <p><span class="volonte">Agir n'est donc ni une question de camp, ni une question de moyens : c'est une question de volonté.</span> Ce qu'une majorité a fait là-bas, la France peut le faire aussi.</p>
-  </div>
-</section>
-
-<section class="questionnaire" id="questionnaire">
-  <div class="wrap">
-    <div class="kicker admin">Présidentielle 2027 — interpeller les candidat·es</div>
-    <h2>Nos questions aux candidat·es</h2>
+  
+    <div class="questionnaire" id="questionnaire">
+    <h3 class="q-titre">Nos cinq questions aux candidat·es</h3>
     <p class="admin">Avec un collectif d'organisations mobilisées contre la précarité dans l'ESR, nous adressons les mêmes cinq questions à chaque candidat·e à l'élection présidentielle. Des engagements simples et vérifiables. <strong>Les réponses — comme les absences de réponse — seront rendues publiques.</strong></p>
     <ol class="questions-liste">
       <li><strong>Rémunérer tout le travail.</strong> Vous engagez-vous à ce que les personnels d'enseignement précaires soient payés pour l'ensemble des heures réellement travaillées — préparation, correction, surveillance, réunions — et non la seule heure passée face aux étudiants ?</li>
@@ -816,8 +810,20 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')ms.forEach(f
       <li><strong>Contre l'abus de pouvoir.</strong> Vous engagez-vous à instaurer un canal de signalement réellement indépendant, une protection effective contre les représailles, et des sanctions applicables pour le harcèlement et l'abus de pouvoir ?</li>
     </ol>
     <p class="questions-pied admin">À chaque question, une réponse attendue : <strong>oui</strong>, <strong>en partie</strong>, <strong>non</strong> — ou le silence, que nous rendrons visible.</p>
+    <div class="propositions-wrap">
+      <div class="propositions-titre" id="propositions-titre">Propositions de la communauté</div>
+      <div id="propositions"></div>
+
+      <div class="bientot">
+        <p class="bientot-titre">Une revendication ou une question qui manque&nbsp;?</p>
+        <p>Proposez-la-nous à <a href="mailto:contact@jesuislea.fr?subject=Proposition%20%2F%20question%20aux%20candidat%C2%B7es">contact@jesuislea.fr</a>. L'espace pour les proposer directement sur le site ouvrira très bientôt.</p>
+      </div>
+    </div>
+    </div>
   </div>
 </section>
+
+
 
 <section class="mur" id="temoignages">
   <div class="wrap">
