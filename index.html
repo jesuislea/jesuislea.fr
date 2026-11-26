@@ -419,6 +419,21 @@
   .piliers a{color:var(--aqua);font-weight:700;font-size:.9rem;text-decoration:none}
   .piliers a:hover{text-decoration:underline}
   @media (max-width:640px){.piliers{grid-template-columns:1fr}}
+  .themes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.9rem;margin-top:.9rem}
+  .theme{background:var(--surface);border:1px solid var(--trait);border-radius:10px;padding:1rem 1.1rem;font-family:var(--sans)}
+  .theme h4{font-size:1.05rem;color:var(--clair);margin:0 0 .6rem;padding-bottom:.45rem;border-bottom:2px solid var(--rose)}
+  .theme ul{list-style:none;margin:0;padding:0}
+  .theme li{margin:0 0 .45rem}
+  .theme li a{display:flex;gap:.6rem;align-items:baseline;color:var(--doux);text-decoration:none;font-size:.93rem;line-height:1.4}
+  .theme li a:hover span:last-child{color:var(--clair);text-decoration:underline}
+  .theme .bref-n{flex:none;min-width:1.6rem;text-align:center;font-weight:800;font-size:.8rem;color:#111;background:var(--aqua);border-radius:4px;padding:.05rem .3rem}
+  .rev-detail{margin-top:1.8rem;border-top:1px solid var(--trait);padding-top:1rem}
+  .rev-detail>summary{cursor:pointer;font-family:var(--sans);font-weight:700;font-size:1rem;color:var(--aqua);padding:.6rem 0;list-style:none}
+  .rev-detail>summary::-webkit-details-marker{display:none}
+  .rev-detail>summary::before{content:"+ ";font-weight:800}
+  .rev-detail[open]>summary::before{content:"− "}
+  .bloc{scroll-margin-top:70px}
+  @media (max-width:640px){.themes{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -546,7 +561,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')ms.forEach(f
 <section class="revendications" id="revendications">
   <div class="wrap">
     <h2 class="rev-titre">Ce que nous demandons</h2>
-    <p class="rev-intro admin">Pas des doléances. Des exigences — précises, chiffrables, opposables. Parce que ce n'est pas une collection de malchances à traiter au cas par cas : c'est un système qui tourne au travail sous-payé. Elles sont classées par ordre d'urgence. Les deux premières ne se négocient pas : le scandale le mieux documenté, et le plus simple à faire cesser. La troisième peut être obtenue dès maintenant, par un seul groupe de député·es. Les trois suivantes se jouent dans le budget 2027 : d'où vient l'argent de l'enseignement supérieur, et où il part. Reste à vouloir.</p>
+    <p class="rev-intro admin">Pas des doléances&nbsp;: des exigences précises et chiffrées, chacune avec un·e responsable. Parce que la précarité à l'université n'est pas une suite de malchances, c'est un système.</p>
 
     <div class="immediat" id="immediat">
       <div class="immediat-titre">Trois demandes immédiates</div>
@@ -559,11 +574,18 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')ms.forEach(f
     </div>
 
     <div class="bref">
-      <div class="bref-titre">En bref : nos 12 revendications</div>
-      <ol class="bref-liste"><li><a href="#rev-1"><span class="bref-n">1</span><span class="bref-t"><strong>Payer chaque mois, comme la loi l'exige</strong> — avec des intérêts de retard automatiques, et toutes les heures travaillées payées : préparation, corrections, surveillances.</span></a></li><li><a href="#rev-2"><span class="bref-n">2</span><span class="bref-t"><strong>80 € net pour chaque heure réellement travaillée, et des postes stables</strong> — préparation et corrections comprises ; aujourd'hui, 43,50 € brut (environ 35 € net) pour une heure de TD, et rien pour le reste.</span></a></li><li><a href="#rev-3"><span class="bref-n">3</span><span class="bref-t"><strong>Une commission d'enquête parlementaire</strong> — sur la précarité dans l'ESR, comme pour Bétharram. Un seul groupe de député·es peut l'obtenir dès maintenant.</span></a></li><li><a href="#rev-4"><span class="bref-n">4</span><span class="bref-t"><strong>Des postes, et des financements durables</strong> — des dotations pérennes pour les laboratoires plutôt que des appels à projets de l'ANR.</span></a></li><li><a href="#rev-5"><span class="bref-n">5</span><span class="bref-t"><strong>Pas d'argent public sans exigences</strong> — l'argent public de la formation à des formations contrôlées par l'État, et les économies à l'université publique.</span></a></li><li><a href="#rev-6"><span class="bref-n">6</span><span class="bref-t"><strong>Avec les lycéen·nes : supprimer Parcoursup</strong> — rétablir le droit d'accès à une université quasi gratuite, et ouvrir les places et les postes qui vont avec.</span></a></li><li><a href="#rev-7"><span class="bref-n">7</span><span class="bref-t"><strong>Handicap : appliquer la loi</strong> — le respect des 6 % d'emploi de personnes handicapées, y compris parmi les enseignant·es-chercheur·es.</span></a></li><li><a href="#rev-8"><span class="bref-n">8</span><span class="bref-t"><strong>Reconnaître le doctorat</strong> — dans les grilles salariales, et par une voie spécifique vers le CAPES.</span></a></li><li><a href="#rev-9"><span class="bref-n">9</span><span class="bref-t"><strong>Protéger contre les abus et les violences</strong> — une instance indépendante de l'employeur pour recevoir les signalements et protéger les victimes.</span></a></li><li><a href="#rev-10"><span class="bref-n">10</span><span class="bref-t"><strong>En finir avec les faux CDI</strong> — un CDI qui ne s'arrête pas avec le projet, et un vrai accès à l'emploi stable.</span></a></li><li><a href="#rev-11"><span class="bref-n">11</span><span class="bref-t"><strong>Rendre la vacation à sa fonction</strong> — un cours confié chaque année à la même personne, c'est un emploi : il doit devenir un contrat, puis un poste.</span></a></li><li><a href="#rev-12"><span class="bref-n">12</span><span class="bref-t"><strong>Compter, et rendre des comptes</strong> — que chaque université publie sa part de cours assurés par des précaires, et ses dépenses de conseil.</span></a></li></ol>
-      <p class="bref-note">Cliquez sur une revendication pour lire le détail, les chiffres et les sources.</p>
+      <div class="bref-titre">Nos 12 revendications, en quatre combats</div>
+      <div class="themes">
+        <div class="theme"><h4>Payer tout le travail</h4><ul><li><a href="#rev-1"><span class="bref-n">1</span><span>Payer chaque mois, avec des intérêts de retard automatiques</span></a></li><li><a href="#rev-2"><span class="bref-n">2</span><span>80&nbsp;€ net (environ 100&nbsp;€ brut) pour chaque heure réellement travaillée</span></a></li><li><a href="#rev-11"><span class="bref-n">11</span><span>Un cours confié chaque année à la même personne&nbsp;: un contrat, puis un poste</span></a></li></ul></div>
+        <div class="theme"><h4>Des emplois stables et reconnus</h4><ul><li><a href="#rev-4"><span class="bref-n">4</span><span>Des postes et des financements durables, plutôt que des appels à projets</span></a></li><li><a href="#rev-10"><span class="bref-n">10</span><span>En finir avec les faux CDI</span></a></li><li><a href="#rev-8"><span class="bref-n">8</span><span>Reconnaître le doctorat dans les grilles salariales</span></a></li></ul></div>
+        <div class="theme"><h4>Protéger chacun·e</h4><ul><li><a href="#rev-9"><span class="bref-n">9</span><span>Une instance indépendante de l'employeur contre les abus et les violences</span></a></li><li><a href="#rev-7"><span class="bref-n">7</span><span>Handicap&nbsp;: appliquer la loi, y compris pour les enseignant·es-chercheur·es</span></a></li></ul></div>
+        <div class="theme"><h4>Un service public financé, ouvert et transparent</h4><ul><li><a href="#rev-3"><span class="bref-n">3</span><span>Une commission d'enquête parlementaire sur la précarité dans l'ESR</span></a></li><li><a href="#rev-12"><span class="bref-n">12</span><span>Publier la part des cours assurés par des précaires, et les dépenses de conseil</span></a></li><li><a href="#rev-5"><span class="bref-n">5</span><span>Pas d'argent public sans exigences</span></a></li><li><a href="#rev-6"><span class="bref-n">6</span><span>Avec les lycéen·nes&nbsp;: supprimer Parcoursup</span></a></li></ul></div>
+      </div>
+      <p class="bref-note">Cliquez sur une revendication pour lire les arguments, les chiffres et les sources.</p>
     </div>
     <p class="carte-note"><strong>Soutenir à la carte.</strong> Vous pouvez soutenir une ou plusieurs de ces demandes sans adhérer à toutes, par exemple le paiement mensuel et la rémunération du travail réel, sans nous suivre sur Parcoursup ou l'ANR. Dites-nous lesquelles : <a href="mailto:contact@jesuislea.fr?subject=Je%20soutiens%20les%20demandes%20n%C2%B0">contact@jesuislea.fr</a>.</p>
+
+    <details class="rev-detail" id="rev-detail"><summary>Le détail des 12 revendications&nbsp;: arguments, chiffres et sources</summary>
 
     <div id="rev-1" class="bloc fer">
       <div class="bloc-tete">
@@ -721,7 +743,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')ms.forEach(f
         <li><strong>Et pas seulement ce qu'on paie mal : aussi ce qu'on paie cher.</strong> Que chaque université publie ses dépenses externes — cabinets de conseil, prestations, sous-traitance. Une proposition de loi pour encadrer le recours aux cabinets de conseil et rendre ces dépenses transparentes a été adoptée à la quasi-unanimité par le Sénat ; depuis 2024, elle attend toujours son adoption définitive. Nous demandons qu'elle aboutisse enfin, et qu'elle s'applique aussi aux universités. On ne peut pas exiger la clarté sur ce qu'on rémunère mal, et l'accepter opaque sur ce qu'on rémunère cher.</li>
       </ul>
     </div>
-
+    </details>
 
     <div class="titu" id="titulaires">
       <h3>Vous êtes titulaire ? Trois engagements concrets</h3>
@@ -755,6 +777,12 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')ms.forEach(f
       </div>
     </div>
   </div>
+<script>
+(function(){var d=document.getElementById('rev-detail');if(!d)return;
+function ouvrir(h){if(/^#rev-\d+$/.test(h)){d.open=true;var el=document.querySelector(h);if(el)setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'start'})},30);return true}return false}
+document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#rev-"]');if(a&&ouvrir(a.getAttribute('href'))){e.preventDefault();history.replaceState(null,'',a.getAttribute('href'))}});
+if(location.hash)ouvrir(location.hash);})();
+</script>
 </section>
 
 <section class="horizon">
