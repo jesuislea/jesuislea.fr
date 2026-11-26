@@ -393,7 +393,10 @@
   .dix-s-accroche{font-size:clamp(1.15rem,2.6vw,1.45rem);line-height:1.35;color:var(--clair);margin:0 0 1.2rem}
   .dix-s-accroche strong{color:var(--rose)}
   .dix-s-constats{list-style:none;margin:0 0 1.2rem;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.7rem}
-  @media (min-width:641px){.dix-s-constats{grid-template-columns:repeat(6,1fr)}.dix-s-constats li{grid-column:span 2}.dix-s-constats li:nth-child(n+4){grid-column:span 3}}
+  @media (min-width:641px){.dix-s-constats{grid-template-columns:repeat(3,minmax(0,1fr))}}
+  .dix-s-qui{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;margin:0 0 1.1rem;font-size:.82rem}
+  .dix-s-qui span{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--rose);margin-right:.2rem}
+  .dix-s-qui i{font-style:normal;color:var(--clair);background:rgba(236,72,153,.14);border:1px solid rgba(236,72,153,.35);border-radius:999px;padding:.18rem .65rem}
   .dix-s-constats li{background:rgba(255,255,255,.05);border-radius:8px;padding:.8rem .9rem;border-left:3px solid var(--aqua)}
   .dix-s-constats b{display:block;font-size:1rem;font-weight:800;line-height:1.25;color:var(--aqua);margin-bottom:.3rem}
   .dix-s-constats span{display:block;font-size:.84rem;line-height:1.45;color:var(--doux)}
@@ -477,12 +480,14 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')ms.forEach(f
     </div>
     <h1>Je suis <em>Léa</em>.</h1>
     <div class="dix-s" aria-label="Léa en bref">
-      <p class="dix-s-accroche">L'université tourne grâce à des milliers de docteur·es et de précaires. <strong>Elle les paie mal, les protège peu et les use.</strong></p>
+      <p class="dix-s-accroche">L'université tourne grâce à des milliers de docteur·es et de précaires. <strong>Elle les paie mal, les protège peu, les laisse dans l'incertitude et les use.</strong></p>
+      <p class="dix-s-qui"><span>Léa, c'est</span> <i>vacataire</i> <i>doctorant·e sans financement</i> <i>post-doc</i> <i>ATER</i> <i>contractuel·le</i> <i>personnel administratif ou technique en CDD</i> <i>chercheur·e venu·e de l'étranger</i> <i>docteur·e au chômage</i></p>
       <ul class="dix-s-constats">
         <li><b>Un travail mal payé</b><span>Seule l'heure de cours est rémunérée, souvent des mois en retard. Préparation, corrections et surveillances ne le sont pas.</span></li>
         <li><b>Des droits au rabais</b><span>Contrats à l'heure ou à durée courte, ni congés payés ni réelle protection sociale pour les vacataires, aucune perspective de poste.</span></li>
         <li><b>Le harcèlement sans suite</b><span>Harcèlement moral et violences sexuelles : la précarité rend la parole risquée, et les sanctions restent rares.</span></li>
         <li><b>Des inégalités qui s'additionnent</b><span>Sexisme, racisme, validisme, origine sociale : la précarité aggrave chaque discrimination.</span></li>
+        <li><b>Une vie en suspens</b><span>Contrats qui s'enchaînent, déménagements forcés, chômage entre deux postes, projets familiaux repoussés, titre de séjour lié au contrat.</span></li>
         <li><b>Des vies abîmées</b><span>Épuisement, isolement, anxiété : un système qui use celles et ceux qui le font tenir.</span></li>
       </ul>
       <p class="dix-s-demande"><span>Nous demandons</span> que chaque heure réellement travaillée soit payée, chaque mois, des postes stables pour les besoins permanents, des droits sociaux, et une protection indépendante contre le harcèlement et les discriminations. <a href="#revendications">Nos 12&nbsp;revendications&nbsp;→</a></p>
