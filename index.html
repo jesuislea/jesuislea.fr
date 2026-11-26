@@ -440,6 +440,14 @@
   .bloc .pli-btn{margin-top:.7rem}
   .q-court .q-rest{display:none}
   .position-doc .pli-btn{margin:.2rem 0 .8rem}
+  .titu-cta{margin-top:1rem;padding-top:.9rem;border-top:1px solid var(--trait);font-family:var(--sans)}
+  .titu-cta p{font-size:.95rem;line-height:1.5;color:var(--doux);margin:0 0 .8rem}
+  .titu-cta p strong{color:var(--clair)}
+  .titu-btns{display:flex;flex-wrap:wrap;gap:.5rem}
+  .titu-btns a{font-weight:700;font-size:.88rem;text-decoration:none;padding:.55rem 1rem;border-radius:999px}
+  .titu-btns .t1{background:var(--rose);color:#fff}
+  .titu-btns .t2{border:1.5px solid var(--aqua);color:var(--aqua)}
+  .titu-btns a:hover{opacity:.85}
 </style>
 </head>
 <body>
@@ -750,11 +758,14 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')ms.forEach(f
 <div class="titu" id="titulaires">
       <h3>Vous êtes titulaire ? Trois engagements concrets</h3>
       <ol>
-        <li><strong>Porter une motion</strong> en conseil d'UFR, en CFVU ou en conseil d'administration : paiement mensuel des vacataires, et rémunération de la préparation et des corrections.</li>
-        <li><strong>Demander les chiffres</strong> en conseil : combien de vacataires, combien d'heures, et quels délais de paiement dans votre composante et votre université.</li>
-        <li><strong>Soutenir publiquement vos collègues précaires</strong> : signer la tribune, relayer les témoignages, témoigner avec #JaiEteLea si vous avez connu cette précarité.</li>
+        <li><strong>En conseil, demander les chiffres et porter une motion</strong> : combien de vacataires ne sont pas payé·es chaque mois, combien n'ont pas signé leur contrat, combien d'heures elles et ils assurent. Puis voter le paiement mensuel, qui est la loi depuis 2022, et la transformation des vacations régulières en contrats.</li>
+        <li><strong>Au quotidien, ne laisser personne seul·e</strong> : refuser qu'un·e collègue commence sans contrat signé, accompagner les réclamations de paiement (<a href="payetonvacataire.html">#PayeTonVacataire</a>), demander un contrat plutôt qu'une vacation pour un enseignement régulier.</li>
+        <li><strong>Publiquement, signer de votre nom</strong> : écrire à vos parlementaires et à votre présidence, relayer #JeSuisLéa, et #JaiEteLea si vous avez connu cette précarité. Votre statut vous protège ; il peut nous protéger aussi.</li>
       </ol>
-      <p style="font-family:var(--sans);font-size:.95rem;margin:.8rem 0 0"><a href="guide-titulaires.html" style="color:var(--aqua);font-weight:700">Lire notre Petit guide de l'émancipation de l'universitaire &rarr;</a> Pourquoi c'est aussi votre combat, et vingt gestes concrets, avec des modèles de lettres.</p>
+      <div class="titu-cta">
+        <p><strong>Téléchargez le guide, parlez-en à votre prochaine réunion ou AG, et appliquez-le, pour nous toutes et tous.</strong> Puis dites-nous ce que vous avez fait&nbsp;: cela en inspirera d'autres.</p>
+        <div class="titu-btns"><a class="t1" href="JeSuisLea_guide_titulaires.pdf" download>Télécharger le guide (PDF)</a><a class="t2" href="guide-titulaires.html">Lire le guide en ligne</a><a class="t2" href="mailto:contact@jesuislea.fr?subject=Ce%20que%20nous%20avons%20fait%20(titulaires)">Nous dire ce que vous avez fait</a></div>
+      </div>
     </div>
 
     <div class="etat-wrap" id="ou-en-sommes-nous">
@@ -4066,7 +4077,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')ms.forEach(f
   if(blocs.length){var w=blocs[0].parentNode,box=document.createElement('div');box.className='pli';box.hidden=true;w.insertBefore(box,blocs[0]);blocs.forEach(function(x){box.appendChild(x)});
     var bt=document.createElement('button');bt.type='button';bt.className='pli-btn';bt.textContent='Lire le détail des 12 revendications ▾';
     bt.addEventListener('click',function(){var o=box.hidden;box.hidden=!o;bt.textContent=o?'Réduire ▴':'Lire le détail des 12 revendications ▾'});w.insertBefore(bt,box);}
-  plier(q('#titulaires'),function(c){return c.tagName==='H3'},'Lire les engagements');
+  plier(q('#titulaires'),function(c){return c.tagName==='H3'||c.classList.contains('titu-cta')},'Lire les trois engagements');
   plier(q('#ou-en-sommes-nous'),function(c,i){return i<2},'Voir le détail');
   var hz=q('.horizon .wrap');if(hz){var np=0;plier(hz,function(c){if(c.tagName==='P'){np++;return np===1}return true},'Lire la suite')}
   var ol=q('.questions-liste');
