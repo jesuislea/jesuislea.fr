@@ -3977,6 +3977,24 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')ms.forEach(f
   }
 </script>
 
+<a href="#mur-haut" class="haut-mur" id="haut-mur" aria-label="Revenir en haut du mur des Léa">↑ Haut du mur</a>
+<style>
+  .mur-outils{scroll-margin-top:70px}
+  .haut-mur{position:fixed;right:1rem;bottom:1.2rem;z-index:98;background:var(--rose);color:#fff;font-family:var(--sans);font-weight:700;font-size:.88rem;text-decoration:none;padding:.6rem 1rem;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.35);opacity:0;transform:translateY(10px);pointer-events:none;transition:opacity .2s,transform .2s}
+  .haut-mur.on{opacity:1;transform:none;pointer-events:auto}
+  .haut-mur:hover,.haut-mur:focus-visible{background:var(--aqua);color:#111}
+</style>
+<script>
+(function(){
+  var b=document.getElementById('haut-mur'),mur=document.getElementById('mur'),cible=document.querySelector('.mur-outils');
+  if(!b||!mur||!cible)return;
+  cible.id=cible.id||'mur-haut';
+  function maj(){var r=mur.getBoundingClientRect();b.classList.toggle('on',r.top<-200&&r.bottom>innerHeight*.5);}
+  addEventListener('scroll',maj,{passive:true});maj();
+  b.addEventListener('click',function(e){e.preventDefault();cible.scrollIntoView({behavior:'smooth',block:'start'});history.replaceState(null,'','#temoignages');});
+})();
+</script>
+
 </body>
 </html>
 
