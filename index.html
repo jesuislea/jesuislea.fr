@@ -755,6 +755,21 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')ms.forEach(f
     <p class="mur-ressources" style="margin:0 0 1.6rem;padding:1rem 1.15rem;border:1.5px solid #ec4899;border-radius:8px;background:rgba(236,72,153,0.07);font-size:0.95rem;line-height:1.6;color:#e9ebf7;"><strong style="color:#ec4899;letter-spacing:0.5px;">BESOIN DE PARLER À QUELQU'UN ?</strong><br>En cas de souffrance psychique, le <strong>3114</strong> — numéro national de prévention, gratuit, 24h/24 — est à votre écoute. Les étudiant·es peuvent aussi joindre <strong>Nightline</strong>, et chaque université dispose d'un <strong>service de santé</strong> et d'une cellule d'écoute. Votre <strong>médecin généraliste</strong> est aussi un premier interlocuteur. Si votre consommation d'alcool ou de drogues vous inquiète : <strong>Alcool Info Service</strong> (<strong>0 980 980 930</strong>) et <strong>Drogues Info Service</strong> (<strong>0 800 23 13 13</strong>), anonymes, 7 jours sur 7 de 8 h à 2 h. Pour une addiction sans substance (jeux, écrans, sport…) : <strong>Joueurs Info Service</strong> (<strong>09 74 75 13 13</strong>, mêmes horaires) et l'<strong>Institut fédératif des addictions comportementales</strong> (IFAC, CHU de Nantes). Face à une discrimination, y compris liée à la grossesse, le <strong>Défenseur des droits</strong> répond au <strong>39 28</strong> (gratuit, en semaine de 9 h à 18 h, ou par tchat sur antidiscriminations.fr). Face à des violences sexistes ou sexuelles : le <strong>3919</strong> (gratuit et anonyme), la cellule VSS de votre établissement et le <strong>CLASCHES</strong>. Pour faire valoir vos droits, les <strong>syndicats et associations de l'ESR</strong> peuvent vous accompagner.</p>
     <p class="mur-recent">Les témoignages les plus récents apparaissent en premier.</p>
     <div class="mur-outils"><input type="search" id="mur-cherche" placeholder="Chercher : un mot, une ville, un n°…" aria-label="Chercher dans les témoignages"><span id="mur-resultat"></span></div>
+    <div class="mur-compteur" id="mur-compteur" style="display:flex;flex-wrap:wrap;align-items:center;gap:.4rem 1.1rem;margin:-.4rem 0 1.4rem;padding:.75rem 1rem;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid var(--trait);font-family:var(--sans);font-size:.9rem;color:var(--doux)">
+      <span><strong style="color:var(--clair);font-size:1.05rem" id="mc-total">378</strong> témoignages reçus · <strong style="color:var(--clair)" id="mc-pub"></strong> publiés</span>
+      <span id="mc-new" style="display:none;color:var(--aqua);font-weight:600"></span>
+      <span id="mc-derniers"></span>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded',function(){try{
+      var t=document.querySelectorAll('.temoin[id^="lea-"]'),nums=[].map.call(t,function(e){return +e.dataset.n||0}).filter(Boolean).sort(function(a,b){return b-a});
+      var tot=document.getElementById('compteur-n');if(tot)document.getElementById('mc-total').textContent=tot.textContent;
+      document.getElementById('mc-pub').textContent=t.length;
+      document.getElementById('mc-derniers').innerHTML='Derniers publiés : '+nums.slice(0,3).map(function(n){return '<a href="#lea-'+n+'" style="color:var(--rose);font-weight:600">n°&nbsp;'+n+'</a>'}).join(', ');
+      var vu=null;try{vu=+localStorage.getItem('lea-dernier-vu')||null;localStorage.setItem('lea-dernier-vu',nums[0])}catch(e){}
+      if(vu&&nums[0]>vu){var k=nums.filter(function(n){return n>vu}).length;var el=document.getElementById('mc-new');el.textContent=k+(k>1?' nouveaux':' nouveau')+' depuis votre dernière visite';el.style.display='inline'}
+    }catch(e){}});
+    </script>
     <div class="lea-toast" id="lea-toast">Lien copié</div>
     <div class="temoignages" id="mur">
       <div class="temoin temoin--lead">
