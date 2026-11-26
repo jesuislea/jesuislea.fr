@@ -389,6 +389,21 @@
 .etat-wrap{margin:2.2rem 0 1rem}
 .etat-wrap .sous{font-family:var(--sans);font-size:.9rem;color:var(--doux);max-width:62ch}
 @media (max-width:720px){.etat{grid-template-columns:1fr}}
+  .dix-s{margin:1.4rem 0 2.6rem;padding:1.4rem 1.5rem;background:var(--surface-2);border:1px solid var(--trait);border-top:4px solid var(--rose);border-radius:10px;font-family:var(--sans)}
+  .dix-s-accroche{font-size:clamp(1.15rem,2.6vw,1.45rem);line-height:1.35;color:var(--clair);margin:0 0 1.2rem}
+  .dix-s-accroche strong{color:var(--rose)}
+  .dix-s-chiffres{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;margin-bottom:1.2rem}
+  .dix-s-chiffres div{background:rgba(255,255,255,.05);border-radius:8px;padding:.85rem .9rem}
+  .dix-s-chiffres b{display:block;font-size:clamp(1.3rem,3vw,1.7rem);font-weight:800;line-height:1.1;color:var(--aqua);margin-bottom:.35rem}
+  .dix-s-chiffres span{display:block;font-size:.85rem;line-height:1.4;color:var(--doux)}
+  .dix-s-demande{font-size:1rem;line-height:1.5;color:var(--clair);margin:0 0 1.1rem}
+  .dix-s-demande span{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--rose);margin-right:.4rem}
+  .dix-s-btns{display:flex;flex-wrap:wrap;gap:.6rem}
+  .dix-s-btns a{font-weight:700;font-size:.9rem;text-decoration:none;padding:.6rem 1.1rem;border-radius:999px}
+  .dix-s-btns .d1{background:var(--rose);color:#fff}
+  .dix-s-btns .d2{border:1.5px solid var(--aqua);color:var(--aqua)}
+  .dix-s-btns a:hover{opacity:.85}
+  @media (max-width:640px){.dix-s{padding:1.1rem 1rem}.dix-s-chiffres{grid-template-columns:1fr;gap:.5rem}.dix-s-chiffres div{display:flex;align-items:baseline;gap:.7rem}.dix-s-chiffres b{flex:none;margin:0;min-width:7.2rem;font-size:1.2rem}}
 </style>
 </head>
 <body>
@@ -456,6 +471,16 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')ms.forEach(f
       <a href="#ajouter" style="color:inherit;text-decoration:none">Prends la parole →</a>
     </div>
     <h1>Je suis <em>Léa</em>.</h1>
+    <div class="dix-s" aria-label="Léa en 10 secondes">
+      <p class="dix-s-accroche">L'université tourne grâce à des enseignant·es <strong>payé·es à l'heure de cours, pas à l'heure de travail.</strong></p>
+      <div class="dix-s-chiffres">
+        <div><b>8&nbsp;sur&nbsp;10</b><span>des personnes qui enseignent à Lyon 3 sont vacataires</span></div>
+        <div><b>43,50 €&nbsp;brut</b><span>pour une heure de TD. Préparation, copies, examens&nbsp;: 0&nbsp;€</span></div>
+        <div><b>Depuis 1989</b><span>le taux horaire n'a pas suivi l'inflation</span></div>
+      </div>
+      <p class="dix-s-demande"><span>Nous demandons</span> 80&nbsp;€ net (environ 100&nbsp;€ brut) pour chaque heure réellement travaillée, un paiement chaque mois et des postes stables.</p>
+      <div class="dix-s-btns"><a href="#ajouter" class="d1">Témoigner</a><a href="#temoignages" class="d2">Lire les témoignages</a><a href="payetonvacataire.html" class="d2">Réclamer mes heures</a></div>
+    </div>
     <div class="manifeste">
       <p>J'ai un doctorat. Huit ans d'études après le bac, une thèse, des années de recherche. J'enseigne à l'université française. Devant les étudiants, on m'appelle « chargée d'enseignement ». Sur ma fiche de paie — quand elle arrive — on m'appelle « heures complémentaires ».</p>
       <p>Je surveille les examens le samedi. Je corrige les copies le soir. Je réponds aux mails, je prépare mes cours, j'assiste aux réunions. De tout cela, une seule chose est payée : l'heure où je suis debout face à la salle. Le reste, l'université le reçoit gratuitement.</p>
