@@ -434,6 +434,12 @@
   .rev-detail[open]>summary::before{content:"− "}
   .bloc{scroll-margin-top:70px}
   @media (max-width:640px){.themes{grid-template-columns:1fr}}
+  .pli-btn{display:inline-flex;align-items:center;gap:.3rem;margin:.5rem 0 .2rem;background:none;border:1.5px solid var(--aqua);color:var(--aqua);font-family:var(--sans);font-weight:700;font-size:.85rem;padding:.38rem .9rem;border-radius:999px;cursor:pointer}
+  .pli-btn:hover,.pli-btn:focus-visible{background:var(--aqua);color:#111}
+  .pli{margin-top:.6rem}
+  .bloc .pli-btn{margin-top:.7rem}
+  .q-court .q-rest{display:none}
+  .position-doc .pli-btn{margin:.2rem 0 .8rem}
 </style>
 </head>
 <body>
@@ -584,8 +590,6 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')ms.forEach(f
       <p class="bref-note">Cliquez sur une revendication pour lire les arguments, les chiffres et les sources.</p>
     </div>
     <p class="carte-note"><strong>Soutenir à la carte.</strong> Vous pouvez soutenir une ou plusieurs de ces demandes sans adhérer à toutes, par exemple le paiement mensuel et la rémunération du travail réel, sans nous suivre sur Parcoursup ou l'ANR. Dites-nous lesquelles : <a href="mailto:contact@jesuislea.fr?subject=Je%20soutiens%20les%20demandes%20n%C2%B0">contact@jesuislea.fr</a>.</p>
-
-    <details class="rev-detail" id="rev-detail"><summary>Le détail des 12 revendications&nbsp;: arguments, chiffres et sources</summary>
 
     <div id="rev-1" class="bloc fer">
       <div class="bloc-tete">
@@ -743,9 +747,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')ms.forEach(f
         <li><strong>Et pas seulement ce qu'on paie mal : aussi ce qu'on paie cher.</strong> Que chaque université publie ses dépenses externes — cabinets de conseil, prestations, sous-traitance. Une proposition de loi pour encadrer le recours aux cabinets de conseil et rendre ces dépenses transparentes a été adoptée à la quasi-unanimité par le Sénat ; depuis 2024, elle attend toujours son adoption définitive. Nous demandons qu'elle aboutisse enfin, et qu'elle s'applique aussi aux universités. On ne peut pas exiger la clarté sur ce qu'on rémunère mal, et l'accepter opaque sur ce qu'on rémunère cher.</li>
       </ul>
     </div>
-    </details>
-
-    <div class="titu" id="titulaires">
+<div class="titu" id="titulaires">
       <h3>Vous êtes titulaire ? Trois engagements concrets</h3>
       <ol>
         <li><strong>Porter une motion</strong> en conseil d'UFR, en CFVU ou en conseil d'administration : paiement mensuel des vacataires, et rémunération de la préparation et des corrections.</li>
@@ -777,12 +779,6 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')ms.forEach(f
       </div>
     </div>
   </div>
-<script>
-(function(){var d=document.getElementById('rev-detail');if(!d)return;
-function ouvrir(h){if(/^#rev-\d+$/.test(h)){d.open=true;var el=document.querySelector(h);if(el)setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'start'})},30);return true}return false}
-document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#rev-"]');if(a&&ouvrir(a.getAttribute('href'))){e.preventDefault();history.replaceState(null,'',a.getAttribute('href'))}});
-if(location.hash)ouvrir(location.hash);})();
-</script>
 </section>
 
 <section class="horizon">
@@ -4051,6 +4047,40 @@ if(location.hash)ouvrir(location.hash);})();
   }
 </script>
 
+<script>
+/* Replier les textes longs : titres visibles, détail au clic */
+(function(){
+  function plier(parent,garder,label,labelFerme){
+    if(!parent)return;
+    var enfants=[].slice.call(parent.children),reste=enfants.filter(function(c,i){return !garder(c,i)});
+    if(!reste.length)return;
+    var box=document.createElement('div');box.className='pli';box.hidden=true;
+    parent.insertBefore(box,reste[0]);reste.forEach(function(c){box.appendChild(c)});
+    var b=document.createElement('button');b.type='button';b.className='pli-btn';b.setAttribute('aria-expanded','false');b.textContent=label+' ▾';
+    b.addEventListener('click',function(){var o=box.hidden;box.hidden=!o;b.setAttribute('aria-expanded',o);b.textContent=(o?(labelFerme||'Réduire')+' ▴':label+' ▾')});
+    parent.insertBefore(b,box);
+  }
+  var q=function(s){return document.querySelector(s)},qa=function(s){return [].slice.call(document.querySelectorAll(s))};
+  plier(q('.manifeste'),function(c,i){return i===0},'Lire tout le manifeste');
+  var blocs=qa('#revendications .bloc');
+  if(blocs.length){var w=blocs[0].parentNode,box=document.createElement('div');box.className='pli';box.hidden=true;w.insertBefore(box,blocs[0]);blocs.forEach(function(x){box.appendChild(x)});
+    var bt=document.createElement('button');bt.type='button';bt.className='pli-btn';bt.textContent='Lire le détail des 12 revendications ▾';
+    bt.addEventListener('click',function(){var o=box.hidden;box.hidden=!o;bt.textContent=o?'Réduire ▴':'Lire le détail des 12 revendications ▾'});w.insertBefore(bt,box);}
+  plier(q('#titulaires'),function(c){return c.tagName==='H3'},'Lire les engagements');
+  plier(q('#ou-en-sommes-nous'),function(c,i){return i<2},'Voir le détail');
+  var hz=q('.horizon .wrap');if(hz){var np=0;plier(hz,function(c){if(c.tagName==='P'){np++;return np===1}return true},'Lire la suite')}
+  var ol=q('.questions-liste');
+  if(ol){qa('.questions-liste li').forEach(function(li){var st=li.querySelector('strong');if(!st)return;var sp=document.createElement('span');sp.className='q-rest';while(st.nextSibling)sp.appendChild(st.nextSibling);li.appendChild(sp)});
+    ol.classList.add('q-court');var b=document.createElement('button');b.type='button';b.className='pli-btn';b.textContent='Lire les questions en entier ▾';
+    b.addEventListener('click',function(){var c=ol.classList.toggle('q-court');b.textContent=c?'Lire les questions en entier ▾':'Réduire ▴'});ol.parentNode.insertBefore(b,ol.nextSibling)}
+  var qb=q('.qui-box');if(qb){var np2=0;plier(qb,function(c){if(c.tagName==='H2')return true;if(c.tagName==='P'&&!c.className){np2++;return np2===1}return false},'En savoir plus sur nous')}
+  qa('.position-doc').forEach(function(d){plier(d,function(c){return !c.classList.contains('position-doc-texte')},'Lire le résumé')});
+  function ouvrirVers(el){while(el&&el!==document.body){if(el.classList&&el.classList.contains('pli')&&el.hidden){var b=el.previousElementSibling;if(b&&b.classList.contains('pli-btn'))b.click();else el.hidden=false}if(el.classList&&el.classList.contains('q-court'))el.classList.remove('q-court');el=el.parentNode}}
+  function cible(h){try{return h&&h.length>1?document.querySelector(h):null}catch(e){return null}}
+  document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var t=cible(a.getAttribute('href'));if(t&&t.closest('.pli[hidden]')){ouvrirVers(t);setTimeout(function(){t.scrollIntoView({behavior:'smooth',block:'start'})},20)}},true);
+  var t0=cible(location.hash);if(t0&&t0.closest('.pli[hidden]')){ouvrirVers(t0);setTimeout(function(){t0.scrollIntoView({block:'start'})},50)}
+})();
+</script>
 <a href="#mur-haut" class="haut-mur" id="haut-mur" aria-label="Revenir en haut du mur des Léa">↑ Haut du mur</a>
 <style>
   .mur-outils{scroll-margin-top:70px}
