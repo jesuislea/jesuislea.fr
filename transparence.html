@@ -172,11 +172,18 @@
   .questions li strong{color:var(--clair)}
   .tab{font-size:.88rem}
   @media (max-width:640px){.fiche{padding:1.1rem}.minibar .wrap{gap:1rem}}
+  .tag.hr{background:rgba(236,72,153,.15);color:var(--rose)}
+  .dix{display:flex;flex-wrap:wrap;align-items:flex-end;gap:.25rem .2rem;margin:.6rem 0 1rem}
+  .dix svg{width:1.55rem;height:2.1rem}
+  .dix .dl{flex-basis:100%;font-family:var(--sans);font-size:.85rem;color:var(--doux);margin-top:.35rem}
+  .dix .dl b{color:var(--rose)}
+  .fiches>*{min-width:0}.ap-nom{min-width:0;overflow-wrap:anywhere}
+  @media (max-width:640px){.tag{white-space:normal;display:inline-block;max-width:100%}}
 </style>
 </head>
 <body>
 
-<div class="bandeau"><a href="index.html">← Je suis Léa</a><span>Transparence · mis à jour le 24 novembre 2026</span></div>
+<div class="bandeau"><a href="index.html">← Je suis Léa</a><span>Transparence · mis à jour le 26 novembre 2026</span></div>
 
 <header>
   <div class="wrap">
@@ -187,16 +194,16 @@
 </header>
 
 <nav class="sommaire"><div class="wrap">
-  <a href="#partie1"><span class="num">1</span><b>Combien de cours reposent sur les vacataires ?</b><span>Jusqu'à une heure de cours sur trois dans certains établissements.</span></a>
+  <a href="#partie1"><span class="num">1</span><b>Combien de cours reposent sur les vacataires ?</b><span>Jusqu'à huit personnes sur dix qui enseignent sont vacataires.</span></a>
   <a href="#partie2"><span class="num">2</span><b>Ce que les universités savent payer</b><span>Primes de fonction et contrats de conseil : l'argent existe.</span></a>
-  <a href="#demandes"><span class="num">3</span><b>Où en sont nos demandes ?</b><span>85 établissements sollicités, premières réponses attendues fin novembre.</span></a>
+  <a href="#demandes"><span class="num">3</span><b>Où en sont nos demandes ?</b><span>85 établissements sollicités : 12 ont transmis des données, 63 n'ont pas encore répondu.</span></a>
 </div></nav>
 
 <div class="chiffres">
   <div class="wrap">
-    <div class="chiffre"><div class="n rose">1/3</div><div class="l">des heures de cours assurées par des vacataires à Sciences Po Bordeaux</div></div>
-    <div class="chiffre"><div class="n aqua">6 sur 10</div><div class="l">personnes qui enseignent à l'université de Bordeaux sont vacataires</div></div>
-    <div class="chiffre"><div class="n blanc">85</div><div class="l">établissements sollicités depuis le 25 octobre 2026</div></div>
+    <div class="chiffre"><div style="font-size:clamp(2.1rem,5.4vw,3.3rem);white-space:nowrap" class="n rose">8 sur 10</div><div class="l">personnes qui enseignent à Lyon 3 sont vacataires (2023-2024)</div></div>
+    <div class="chiffre"><div style="font-size:clamp(2.1rem,5.4vw,3.3rem);white-space:nowrap" class="n aqua">4 pour 1</div><div class="l">vacataires pour un·e enseignant·e titulaire à Paris 1 (2024)</div></div>
+    <div class="chiffre"><div style="font-size:clamp(2.1rem,5.4vw,3.3rem);white-space:nowrap" class="n blanc">398 000 €</div><div class="l">d'heures complémentaires encore impayées fin 2024 à Polytechnique Hauts-de-France</div></div>
   </div>
 </div>
 
@@ -211,13 +218,14 @@
       <div class="apercu">
         <div class="ap-titre">En un coup d'œil</div>
         <div class="ap-ligne"><div class="ap-nom">Jean Moulin Lyon 3<small>des personnes qui enseignent (2023-2024)</small></div><div class="ap-piste"><b style="width:79%"></b></div><div class="ap-v">≈ 79 %</div></div>
-        <div class="ap-ligne"><div class="ap-nom">Paris 1 Panthéon-Sorbonne<small>des personnes qui enseignent (2024)</small></div><div class="ap-piste"><b style="width:69%"></b></div><div class="ap-v">≈ 69 %</div></div>
         <div class="ap-ligne"><div class="ap-nom">Lumière Lyon 2<small>des personnes qui enseignent (2024-2025)</small></div><div class="ap-piste"><b style="width:72%"></b></div><div class="ap-v">≈ 72 %</div></div>
         <div class="ap-ligne"><div class="ap-nom">Le Havre Normandie<small>des intervenant·es en heures complémentaires (2025)</small></div><div class="ap-piste"><b style="width:71%"></b></div><div class="ap-v">71 %</div></div>
+        <div class="ap-ligne"><div class="ap-nom">Paris 1 Panthéon-Sorbonne<small>des personnes qui enseignent (2024)</small></div><div class="ap-piste"><b style="width:69%"></b></div><div class="ap-v">≈ 69 %</div></div>
         <div class="ap-ligne"><div class="ap-nom">La Rochelle Université<small>des personnes qui enseignent (2023-2024)</small></div><div class="ap-piste"><b style="width:64%"></b></div><div class="ap-v">≈ 64 %</div></div>
-        <div class="ap-ligne"><div class="ap-nom">Avignon Université<small>des sommes versées en heures complémentaires et vacations (2024)</small></div><div class="ap-piste"><b style="width:55%"></b></div><div class="ap-v">55 %</div></div>
         <div class="ap-ligne"><div class="ap-nom">Université de Bordeaux<small>des personnes qui enseignent</small></div><div class="ap-piste"><b style="width:59%"></b></div><div class="ap-v">≈ 59 %</div></div>
         <div class="ap-ligne"><div class="ap-nom">Picardie Jules Verne<small>des personnes qui enseignent (2020-2021)</small></div><div class="ap-piste"><b style="width:59%"></b></div><div class="ap-v">≈ 59 %</div></div>
+        <div class="ap-ligne"><div class="ap-nom">Université de Lille<small>des personnes qui enseignent (2024)</small></div><div class="ap-piste"><b style="width:59%"></b></div><div class="ap-v">≈ 59 %</div></div>
+        <div class="ap-ligne"><div class="ap-nom">Avignon Université<small>des sommes versées en heures complémentaires et vacations (2024)</small></div><div class="ap-piste"><b style="width:55%"></b></div><div class="ap-v">55 %</div></div>
         <div class="ap-ligne"><div class="ap-nom">Sciences Po Bordeaux<small>des heures de cours (2024)</small></div><div class="ap-piste"><b style="width:33%"></b></div><div class="ap-v">33 %</div></div>
         <div class="ap-ligne"><div class="ap-nom">Rennes 2<small>des heures de cours (2024-2025)</small></div><div class="ap-piste"><b style="width:22%"></b></div><div class="ap-v">22 %</div></div>
         <div class="ap-ligne"><div class="ap-nom">Polytechnique Hauts-de-France<small>des heures de cours (2023-2024)</small></div><div class="ap-piste"><b style="width:20%"></b></div><div class="ap-v">≈ 20 %</div></div>
@@ -236,6 +244,7 @@
       </div>
       <div class="fiche" id="u-universite-de-bordeaux">
         <div class="nom">Université de Bordeaux <span class="tag jaune">Données partielles</span></div>
+        <div class="dix" data-v="6" role="img" aria-label="Sur 10 personnes qui enseignent à l'université de Bordeaux, 6 sont vacataires"></div>
         <p>L'université présente <strong style="color:var(--clair)">4 853 vacataires d'enseignement</strong> comme des « collaborateurs ponctuels », pour un potentiel de 116 276 heures. Elle compte 3 387 personnels d'enseignement et de recherche, titulaires et contractuel·les. Autrement dit, <strong style="color:var(--rose)">environ six personnes sur dix qui enseignent à l'université de Bordeaux sont vacataires</strong>. L'université examine notre demande de données plus détaillées.</p>
         <details class="src-d"><summary>Sources et méthode</summary><p class="src">Source : rapport social unique 2025 de l'université de Bordeaux, annexe « Chiffres clés », transmis par l'université le 27 octobre 2026 en réponse à notre demande. La proportion est calculée par nous sur les effectifs, pas sur les heures : beaucoup de vacataires n'assurent que quelques heures.</p></details>
       </div>
@@ -246,7 +255,8 @@
         <details class="src-d"><summary>Sources et méthode</summary><p class="src">Source : <a href="https://www.univ-lehavre.fr/wp-content/uploads/2026/06/RSU-2025-V_finale.pdf">rapport social unique 2025 de l'université Le Havre Normandie</a>, p. 45, indiqué par l'université le 2 novembre 2026 en réponse à notre demande. Le nombre d'environ 780 vacataires est calculé par nous. Compte financier 2023 (tableau des emplois et tableau de financement), approuvé par le conseil d'administration le 14 mars 2024 et transmis par l'université. Les emplois sont comptés en équivalents temps plein, les vacataires en personnes : les deux chiffres ne sont pas directement comparables.</p></details>
       </div>
       <div class="fiche" id="u-universite-paris-1-pantheon-sorbonne">
-        <div class="nom">Université Paris 1 Panthéon-Sorbonne <span class="tag jaune">Premiers documents reçus · 9 novembre</span></div>
+        <div class="nom">Université Paris 1 Panthéon-Sorbonne <span class="tag jaune">Premiers documents reçus · 9 novembre</span> <span class="tag hr" title="Label européen « HR Excellence in Research »">Label HR Excellence</span></div>
+        <div class="dix" data-v="7" role="img" aria-label="Sur 10 personnes qui enseignent à Paris 1, 7 sont vacataires"></div>
         <p>En 2024, l'université a fait appel à <strong style="color:var(--clair)">3 366 vacataires d'enseignement</strong>, qui ont assuré 135 949 heures équivalent TD, soit 66 % des heures complémentaires et vacations. Elle compte 1 544 enseignant·es et enseignant·es-chercheur·es, dont 855 titulaires. Autrement dit, <strong style="color:var(--rose)">plus de deux personnes sur trois qui enseignent à Paris 1 sont vacataires</strong>, et l'on compte près de quatre vacataires pour un·e enseignant·e titulaire.</p>
         <p>L'université détient le label européen « HR Excellence in Research » depuis 2021. En juillet 2023, son conseil d'administration a adopté une motion reconnaissant que la situation de certain·es vacataires est « particulièrement difficile » et demandant à l'État davantage de postes et une meilleure rémunération des vacations.</p>
         <details class="src-d"><summary>Sources et méthode</summary><p class="src">Sources : <a href="https://www.pantheonsorbonne.fr/universite/publications-reglementaires">rapport social unique 2024 de l'université Paris 1 Panthéon-Sorbonne</a> (soumis au comité social d'administration le 23 juin 2026), p. 12 et 90-91, indiqué par l'université le 9 novembre 2026 en réponse à notre demande ; délibération du conseil d'administration du 6 juillet 2023 (motion relative aux enseignants vacataires). La proportion est calculée par nous sur les effectifs, pas sur les heures : beaucoup de vacataires n'assurent que quelques heures. Les vacataires sont comptés sur l'année 2024, les personnels au 31 décembre 2024. Label : <a href="https://recherche.pantheonsorbonne.fr/politique-scientifique/european-hrs4r-label">page HRS4R de l'université</a>.</p></details>
@@ -260,12 +270,14 @@
       </div>
       <div class="fiche" id="u-universite-lumiere-lyon-2">
         <div class="nom">Université Lumière Lyon 2 <span class="tag gris">Données publiées par l'université · 23 novembre</span></div>
+        <div class="dix" data-v="7" role="img" aria-label="Sur 10 personnes qui enseignent à Lyon 2, 7 sont vacataires"></div>
         <p>En 2024-2025, l'université a fait appel à <strong style="color:var(--clair)">2 547 vacataires d'enseignement</strong>, qui ont assuré <strong style="color:var(--clair)">90 864 heures équivalent TD</strong>. Elle compte 1 014 enseignant·es et enseignant·es-chercheur·es, dont 662 titulaires. Autrement dit, <strong style="color:var(--rose)">environ sept personnes sur dix qui enseignent à Lyon 2 sont vacataires</strong>.</p>
         <p>Parmi ces vacataires, <strong style="color:var(--clair)">482 sont auto-entrepreneur·es ou exercent une profession libérale ou indépendante</strong> (21 377 heures), et 243 sont étudiant·es de troisième cycle ou doctorant·es de l'université. Le nombre de vacataires augmente chaque année : 2 383 en 2022-2023, 2 523 en 2023-2024.</p>
         <details class="src-d"><summary>Sources et méthode</summary><p class="src">Source : <a href="https://www.univ-lyon2.fr/medias/fichier/rapport-social-unique2025_1784186601671-pdf">rapport social unique 2025 de l'Université Lumière Lyon 2</a>, p. 5 (tableau 1) et p. 11-12 (tableaux 13 et 14), indiqué par l'université le 23 novembre 2026 en réponse à notre demande. Vacataires comptés par année universitaire, personnels au 31 décembre 2025. La proportion est calculée par nous sur les effectifs, pas sur les heures : beaucoup de vacataires n'assurent que quelques heures.</p></details>
       </div>
       <div class="fiche" id="u-universite-jean-moulin-lyon-3">
-        <div class="nom">Université Jean Moulin Lyon 3 <span class="tag vert">Données reçues le 26 novembre</span></div>
+        <div class="nom">Université Jean Moulin Lyon 3 <span class="tag vert">Données reçues le 26 novembre</span> <span class="tag hr" title="Label européen « HR Excellence in Research »">Label HR Excellence</span></div>
+        <div class="dix" data-v="8" role="img" aria-label="Sur 10 personnes qui enseignent à Lyon 3, 8 sont vacataires"></div>
         <p>En 2023-2024, l'université a fait appel à <strong style="color:var(--clair)">2&nbsp;359 vacataires d'enseignement</strong>, qui ont assuré <strong style="color:var(--clair)">100&nbsp;154 heures équivalent TD</strong> rémunérées. Elle compte 630 enseignant·es et enseignant·es-chercheur·es, dont 481 titulaires. Autrement dit, <strong style="color:var(--rose)">près de huit personnes sur dix qui enseignent à Lyon 3 sont vacataires</strong>.</p>
         <p>Le recours aux vacations est stable à un niveau élevé&nbsp;: 2&nbsp;300 vacataires et 96&nbsp;802 heures en 2022-2023, 2&nbsp;344 vacataires et 97&nbsp;136 heures en 2024-2025. Une grande partie d'entre elles et eux exercent une autre activité&nbsp;: en 2023-2024, l'université recense environ 780 salarié·es du secteur privé et 780 travailleur·ses indépendant·es parmi ses vacataires.</p>
         <p>L'université détient le label européen « HR Excellence in Research » depuis le 4 octobre 2018 ; son renouvellement est en cours.</p>
@@ -284,6 +296,7 @@
       </div>
       <div class="fiche" id="u-universite-polytechnique-hauts-de-france">
         <div class="nom">Université Polytechnique Hauts-de-France <span class="tag vert">Données reçues le 24 novembre</span></div>
+        <div class="dix" data-v="6" role="img" aria-label="Sur 10 personnes qui enseignent à Polytechnique Hauts-de-France, 6 sont vacataires"></div>
         <p>En 2024, l'université (INSA Hauts-de-France compris) a fait appel à <strong style="color:var(--clair)">1 038 vacataires d'enseignement</strong>, qui ont assuré <strong style="color:var(--clair)">51 087 heures</strong> : <strong style="color:var(--rose)">environ une heure de cours sur cinq</strong>. Le service statutaire des enseignant·es permanent·es ne couvre que 49 % des heures d'enseignement ; les heures complémentaires, des titulaires comme des vacataires, en représentent 51 % selon l'université elle-même.</p>
         <div class="barre3">
           <div style="width:49.1%;background:var(--aqua)">Permanent·es 49 %</div>
@@ -295,12 +308,14 @@
       </div>
       <div class="fiche" id="u-universite-de-picardie-jules-verne">
         <div class="nom">Université de Picardie Jules Verne <span class="tag jaune">Documents reçus · 25 novembre</span></div>
+        <div class="dix" data-v="6" role="img" aria-label="Sur 10 personnes qui enseignent à l'UPJV, 6 sont vacataires"></div>
         <p>En 2020-2021, l'université a fait appel à <strong style="color:var(--clair)">1 826 vacataires d'enseignement</strong> : 1 697 chargé·es d'enseignement vacataires et 129 agent·es temporaires vacataires. Elle comptait 1 264 enseignant·es et enseignant·es-chercheur·es, titulaires et contractuel·les. Autrement dit, <strong style="color:var(--rose)">environ six personnes sur dix qui enseignent à l'UPJV sont vacataires</strong>.</p>
         <p><strong style="color:var(--clair)">Fin 2026, le rapport social le plus récent de l'université porte sur l'année 2021.</strong> Il n'a été approuvé par son conseil d'administration qu'en juin 2024, soit deux ans et demi plus tard. <strong style="color:var(--rose)">Les rapports suivants, sur 2022, 2023 et 2024, nous ont été refusés</strong> : l'université les dit « inachevés », faute d'approbation. Elle nous a en revanche transmis ses comptes financiers 2022 à 2025, et indique ne disposer d'aucune liste des bons de commande de prestations de conseil.</p>
         <details class="src-d"><summary>Sources et méthode</summary><p class="src">Source : rapport social unique 2022 de l'Université de Picardie Jules Verne (données au 31 décembre 2021, approuvé par le conseil d'administration le 6 juin 2024), p. 6 et annexe 3, p. 121-122, transmis le 25 novembre 2026 en réponse à notre demande. Vacataires comptés sur l'année universitaire 2020-2021, personnels au 31 décembre 2021. La proportion est calculée par nous sur les effectifs, pas sur les heures : beaucoup de vacataires n'assurent que quelques heures. Le rapport ne donne pas le volume d'heures assuré par les vacataires.</p></details>
       </div>
       <div class="fiche" id="u-la-rochelle-universite">
-        <div class="nom">La Rochelle Université <span class="tag gris">Données publiées par l'université · 9 novembre</span></div>
+        <div class="nom">La Rochelle Université <span class="tag gris">Données publiées par l'université · 9 novembre</span> <span class="tag hr" title="Label européen « HR Excellence in Research »">Label HR Excellence</span></div>
+        <div class="dix" data-v="6" role="img" aria-label="Sur 10 personnes qui enseignent à La Rochelle Université, 6 sont vacataires"></div>
         <p>En 2023-2024, l'université a fait appel à <strong style="color:var(--clair)">879 vacataires d'enseignement</strong>, un chiffre stable depuis quatre ans (entre 871 et 929). Elle compte 484 enseignant·es et enseignant·es-chercheur·es titulaires et contractuel·les, doctorant·es contractuel·les compris. Autrement dit, <strong style="color:var(--rose)">près de deux personnes sur trois qui enseignent à La Rochelle Université sont vacataires</strong>.</p>
         <p>L'université détient le label européen « HR Excellence in Research » depuis le 30 août 2024. Elle a accusé réception de notre demande et nous a renvoyé·es vers ses rapports publiés.</p>
         <details class="src-d"><summary>Sources et méthode</summary><p class="src">Source : <a href="https://www.univ-larochelle.fr/wp-content/uploads/Rapport-social-unique-2024-de-La-Rochelle-Universite.pdf">rapport social unique 2024 de La Rochelle Université</a>, p. 16-18. La proportion est calculée par nous sur les effectifs, pas sur les heures : beaucoup de vacataires n'assurent que quelques heures. Les vacataires sont comptés sur l'année universitaire 2023-2024, les personnels au 31 décembre 2024. Label : <a href="https://euraxess.ec.europa.eu/hrexcellenceaward/awarded">liste EURAXESS</a>.</p></details>
@@ -313,6 +328,7 @@
       </div>
       <div class="fiche" id="u-universite-de-lille">
         <div class="nom">Université de Lille <span class="tag gris">Données publiées par l'université · pas encore de réponse</span></div>
+        <div class="dix" data-v="6" role="img" aria-label="Sur 10 personnes qui enseignent à l'Université de Lille, 6 sont vacataires"></div>
         <p>En 2024, l'université a fait appel à <strong style="color:var(--clair)">5 696 vacataires d'enseignement</strong>, dont 85,6 % de chargé·es d'enseignement vacataires. Elle compte 4 015 enseignant·es et enseignant·es-chercheur·es, titulaires et contractuel·les, dont 2 615 titulaires. Autrement dit, <strong style="color:var(--rose)">environ six personnes sur dix qui enseignent à l'Université de Lille sont vacataires</strong>.</p>
         <p>L'université n'a pas encore répondu à notre demande de données sur ses vacataires, le volume d'heures qu'ils et elles assurent et leurs délais de paiement.</p>
         <details class="src-d"><summary>Sources et méthode</summary><p class="src">Source : <a href="https://www.univ-lille.fr/fileadmin/user_upload/Universite/Comprendre_notre_organisation/Fiche_d_identite/RSU_2024__29042026__compressed.pdf">rapport social unique 2024 de l'Université de Lille</a>, p. 24-25 et 28-29. La proportion est calculée par nous sur les effectifs, pas sur les heures : beaucoup de vacataires n'assurent que quelques heures.</p></details>
@@ -331,7 +347,7 @@
     </div>
     <h3 class="h3">Ce que cela veut dire</h3>
     <ul class="questions">
-      <li><strong style="color:var(--clair)">La moyenne nationale masque des écarts énormes.</strong> Selon l'<a href="https://www.education.gouv.fr/igesr/les-charges-d-enseignement-vacataires-dans-les-etablissements-du-superieur-465621">Inspection générale</a>, les vacataires assurent environ 20 % de la charge d'enseignement. À Sciences Po Bordeaux, c'est près d'un tiers des heures, et à l'université de Bordeaux, les vacataires sont plus nombreux que les personnels d'enseignement et de recherche.</li>
+      <li><strong style="color:var(--clair)">La moyenne nationale masque des écarts énormes.</strong> Selon l'<a href="https://www.education.gouv.fr/igesr/les-charges-d-enseignement-vacataires-dans-les-etablissements-du-superieur-465621">Inspection générale</a>, les vacataires assurent environ 20 % de la charge d'enseignement. À Lyon 3, près de huit personnes sur dix qui enseignent sont vacataires ; à Paris 1, on compte près de quatre vacataires pour un·e titulaire ; à Sciences Po Bordeaux, les vacataires assurent près d'un tiers des heures.</li>
       <li><strong style="color:var(--clair)">Les vacations ne sont pas un appoint.</strong> Quand un tiers des heures en dépend, année après année, elles couvrent des besoins permanents. À besoin permanent, emploi permanent.</li>
       <li><strong style="color:var(--clair)">Les titulaires aussi sont sous pression.</strong> À Sciences Po Bordeaux, la forte hausse des heures complémentaires suggère que les équipes permanentes compensent elles aussi le manque de postes.</li>
       <li><strong style="color:var(--clair)">Ces chiffres ont leurs limites.</strong> Une partie des vacataires exerce une autre activité principale, ce qui est fréquent dans les instituts d'études politiques. Les rapports mesurent la dépendance aux vacations, pas directement la précarité. C'est pourquoi nous demandons aussi le statut des vacataires et les délais de paiement.</li>
@@ -438,5 +454,8 @@
 </section>
 
 <footer><div class="wrap">#JeSuisLéa · <a href="index.html">jesuislea.fr</a> · contact@jesuislea.fr</div></footer>
+<script>
+document.querySelectorAll('.dix').forEach(function(d){var v=+d.dataset.v,h='';for(var i=0;i<10;i++){var c=i<v?'#ec4899':'rgba(255,255,255,.28)';h+='<svg viewBox="0 0 24 32" aria-hidden="true"><circle cx="12" cy="7" r="5.5" fill="'+c+'"/><path d="M3 31v-9a9 9 0 0 1 18 0v9z" fill="'+c+'"/></svg>'}h+='<div class="dl">Sur 10 personnes qui enseignent, <b>'+v+' sont vacataires</b></div>';d.innerHTML=h});
+</script>
 </body>
 </html>
