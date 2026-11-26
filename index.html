@@ -404,6 +404,8 @@
   .dix-s-btns .d2{border:1.5px solid var(--aqua);color:var(--aqua)}
   .dix-s-btns a:hover{opacity:.85}
   @media (max-width:640px){.dix-s{padding:1.1rem 1rem}.dix-s-chiffres{grid-template-columns:1fr;gap:.5rem}.dix-s-chiffres div{display:flex;align-items:baseline;gap:.7rem}.dix-s-chiffres b{flex:none;margin:0;min-width:7.2rem;font-size:1.2rem}}
+  .vers-mur{display:inline-block;margin-top:.9rem;background:linear-gradient(90deg,var(--rose),var(--aqua));color:#111;font-weight:700;font-size:.95rem;letter-spacing:.01em;text-decoration:none;padding:.6rem 1.2rem;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+  .vers-mur:hover,.vers-mur:focus-visible{filter:brightness(1.08);transform:translateY(-1px)}
 </style>
 </head>
 <body>
@@ -503,7 +505,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')ms.forEach(f
 <section class="compteur">
   <div class="wrap">
     <div class="n" id="compteur-n">378</div>
-    <div class="lbl admin">témoignages reçus, dont <span id="compteur-pub">317</span> publiés ci-dessous.<br>Chacun est une personne réelle derrière Léa. Nous publions ceux dont les auteur·es l'ont accepté ; les autres nourrissent nos analyses.</div>
+    <div class="lbl admin">témoignages reçus, dont <span id="compteur-pub">317</span> publiés ci-dessous.<br>Chacun est une personne réelle derrière Léa. Nous publions ceux dont les auteur·es l'ont accepté ; les autres nourrissent nos analyses.<br><a href="#mur-haut" class="vers-mur">Lire les témoignages ↓</a></div>
     <script>document.addEventListener('DOMContentLoaded',function(){try{var n=document.querySelectorAll('.temoin[id^="lea-"]').length;if(n)document.getElementById('compteur-pub').textContent=n;}catch(e){}});</script>
   </div>
 </section>
