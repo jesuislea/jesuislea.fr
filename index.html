@@ -392,10 +392,12 @@
   .dix-s{margin:1.4rem 0 2.6rem;padding:1.4rem 1.5rem;background:var(--surface-2);border:1px solid var(--trait);border-top:4px solid var(--rose);border-radius:10px;font-family:var(--sans)}
   .dix-s-accroche{font-size:clamp(1.15rem,2.6vw,1.45rem);line-height:1.35;color:var(--clair);margin:0 0 1.2rem}
   .dix-s-accroche strong{color:var(--rose)}
-  .dix-s-chiffres{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;margin-bottom:1.2rem}
-  .dix-s-chiffres div{background:rgba(255,255,255,.05);border-radius:8px;padding:.85rem .9rem}
-  .dix-s-chiffres b{display:block;font-size:clamp(1.3rem,3vw,1.7rem);font-weight:800;line-height:1.1;color:var(--aqua);margin-bottom:.35rem}
-  .dix-s-chiffres span{display:block;font-size:.85rem;line-height:1.4;color:var(--doux)}
+  .dix-s-constats{list-style:none;margin:0 0 1.2rem;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.7rem}
+  @media (min-width:641px){.dix-s-constats{grid-template-columns:repeat(6,1fr)}.dix-s-constats li{grid-column:span 2}.dix-s-constats li:nth-child(n+4){grid-column:span 3}}
+  .dix-s-constats li{background:rgba(255,255,255,.05);border-radius:8px;padding:.8rem .9rem;border-left:3px solid var(--aqua)}
+  .dix-s-constats b{display:block;font-size:1rem;font-weight:800;line-height:1.25;color:var(--aqua);margin-bottom:.3rem}
+  .dix-s-constats span{display:block;font-size:.84rem;line-height:1.45;color:var(--doux)}
+  .dix-s-demande a{color:var(--aqua);font-weight:700;white-space:nowrap}
   .dix-s-demande{font-size:1rem;line-height:1.5;color:var(--clair);margin:0 0 1.1rem}
   .dix-s-demande span{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--rose);margin-right:.4rem}
   .dix-s-btns{display:flex;flex-wrap:wrap;gap:.6rem}
@@ -403,7 +405,7 @@
   .dix-s-btns .d1{background:var(--rose);color:#fff}
   .dix-s-btns .d2{border:1.5px solid var(--aqua);color:var(--aqua)}
   .dix-s-btns a:hover{opacity:.85}
-  @media (max-width:640px){.dix-s{padding:1.1rem 1rem}.dix-s-chiffres{grid-template-columns:1fr;gap:.5rem}.dix-s-chiffres div{display:flex;align-items:baseline;gap:.7rem}.dix-s-chiffres b{flex:none;margin:0;min-width:7.2rem;font-size:1.2rem}}
+  @media (max-width:640px){.dix-s{padding:1.1rem 1rem}.dix-s-constats{grid-template-columns:1fr;gap:.5rem}}
   .vers-mur{display:inline-block;margin-top:.9rem;background:linear-gradient(90deg,var(--rose),var(--aqua));color:#111;font-weight:700;font-size:.95rem;letter-spacing:.01em;text-decoration:none;padding:.6rem 1.2rem;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.3)}
   .vers-mur:hover,.vers-mur:focus-visible{filter:brightness(1.08);transform:translateY(-1px)}
 </style>
@@ -474,14 +476,16 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')ms.forEach(f
       <a href="#ajouter" style="color:inherit;text-decoration:none">Prends la parole →</a>
     </div>
     <h1>Je suis <em>Léa</em>.</h1>
-    <div class="dix-s" aria-label="Léa en 10 secondes">
-      <p class="dix-s-accroche">L'université tourne grâce à des enseignant·es <strong>payé·es à l'heure de cours, pas à l'heure de travail.</strong></p>
-      <div class="dix-s-chiffres">
-        <div><b>8&nbsp;sur&nbsp;10</b><span>des personnes qui enseignent à Lyon 3 sont vacataires</span></div>
-        <div><b>43,50 €&nbsp;brut</b><span>pour une heure de TD. Préparation, copies, examens&nbsp;: 0&nbsp;€</span></div>
-        <div><b>Depuis 1989</b><span>le taux horaire n'a pas suivi l'inflation</span></div>
-      </div>
-      <p class="dix-s-demande"><span>Nous demandons</span> 80&nbsp;€ net (environ 100&nbsp;€ brut) pour chaque heure réellement travaillée, un paiement chaque mois et des postes stables.</p>
+    <div class="dix-s" aria-label="Léa en bref">
+      <p class="dix-s-accroche">L'université tourne grâce à des milliers de docteur·es et de précaires. <strong>Elle les paie mal, les protège peu et les use.</strong></p>
+      <ul class="dix-s-constats">
+        <li><b>Un travail mal payé</b><span>Seule l'heure de cours est rémunérée, souvent des mois en retard. Préparation, corrections et surveillances ne le sont pas.</span></li>
+        <li><b>Des droits au rabais</b><span>Contrats à l'heure ou à durée courte, ni congés payés ni réelle protection sociale pour les vacataires, aucune perspective de poste.</span></li>
+        <li><b>Le harcèlement sans suite</b><span>Harcèlement moral et violences sexuelles : la précarité rend la parole risquée, et les sanctions restent rares.</span></li>
+        <li><b>Des inégalités qui s'additionnent</b><span>Sexisme, racisme, validisme, origine sociale : la précarité aggrave chaque discrimination.</span></li>
+        <li><b>Des vies abîmées</b><span>Épuisement, isolement, anxiété : un système qui use celles et ceux qui le font tenir.</span></li>
+      </ul>
+      <p class="dix-s-demande"><span>Nous demandons</span> que chaque heure réellement travaillée soit payée, chaque mois, des postes stables pour les besoins permanents, des droits sociaux, et une protection indépendante contre le harcèlement et les discriminations. <a href="#revendications">Nos 12&nbsp;revendications&nbsp;→</a></p>
       <div class="dix-s-btns"><a href="#ajouter" class="d1">Témoigner</a><a href="#temoignages" class="d2">Lire les témoignages</a><a href="payetonvacataire.html" class="d2">Réclamer mes heures</a></div>
     </div>
     <div class="manifeste">
