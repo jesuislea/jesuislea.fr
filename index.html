@@ -4156,6 +4156,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')ms.forEach(f
 })();
 </script>
 
+<script>
+(function(){function ouvrir(){var id=decodeURIComponent(location.hash.slice(1));if(!id)return;var el=document.getElementById(id);if(!el)return;var p=el.parentElement,ch=false;while(p){if(p.classList&&p.classList.contains('pli')&&p.hidden){p.hidden=false;ch=true;var b=p.previousElementSibling;if(b&&b.classList.contains('pli-btn')){b.setAttribute('aria-expanded','true');b.textContent='Réduire ▴';}}p=p.parentElement;}if(ch)setTimeout(function(){el.scrollIntoView({block:'start'})},50);}
+window.addEventListener('hashchange',ouvrir);window.addEventListener('load',function(){setTimeout(ouvrir,60)});})();
+</script>
 </body>
 </html>
 
